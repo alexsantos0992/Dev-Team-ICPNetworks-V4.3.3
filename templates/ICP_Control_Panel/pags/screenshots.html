@@ -1,0 +1,40 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">ScreenShots</h1>
+</div>
+<div class="row text-center" style="margin:30px 0px;">
+	<div class="col">
+		Total of <b>{INDEX_SCREENSHOTS_TOTAL}</b> ScreenShots. Showing from {INDEX_SCREENSHOTS_START} to {INDEX_SCREENSHOTS_STOP}.
+	</div>
+</div>
+<div class="row">
+	<!-- BEGIN BLOCK_GALLERY_SCREENSHOTS -->
+		<div class="col-sm-4">
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					{INDEX_SCREENSHOTS_AUTHOR}
+				</div>
+				<img alt="ScreenShots" src="images/screenshots/thumbs/{INDEX_SCREENSHOTS_IMG}" pbsrc="images/screenshots/{INDEX_SCREENSHOTS_IMG}" pbCaption="Author: {INDEX_SCREENSHOTS_AUTHOR} - Legend: {INDEX_SCREENSHOTS_LEGEND} - Date: {INDEX_SCREENSHOTS_DATE}" class="card-img-top PopBoxImageSmall" onclick="Pop(this,50,'PopBoxImageLarge');" />
+				<div class="card-body">
+					Legend: {INDEX_SCREENSHOTS_LEGEND}<br>
+					Date: {INDEX_SCREENSHOTS_DATE}
+				</div>
+			</div>
+		</div>
+	<!-- END BLOCK_GALLERY_SCREENSHOTS -->
+</div>
+<!-- BEGIN BLOCK_PAGINATION -->
+	<nav aria-label="Pagination">
+		<ul class="pagination justify-content-center">
+			{PAGINATION}
+		</ul>
+	</nav>
+<!-- END BLOCK_PAGINATION -->

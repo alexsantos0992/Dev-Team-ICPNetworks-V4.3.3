@@ -1,0 +1,56 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">Profile</h1>
+</div>
+<!-- BEGIN CONFIG_ICP_PANEL_PROFILE -->
+	<div class="card mb-3">
+		<div class="card-header text-center">
+			Admin profile system
+		</div>
+		<div class="card-body pb-0">
+			<div class="row">
+				<div class="col text-center me-3" style="max-width:100px;">
+					<image id="profileImage" class="news-profile" style="cursor:pointer;" width="100" height="100" src="images/profiles/{CONFIG_GM_PROFILE_IMG}" /><br>
+					{CONFIG_GM_PROFILE_OFFICE}
+					<div class="news-author" id="GmName2" style="width:100px">{CONFIG_GM_PROFILE_NAME1}</div>
+					<input type="file" class="custom-file-input" form="profile" style="display:none;" name="profile" id="imageUpload" accept=".gif,.jpg,.png,.bmp">
+				</div>
+				<div class="col">
+					<div class="input-group w-100 mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="gmname">Name</span>
+						</div>
+						<input type="text" class="form-control" form="profile" name="gmName" value="{CONFIG_GM_PROFILE_NAME2}" autocomplete="off" placeholder="Gm name" aria-describedby="gmname" id="GmName">
+					</div>
+					<div class="input-group w-100 mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="gmemail">Email</span>
+						</div>
+						<input type="text" class="form-control" form="profile" name="gmEmail" value="{CONFIG_GM_PROFILE_EMAIL}" autocomplete="off" placeholder="Gm email" aria-describedby="gmemail">
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<button type="submit" class="btn btn-sm btn-primary w-100 mb-3" name="editProfile" form="profile">Save profile</button>
+						</div>
+						<div class="col-sm-6">
+							<button type="submit" class="btn btn-sm btn-primary w-100 mb-3" name="deleteProfile" form="deleteProfile">Delete profile</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form action="" method="post" style="margin:0px;padding:0px;" id="profile" enctype="multipart/form-data"></form>
+	<form action="" method="post" style="margin:0px;padding:0px;" id="deleteProfile"></form>
+<!-- END CONFIG_ICP_PANEL_PROFILE -->
+<!-- BEGIN CONFIG_ICP_PANEL_PROFILE_NULL -->
+	<p class="text-center">Unauthorized user.</p>
+<!-- END CONFIG_ICP_PANEL_PROFILE_NULL -->

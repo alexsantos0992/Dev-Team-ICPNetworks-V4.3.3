@@ -1,0 +1,40 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">Videos</h1>
+</div>
+<div class="row text-center" style="margin:30px 0px;">
+	<div class="col">
+		Total of <b>{INDEX_VIDEOS_TOTAL}</b> Videos. Showing from {INDEX_VIDEOS_START} to {INDEX_VIDEOS_STOP}.
+	</div>
+</div>
+<div class="row">
+	<!-- BEGIN BLOCK_GALLERY_VIDEOS -->
+		<div class="col-sm-4">
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					{INDEX_VIDEOS_AUTHOR}
+				</div>
+				<img alt="Videos" src="{INDEX_VIDEOS_IMG}" modalBody='<iframe width="100%" height="315" class="embed-responsive-item" src="{INDEX_VIDEOS_URL}?autoplay=1&amp;modestbranding=1&amp;showinfo=0"  frameborder="0" id="video" allowscriptaccess="always" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' modalFooter='Legend: {INDEX_VIDEOS_LEGEND}<br>Date: {INDEX_VIDEOS_DATE}' modalTitle="Enviado por: {INDEX_VIDEOS_AUTHOR}" class="modal-btn card-img-top" data-toggle="modal" data-target="#modalVideos" style="cursor: pointer;" />
+				<div class="card-body">
+					Legend: {INDEX_VIDEOS_LEGEND}<br>
+					Date: {INDEX_VIDEOS_DATE}
+				</div>
+			</div>
+		</div>
+	<!-- END BLOCK_GALLERY_VIDEOS -->
+</div>
+<!-- BEGIN BLOCK_PAGINATION -->
+	<nav aria-label="Pagination">
+		<ul class="pagination justify-content-center">
+			{PAGINATION}
+		</ul>
+	</nav>
+<!-- END BLOCK_PAGINATION -->

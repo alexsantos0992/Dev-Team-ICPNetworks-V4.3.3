@@ -1,0 +1,42 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<main class="form-signin">
+	<div class="text-center">
+		<form method="post" action="">
+			<img class="mb-4" src="images/miscs/icplogo.png" alt="" width="200" height="48">
+			<h1 class="h3 mb-3 fw-normal">Register account</h1>
+			<div class="form-floating mb-3">
+				<input type="text" class="form-control" id="floatingInput" placeholder="Login / Username" name="username" autocomplete="off" required>
+				<label for="floatingInput">Login / Username</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="email" class="form-control" id="floatingEmail" placeholder="Email" name="email" autocomplete="off" required>
+				<label for="floatingEmail">Email</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="password" class="form-control" id="floatingPassword1" placeholder="Password" name="password1" autocomplete="off" required>
+				<label for="floatingPassword1">Password</label>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="password" class="form-control" id="floatingPassword2" placeholder="Password" name="password2" autocomplete="off" required>
+				<label for="floatingPassword2">Password</label>
+			</div>
+			<p></p>
+			<div class="checkbox mb-3">
+				<label>
+					<input type="checkbox" name="accept_rules" value="accept" required> I have read and accepted all the rules.
+				</label>
+			</div>
+			<input type="submit" class="w-100 btn btn-lg btn-primary" name="register" value="Register now">
+			<p class="mt-5 mb-3 text-muted"><a href="?icp=panel">Go back to login.</a></p>
+			<p class="mt-5 mb-3 text-muted"><a href="http://www.icpnetworks.com.br" target="_blank">ICPNetworks &copy; 2010–2021</a></p>
+		</form>
+	</div>
+</main>

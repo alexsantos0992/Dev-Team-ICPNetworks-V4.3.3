@@ -1,0 +1,88 @@
+<h1 class="12032"></h1>
+
+<div style='padding: 0 20px;' class='12031'></div>
+
+<div class='separator'></div>
+
+<span id='accLoc'></span>
+<br>
+<br>
+<center>
+	<p><b>Time zone for countries Open Server:</b></p>
+	<p>(Greece) Friday, October 20, 2017, 12:00 PM</p>
+	<p>(Venezuela) Friday, October 20, 2017, 05:00 PM</p>
+	<p>(Russia) Friday, October 20, 2017, 12:00 PM</p>
+	<p>(Brazil - Brasilia) Friday, October 20, 2017, 19:00</p>
+	<p>(Argentina) Friday, October 20, 2017, 06:00 PM</p>
+</center>
+<hr />
+<div class='pddInner'>
+	<div class='rulesbox 12109'></div>
+	
+<form method="POST" action="" id='reggo'>
+
+	<label><input type='checkbox' name="accept_rules" id='acceptrules' value='1' /> <b class='12994'></b></label><br /><br /><br />
+	
+<span class='12067'></span>
+
+<br /><br />
+	
+<label class='formpadrao accr_login'>
+	<div>
+		<div class='desc'>* Login:</div>
+		<div class='camp'><input type='text' name='username' maxlength='16' value='' autocomplete='off' /></div>
+	</div>
+</label>
+
+<label class='formpadrao accr_pass'>
+	<div>
+		<div class='desc'>* <span class='12049'></span>:</div>
+		<div class='camp'><input type='password' maxlength='16' name='password1' autocomplete='off' /></div>
+	</div>
+</label>
+
+<label class='formpadrao accr_pass'>
+	<div>
+		<div class='desc'>* <span class='12048'></span>:</div>
+		<div class='camp'><input type='password' maxlength='16' name='password2' autocomplete='off' /></div>
+	</div>
+</label>
+
+<label class='formpadrao accr_email'>
+	<div>
+		<div class='desc'>* Email:</div>
+		<div class='camp'><input type='text' maxlength='100' name='email' value='' autocomplete='off' /></div>
+	</div>
+</label>
+
+<div class='formpadrao dcaptcha'>
+	<img id="siimage" src="" alt="CAPTCHA Image" align="left">
+	<a tabindex="-1" style="border-style: none;" href="#" title="Refresh Image" onclick="document.getElementById('siimage').src = './engine/captcha/securimage_show.php?sid=' + Math.random(); this.blur(); return false"><img src="./engine/captcha/images/refresh.png" alt="Reload Image" onclick="this.blur()" align="bottom" border="0"></a>
+</div>
+
+<label class='formpadrao accr_code'>
+	<div>
+		<div class='desc'>* <span class='11017'></span>:</div>
+		<div class='camp'><input type='text' maxlength='6' name='captcha' autocomplete='off' /></div>
+	</div>
+</label>
+
+<div style='margin: 20px 0 0 0; display:table;width:100%;'><div style='display:table;margin: 0 auto;'>
+<input type="submit" class='default' name="register" value="Cadastrar" />
+<div style="display:none" id="12004"></div>
+<script type='text/javascript'>
+$(document).ready(function(){
+	$('form#reggo').submit(function(e){
+		if($('#acceptrules').prop('checked') != true) {
+			e.preventDefault();
+			alert($("#12004").html());
+		}
+	});
+	document.getElementById('siimage').src = './engine/captcha/securimage_show.php?sid=' + Math.random();
+});
+</script>
+</div></div>
+</form>
+<br /><br />
+
+</div>

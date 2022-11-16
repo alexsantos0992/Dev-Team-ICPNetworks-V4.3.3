@@ -1,0 +1,289 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">Server informations</h1>
+</div>
+<div class="row">
+	<div class="col">
+		<div class="card mb-3">
+			<div class="card-header">
+				Basic infos
+			</div>
+			<div class="card-body">
+				<span class="card-text">Login server status:
+					<!-- BEGIN BLOCK_LOGIN_SERVER_ONLINE -->
+						<span style="color:#008000; text-shadow:1px 1px #ccc;">Online</span>
+					<!-- END BLOCK_LOGIN_SERVER_ONLINE -->
+					<!-- BEGIN BLOCK_LOGIN_SERVER_OFFLINE -->
+						<span style="color:#f31313; text-shadow:1px 1px #ccc;">Offline</span>
+					<!-- END BLOCK_LOGIN_SERVER_OFFLINE -->
+				</span><br>
+				<span class="card-text">Game server status:
+					<!-- BEGIN BLOCK_GAME_SERVER_ONLINE -->
+						<span style="color:#008000; text-shadow:1px 1px #ccc;">Online</span>
+					<!-- END BLOCK_GAME_SERVER_ONLINE -->
+					<!-- BEGIN BLOCK_GAME_SERVER_OFFLINE -->
+						<span style="color:#f31313; text-shadow:1px 1px #ccc;">Offline</span>
+					<!-- END BLOCK_GAME_SERVER_OFFLINE -->
+				</span><br>
+				<span class="card-text">Server name: {SITE_NAME}</span><br>
+				<span class="card-text">Chronicle: {CHRONICLE}</span>
+			</div>
+			<!-- BEGIN BLOCK_SERVER_DETAILS -->
+				<div class="card-header border-top">
+					Server details
+				</div>
+				<div class="card-body">
+					<span class="card-text">Registered accounts: {SERVER_TOTAL_ACCOUNTS}</span><br>
+					<span class="card-text">Created characters: {SERVER_TOTAL_CHARACTERS}</span><br>
+					<span class="card-text">Online players: {SERVER_TOTAL_ONLINE}</span><br>
+					<span class="card-text">Created clans: {SERVER_TOTAL_CLANS}</span>
+				</div>
+			<!-- END BLOCK_SERVER_DETAILS -->
+			<div class="card-header border-top">
+				Rates
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col">
+						<span class="card-text">XP: {XP_RATE}x</span>
+					</div>
+					<div class="col">
+						<span class="card-text">SP: {SP_RATE}x</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<span class="card-text">Drop: {DROP_RATE}x</span>
+					</div>
+					<div class="col">
+						<span class="card-text">Spoil: {SPOIL_RATE}x</span>
+					</div>
+				</div>
+			</div>
+			<div class="card-header border-top">
+				Enchants
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col">
+						<span class="card-text">Safe: +{SAFE_ENCHANT}</span>
+					</div>
+					<div class="col">
+						<span class="card-text">Max: +{MAX_ENCHANT}</span>
+					</div>
+				</div>
+			</div>
+			<div class="card-header border-top">
+				Downloads
+			</div>
+			<div class="card-body">
+				<div class="row text-center">
+					<div class="col">
+						<a href="{CLIENT_DOWNLOAD_LINK}" class="btn btn-primary btn-sm" target="_blank"><span data-feather="download"></span>&nbsp;&nbsp;Client</a>
+					</div>
+					<div class="col">
+						<a href="{FILES_DOWNLOAD_LINK}" class="btn btn-primary btn-sm" target="_blank"><span data-feather="download"></span>&nbsp;&nbsp;Server files</a>
+					</div>
+				</div>
+			</div>
+			<div class="card-header border-top">
+				Server time-zone
+			</div>
+			<div class="card-body">
+				{TIME_ZONE}
+			</div>
+			<div class="card-header border-top">
+				Olympiads period{OLY_PERIOD_CURRENT}
+			</div>
+			<div class="card-body">
+				<!-- BEGIN BLOCK_OLYMPIAD_PERIOD -->
+					<div class="text-center" style="margin-bottom:10px;">
+						There are {OLY_PERIOD_DAYS} days left to finish.
+					</div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {OLY_PERIOD_PERCENT}%" aria-valuenow="{OLY_PERIOD_PERCENT}" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				<!-- END BLOCK_OLYMPIAD_PERIOD -->
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="card mb-3">
+			<div class="card-header">
+				Latest news
+			</div>
+			<!-- BEGIN BLOCK_NEWS -->
+				<div class="card-body" style="border-bottom:1px solid #ccc;">
+					<div style="float:left; margin: 0px 10px 5px 0px;">
+						<img src="images/profiles/{NEWS_PROFILE}" class="news-profile"><br>
+						<div class="news-author">By: {NEWS_AUTHOR}</div>
+					</div>
+					<h5 class="card-title">{NEWS_TITLE}</h5>
+					<p class="card-text">{NEWS_TEXT_MINI}</p>
+					<div style="text-align:right;">
+						<a href="./?icp=panel&show=news&id={NEWS_ID}" class="btn btn-primary">Read more</a>
+					</div>
+				</div>
+			<!-- END BLOCK_NEWS -->
+		</div>
+	</div>
+	<div class="col">
+		<div class="card mb-3">
+			<!-- BEGIN BLOCK_MINI_BOSS_STATUS -->
+				<div class="card-header">
+					Bosses Status
+				</div>
+				<div class="card-body">
+					<div class="row w-100">
+						<div class="col-sm-5">
+							<img src="images/bosses/{MINI_BOSS_NAME}.jpg" width="100%" border="0" style="margin-bottom:5px; border:1px solid #666;" pbsrc="images/bosses/{MINI_BOSS_NAME}.jpg" pbCaption="{MINI_BOSS_NAME} - Status: {MINI_BOSS_STATUS} - Respawn: {MINI_BOSS_RESPAWN}" class="PopBoxImageSmall" onclick="Pop(this,50,'PopBoxImageLarge');" alt="{MINI_BOSS_NAME}">
+						</div>
+						<div class="col" style="padding-right:0px;">
+							<div style="font-size:75%;">
+								Name: {MINI_BOSS_NAME}<br>
+								Level: {MINI_BOSS_LEVEL}<br>
+								Status: {MINI_BOSS_STATUS}<br>
+								Respawn: {MINI_BOSS_RESPAWN}
+							</div>
+						</div>
+					</div>
+					<div style="text-align:right; margin-top:10px;">
+						<a href="index.php?icp=panel&show=boss-status" class="btn btn-primary btn-sm w-100">Show all bosses</a>
+					</div>
+				</div>
+			<!-- END BLOCK_MINI_BOSS_STATUS -->
+			<!-- BEGIN BLOCK_MINI_CASTLE -->
+				<div class="card-header border-top" style="text-transform: capitalize;">
+					{MINI_CASTLE_NAME} Castle
+				</div>
+				<div class="card-body">
+					<div class="row w-100">
+						<div class="col-sm-5">
+							<img src="images/castles/{MINI_CASTLE_NAME}.jpg" width="100%" border="0" style="margin-bottom:5px; border:1px solid #666;" alt="{MINI_CASTLE_NAME}">
+						</div>
+						<div class="col" style="padding-right:0px;">
+							<div style="font-size:75%;">
+								Leader: {MINI_CASTLE_OWNER}<br>
+								Clan: {MINI_CASTLE_CLAN}<br>
+								Ally: {MINI_CASTLE_ALLY}<br>
+								Tax: {MINI_CASTLE_TAX}%<br>
+								Siege: {MINI_CASTLE_DATE}
+							</div>
+						</div>
+					</div>
+					<div style="text-align:right; margin-top:5px;">
+						<a href="index.php?icp=panel&show=castles-siege" class="btn btn-primary btn-sm w-100">Show all castles</a>
+					</div>
+				</div>
+			<!-- END BLOCK_MINI_CASTLE -->
+			<div class="card-header border-top">
+				Rankings
+			</div>
+			<div class="card-body">
+				<!-- BEGIN BLOCK_MINI_RANK -->
+					<div class="table-responsive">
+						<table class="table table-striped table-sm">
+							<tbody>
+								<tr>
+									<td>Top PvP:</td>
+									<td>{MINI_RANK_PVP}</td>
+								</tr>
+								<tr>
+									<td>
+										Top PK:
+									</td>
+									<td>
+										{MINI_RANK_PK}
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Top Online:
+									</td>
+									<td>
+										{MINI_RANK_ONLINE}
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Top Clan:
+									</td>
+									<td>
+										{MINI_RANK_CREST_CLAN}{MINI_RANK_CLAN}
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				<!-- END BLOCK_MINI_RANK -->
+				<a href="index.php?icp=panel&show=top-pvp" class="btn btn-primary btn-sm w-100">Show all rankings</a>
+			</div>
+		</div>
+		<div class="row">
+			<!-- BEGIN BLOCK_INDEX_SCREENSHOTS -->
+				<div class="col-sm-6">
+					<div class="card mb-3">
+						<div class="card-header text-center" style="font-size:0.7rem;">
+							ScreenShots Gallery
+						</div>
+						<img alt="ScreenShots" src="images/screenshots/thumbs/{INDEX_SCREENSHOTS_IMG}" pbsrc="images/screenshots/{INDEX_SCREENSHOTS_IMG}" pbCaption="Autor: {INDEX_SCREENSHOTS_AUTHOR} - Legenda: {INDEX_SCREENSHOTS_LEGEND} - Data: {INDEX_SCREENSHOTS_DATE}" class="card-img-top PopBoxImageSmall" onClick="Pop(this,50,'PopBoxImageLarge');" id="img-image" />
+						<div class="card-body">
+							<div style="text-align:right; margin-top:5px;">
+								<a href="index.php?icp=panel&show=screenshots" class="btn btn-primary btn-sm w-100">Show all</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- END BLOCK_INDEX_SCREENSHOTS -->
+			<!-- BEGIN BLOCK_INDEX_VIDEOS -->
+				<div class="col-sm-6">
+					<div class="card mb-3">
+						<div class="card-header text-center" style="font-size:0.7rem;">
+							Videos Gallery
+						</div>
+						<img alt="Videos" src="{INDEX_VIDEOS_IMG}" id="img-video" modalBody='<iframe width="100%" height="315" class="embed-responsive-item" src="{INDEX_VIDEOS_URL}?autoplay=1&amp;modestbranding=1&amp;showinfo=0"  frameborder="0" id="video" allowscriptaccess="always" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' modalFooter='Legend: {INDEX_VIDEOS_LEGEND}<br>Date: {INDEX_VIDEOS_DATE}' modalTitle="Enviado por: {INDEX_VIDEOS_AUTHOR}" class="modal-btn card-img-top" data-toggle="modal" data-target="#modalVideos" style="cursor: pointer;" />
+						<div class="card-body">
+							<div style="text-align:right; margin-top:5px;">
+								<a href="index.php?icp=panel&show=videos" class="btn btn-primary btn-sm w-100">Show all</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- END BLOCK_INDEX_VIDEOS -->
+		</div>
+	</div>
+</div>
+<div class="card mb-3">
+	<div class="card-header">
+		Server rules
+	</div>
+	<div class="card-body rules">
+		<p>01. Sempre tratar todos os Administradores, Game Masters e membros da administração com respeito. Qualquer ato de desrespeito à administração, independentemente do meio de comunicação, resultará em punição.</p>
+		
+		<p>02. É proibido personificar (fingir ser) qualquer membro da administração.</p>
+		
+		<p>03. Publicidade, comentários ou sugestões de qualquer outro servidor de Lineage é proibida em qualquer chat do jogo ou outros meios de comunicação ligados a nós.</p>
+		
+		<p>04. É proibido o uso de programas que interajam com o Lineage 2, exploits ou se aproveitar de qualquer tipo de problema encontrado no jogo, no fórum ou no site que irá beneficiá-lo em relação a outros jogadores. Se um jogador descobre um bug (problema/falha) no jogo, fórum ou site deve comunicar imediatamente à administração.</p>
+		
+		<p>05. Nunca solicite níveis, itens, adena, teleport ou qualquer benefício à qualquer membro da administração porque você não será respondido.</p>
+		
+		<p>06. Sua conta é pessoal e intransmissível, isso significa que você é responsável por sua própria segurança no jogo. Nunca forneça sua senha para qualquer outra pessoa, incluindo a administração. Certifique-se de que o computador usado para jogar é seguro. Nunca execute programas extras de interatividade com seu Lineage 2, que não foi fornecido pela administração, pois podem conter vírus e keyloguers que irão resultar no roubo de suas contas de usuário e/ou itens. A administração não se responsabiliza por qualquer roubo, itens dropados ou destruídos. A administração garante a integridade completa e segurança do servidor e, portanto, não são possíveis invasões hacks para roubar itens ou contas diretamente no servidor, site ou fórum, em outras palavras, qualquer tipo de roubo são causados por descuido ou má utilização dos usuários.</p>
+		
+		<p>07. Todos os dados do usuário (sua veracidade e manutenção) são da exclusiva responsabilidade do usuário. Cuide de seus dados e mantenha sua conta de e-mail ativa pois é necessária para recuperar sua senha se você esquecê-la. A administração não se responsabiliza por dados esquecidos, perdidos, suprimidos ou cancelados por qualquer motivo.</p>
+		
+		<p>08. É proibido ofender outros jogadores com palavras de baixo calão, nomes depreciativos e ofensivos, ofensas pornográficas, racistas e outros no Chat Global e quaisquer outros meios de comunicação fornecidos por nossa equipe. Em chats in-game utilize o comando /block para não ver mensagens de personagens indesejados. Use o chat hero com sabedoria, pois envolve a leitura de todo o servidor. Também é proibido o uso de qualquer bate-papo para incitar ou manipular os jogadores do servidor contra a administração.</p>
+		
+		<p>09. Jogadores que acusem, sem provas, a administração de favorecimento de outros jogadores serão severamente punidos. A administração não vai permitir que maus jogadores manchem a imagem do servidor pelo fato de serem maus perdedores.</p>
+		
+		<p>10. Qualquer ação dentro do jogo que a administração julgue anti-jogo (ações consideradas impróprias ou de mau caráter) também resultarão em punições, como por exemplo: perder propositalmente na Grand Olympiad para dar pontos a outro personagem; romper ou tentar enganar de forma alguma os eventos automáticos ou realizados pela administração; Tentar enganar outros jogadores oferecendo itens falsos.</p>
+	</div>
+</div>

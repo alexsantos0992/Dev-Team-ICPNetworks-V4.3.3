@@ -1,0 +1,95 @@
+<script type='text/javascript'>
+$(document).ready(function(){
+	$('.banner > a:first-child').addClass('bvis');
+	$('.banner .circles div:first-child').addClass('act');
+	var rotateBannerAtualstudio = function() {
+		if($('input#tempBanner').val() == '1') {
+			var countA = $('.banner > a').length;
+			var relAtual = $('.banner > a.bvis').attr('rel');
+			var proxRel = parseInt(parseInt(relAtual)+1);
+			if(proxRel > countA) {
+				var proxRel = 1;
+			}
+			$('.banner > a').removeClass('bvis');
+			$('.banner > a[rel='+proxRel+']').addClass('bvis');
+			$('.banner .circles div').removeClass('act');
+			$('.banner .circles div[rel='+proxRel+']').addClass('act');
+		}
+		  setTimeout(rotateBannerAtualstudio, 3000);
+	}
+	setTimeout(rotateBannerAtualstudio, 3000);
+	$('.banner').hover(function(){
+		$('input#tempBanner').val('2');
+	}, function(){
+		$('input#tempBanner').val('1');
+	});
+	$('.circles div').hover(function(){
+		var relCircle = $(this).attr('rel');
+		$('.banner .circles div').removeClass('act');
+		$(this).addClass('act');
+		$('.banner > a').removeClass('bvis');
+		$('.banner > a[rel='+relCircle+']').addClass('bvis');
+	});
+});
+</script>
+
+<div class='banner'>
+	<div class='circles'>
+		<div rel='1' class='act'></div>
+		<div rel='2'></div>
+	</div>
+	<a rel='1' href='{TEMPLATE}imgs/banners/1e53714c15bdc6a6e1e02bcb22bf6145.png' target='_blank' class='bvis'>
+		<div class='bmask'></div>
+		<img src='{TEMPLATE}imgs/banners/1e53714c15bdc6a6e1e02bcb22bf6145.png' />
+	</a>
+	<a rel='2' href='{TEMPLATE}imgs/banners/2fbb24cb6f5db24b3c368f23c9b008b8.jpg' target='_blank'>
+		<div class='bmask'></div>
+		<img src='{TEMPLATE}imgs/banners/2fbb24cb6f5db24b3c368f23c9b008b8.jpg' />
+	</a>
+	<input type='hidden' id='tempBanner' value='1' />
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr />
+<center>
+	<p><b>Time zone for countries Open Server:</b></p>
+	<p>(Greece) Friday, October 20, 2017, 12:00 PM</p>
+	<p>(Venezuela) Friday, October 20, 2017, 05:00 PM</p>
+	<p>(Russia) Friday, October 20, 2017, 12:00 PM</p>
+	<p>(Brazil - Brasilia) Friday, October 20, 2017, 19:00</p>
+	<p>(Argentina) Friday, October 20, 2017, 06:00 PM</p>
+</center>
+
+
+<hr />
+<!-- News -->
+<h1>Latest News</h1>
+<!-- BEGIN BLOCK_NEWS -->
+	<div class='news'>
+		<a class='imgn' href='./?icp=news&id={NEWS_ID}'><img src='images/profiles/{NEWS_PROFILE}' /></a>
+		<div class='contentn'>
+			<a href='./?icp=news&id={NEWS_ID}' class='titlen'>{NEWS_TITLE}</a>
+			<div class='textn'>
+				{NEWS_TEXT_MINI}
+			</div>
+			<div class='finalinfo'>
+				<div class='datan'>{NEWS_DATE}</div>
+				<div class='lermaisn'><a href='./?icp=news&id={NEWS_ID}'>ler mais &raquo;</a></div>
+			</div>
+		</div>
+	</div>
+	<div class='shadownew'></div>
+<!-- END BLOCK_NEWS -->

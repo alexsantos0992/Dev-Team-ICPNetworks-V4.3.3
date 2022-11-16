@@ -1,0 +1,1190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>{SITE_TITLE}</title>
+		<noscript>
+			<meta http-equiv="refresh" content="0; URL=nojs.html">
+		</noscript>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="{TEMPLATE}styles/css/bootstrap.min.css" rel="stylesheet">
+		<link href="{TEMPLATE}styles/css/icpnetworks.css" rel="stylesheet">
+		<link rel="shortcut icon" href="images/miscs/favicon.ico">
+		<script>
+			var index = "./";
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '2617026385223468');
+			fbq('track', 'PageView');
+			fbq('track', 'UserPanel');
+		</script>
+	</head>
+	<body>
+		<!-- BEGIN BLOCK_ICP_PANEL_CONNECTED -->
+			<style>
+				.bd-placeholder-img {
+					font-size: 1.125rem;
+					text-anchor: middle;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					user-select: none;
+				}
+				
+				@media (min-width: 768px) {
+					.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+					}
+				}
+			</style>
+			<!-- Custom styles for this template -->
+			<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+				<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="?icp=panel">Dashboard {SITE_NAME}</a>
+				<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<form method="get" action="?icp=panel&show=informer" class="nav w-100">
+					<input type="hidden" name="icp" value="panel">
+					<input type="hidden" name="show" value="informer">
+					<input type="hidden" id="informer_type" name="informer_type" value="">
+					<input class="form-control form-control-dark w-100 informer" name="informer_name" type="text" placeholder="Informer - Get information about items or monsters here" aria-label="Informer" autocomplete="off">
+				</form>
+				<div class="btn-group m-1" role="group">
+					<div class="dropdown">
+						<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Balance:
+							<!-- BEGIN BLOCK_DONATE_BALANCE -->
+								{PANEL_DONATE_BALANCE}
+							<!-- END BLOCK_DONATE_BALANCE -->
+							{DONATE_COIN_NAME}
+						</a>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="?icp=panel&show=donation"><span data-feather="dollar-sign"></span> Make a donation</a>
+							<a class="dropdown-item" href="?icp=panel&show=donation-history"><span data-feather="search"></span> Donation history</a>
+						</div>
+					</div>
+				</div>
+				<ul class="navbar-nav px-3">
+					<li class="nav-item text-nowrap">
+						<a class="nav-link" href="index.php?icp=panel&show=logout"><span data-feather="power"></span> Sign out</a>
+					</li>
+				</ul>
+			</header>
+			<div class="container-fluid">
+				<div class="row">
+					<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+						<div class="position-sticky pt-3">
+							<ul class="nav flex-column">
+								<!-- BEGIN BLOCK_ICP_PANEL_ADMIN_MENUS -->
+									{BLOCK_ICP_PANEL_ADMIN_MENU_TITLE}
+									<!-- BEGIN BLOCK_ICP_PANEL_ADMIN_LINKS -->
+										{BLOCK_ICP_PANEL_ADMIN_LINKS}
+									<!-- END BLOCK_ICP_PANEL_ADMIN_LINKS -->
+								<!-- END BLOCK_ICP_PANEL_ADMIN_MENUS -->
+								<!-- BEGIN BLOCK_ICP_PANEL_USERS_MENUS -->
+									{BLOCK_ICP_PANEL_USER_LINKS}
+								<!-- END BLOCK_ICP_PANEL_USERS_MENUS -->
+							</ul>
+						</div>
+					</nav>
+					<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+						{PAGES}
+						<div class="modal fade" id="modalVideos" tabindex="-1" role="dialog" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header text-center">
+										<h5 class="modal-title w-100">
+											<div class="modal-video-title"></div>
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true"><b>&times;</b></span>
+										</button>
+									</div>
+									<div class="modal-body text-center">
+										<div class="embed-responsive embed-responsive-16by9">
+											<div class="modal-video-body"></div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<div class="modal-video-footer w-100" style="text-align:left;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		<!-- END BLOCK_ICP_PANEL_CONNECTED -->
+		<!-- BEGIN BLOCK_ICP_PANEL_DISCONNECTED -->
+			{PAGES}
+		<!-- END BLOCK_ICP_PANEL_DISCONNECTED -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="{TEMPLATE}styles/js/PopBox.js"></script>
+		<script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$("#paypal").on("change",function(){
+					$("#paypalQuantity").val($("#paypal option:selected").val());
+				});
+				$("#clickPS").on("click",function(){
+					$("#clickPS").prop("disabled", true);
+					$.get("engine/donate/pagseguro.php", {quantity: $("#pagseguro option:selected").val()}, function(data){
+						$("#PScode").val(data);
+						$("#submitPagseguro").submit();
+						setTimeout(function(){
+							$("#clickPS").prop("disabled", false);
+						}, 100)
+					})
+				});
+				$("#clickMP").on("click",function(){
+					$("#clickMP").prop("disabled", true);
+					if(document.querySelector("#mercadopago-checkout-btn")){
+						document.body.removeChild(document.querySelector("#mercadopago-checkout-btn"));
+						document.body.removeChild(document.querySelector(".mercadopago-button"));
+					}
+					$.get("engine/donate/mercadopago.php", {quantity: $("#mercadopago option:selected").val()}, function(data){
+						const script = document.createElement("script");
+						script.id = "mercadopago-checkout-btn";
+						script.src = "{LINK_CHECKOUT_MP}";
+						script.setAttribute("data-preference-id", data);
+						script.async = true;
+						script.onload = () => {
+							setTimeout(function(){
+								$(".mercadopago-button").click();
+								$("#clickMP").prop("disabled", false);
+							}, 100)
+						};
+						document.body.appendChild(script);
+					});
+				});
+				$("#GmName").on("keyup",function(){
+					var writing = $(this).val();
+					if(writing == "")
+						$("#GmName2").text("GM Anonymous");
+					else
+						$("#GmName2").text(writing);
+				});
+				$("#profileImage").click(function(e){
+					$("#imageUpload").click();
+				});
+				function fasterPreview(uploader){
+					if (uploader.files && uploader.files[0]){
+						$('#profileImage').attr('src', window.URL.createObjectURL(uploader.files[0]));
+					}
+				}
+				$("#imageUpload").change(function(){
+					fasterPreview( this );
+				});
+				$('[data-toggle="tooltip"]').tooltip();
+				$(".informer").autocomplete({
+					source: function (request, response) {
+						$.getJSON("?json=informer&term=" + request.term, function (data) {
+							response($.map(data.informer, function (value, key) {
+								return {
+									label: key,
+									value: value
+								};
+							}));
+						});
+					},
+					select: function(event,ui){
+						var type = ui.item.label.split(" - ");
+						$("#informer_type").val(type[0]);
+					},
+					minLength: 5,
+					delay: 100
+				});
+				$(".accounts").autocomplete({
+					source: function (request, response) {
+						$.getJSON("?json=accounts&term=" + request.term, function (data) {
+							response($.map(data.accounts, function (value, key) {
+								return {
+									label: key,
+									value: value
+								};
+							}));
+						});
+					},
+					minLength: 3,
+					delay: 100
+				});
+				var i = 0;
+				$("#addScnt").on("click", function(){
+					$('<tr><td valign="middle"><input type="number" name="itemId[]" min="1" value="1" style="width:43px;font-size:9px;" form="formPrimeShop" oninput="validity.valid||(value="");" required></td><td valign="middle"><input type="number" name="itemCount[]" min="1" value="1" style="width:30px;font-size:9px;" form="formPrimeShop" oninput="validity.valid||(value="");" required></td><td valign="middle"><input type="number" name="itemEnchant[]" min="0" value="0" style="width:30px;font-size:9px;" form="formPrimeShop" oninput="validity.valid||(value="");" required></td><td valign="middle"><input type="number" name="itemFire[]" min="0" value="0" style="width:30px;font-size:9px;" form="formPrimeShop" oninput="validity.valid||(value="");" required></td><td valign="middle"><input type="number" name="itemWater[]" min="0" value="0" style="width:30px;font-size:9px;" form="formPrimeShop" oninput="validity.valid||(value="");" required></td><td valign="middle"><input type="number" name="itemWind[]" min="0" value="0" style="width:30px;font-size:9px;" form="formPrimeShop" oninput="validity.valid||(value="");" required></td><td valign="middle"><input type="number" name="itemEarth[]" min="0" value="0" style="width:30px;font-size:9px;" form="formPrimeShop" oninput="validity.valid||(value="");" required></td><td valign="middle"><input type="number" name="itemHoly[]" min="0" value="0" style="width:30px;font-size:9px;" form="formPrimeShop" oninput="validity.valid||(value="");" required></td><td valign="middle"><input type="number" name="itemDark[]" min="0" value="0" style="width:30px;font-size:9px;" form="formPrimeShop" oninput="validity.valid||(value="");" required></td><td valign="middle"><span class="btn btn-sm btn-primary remScnt" aria-hidden="true">&times;</span></td></tr>').appendTo('#p_scents');
+					i++;
+					return false;
+				});
+				$("#p_scents").on("click",".remScnt", function(){
+					if( i > 0 ) {
+						$(this).parent().closest("tr").remove();
+						i--;
+					}
+					return false;
+				});
+			});
+			$(document).ready(function(){
+				$("#blockMsg").on("click", function(){
+					Swal.fire({
+						title: 'Block/Unblock messages',
+						showConfirmButton: false,
+						html: '<small>Block/Unblock user account of create/reply messages?</small><br><br><form action="" method="post" style="margin:0px padding:0px;"><input name="username" placeholder="User account name" class="form-control mb-3 accounts" autocomplete="off" required><select name="type" class="form-select mb-3" required><option value="1">Block user account</option><option value="2">Unblock user account</option></select><input type="submit" name="submitBlockMsg" value="Submit" class="btn btn-primary"></form>'
+					})
+				});
+				$( ".informerMap" ).css( "maxHeight", ( $( window ).height() * 0.7 | 0 ) + "px" );
+				var x = {INFORMER_POS_X} - ($(".informerMap").width()/2);
+				var y = {INFORMER_POS_Y} - ($(".informerMap").height()/2);
+				$('.informerMap').scrollLeft(x).scrollTop(y);
+				$("#serverChronicle").on("change",function() {
+					if (this.value == "Interlude") {
+						$("#customSwitch2").prop("disabled", false);
+						$("#customSwitch3").prop("disabled", false);
+					} else {
+						$("#customSwitch2").prop("disabled", true);
+						$("#customSwitch2").prop("checked", false);
+						$("#customSwitch3").prop("disabled", true);
+						$("#customSwitch3").prop("checked", false);
+						if($("#customSwitch1").prop("disabled"))
+							$("#customSwitch1").prop("disabled", false);
+					}
+				});
+				if ($("#serverChronicle").val() != "Interlude"){
+					$("#customSwitch2").prop("disabled", true);
+					$("#customSwitch2").prop("checked", false);
+					$("#customSwitch3").prop("disabled", true);
+					$("#customSwitch3").prop("checked", false);
+				}
+				$("#customSwitch1").on("click",function() {
+					if ($("#serverChronicle").val() == "Interlude"){
+						if (this.checked) {
+							$("#customSwitch2").prop("disabled", true);
+							$("#customSwitch2").prop("checked", false);
+							$("#customSwitch3").prop("disabled", true);
+							$("#customSwitch3").prop("checked", false);
+						} else {
+							$("#customSwitch2").prop("disabled", false);
+							$("#customSwitch3").prop("disabled", false);
+						}
+					}
+				});
+				if($("#customSwitch1").prop("checked")){$
+					("#customSwitch2").prop("disabled", true);
+					$("#customSwitch2").prop("checked", false);
+					$("#customSwitch3").prop("disabled", true);
+					$("#customSwitch3").prop("checked", false);
+				}
+				$("#customSwitch2").on("click",function() {
+					if (this.checked) {
+						$("#customSwitch1").prop("disabled", true);
+						$("#customSwitch1").prop("checked", false);
+					} else {
+						$("#customSwitch1").prop("disabled", false);
+						$("#customSwitch3").prop("checked", false);
+					}
+				});
+				$("#customSwitch3").on("click",function() {
+					if (this.checked) {
+						$("#customSwitch1").prop("disabled", true);
+						$("#customSwitch1").prop("checked", false);
+						$("#customSwitch2").prop("checked", true);
+					} else {
+						if(!$("#customSwitch2").prop("checked"))
+							$("#customSwitch1").prop("disabled", false);
+					}
+				});
+				if($("#customSwitch2").prop("checked") || $("#customSwitch3").prop("checked")){$
+					("#customSwitch1").prop("disabled", true);
+					$("#customSwitch1").prop("checked", false);
+					if($("#customSwitch3").prop("checked"))
+						$("#customSwitch2").prop("checked", true);
+				}
+				$("#customSwitch4").on("click",function() {
+					if (this.checked) {
+						if($("#smtpHost").prop("disabled"))
+							$("#smtpHost").prop("disabled", false);
+						if($("#smtpPort").prop("disabled"))
+							$("#smtpPort").prop("disabled", false);
+						if($("#smtpEmail").prop("disabled"))
+							$("#smtpEmail").prop("disabled", false);
+						if($("#smtpPass").prop("disabled"))
+							$("#smtpPass").prop("disabled", false);
+					} else {
+						if (!$("#customSwitch5").prop("checked")) {
+							$("#smtpHost").prop("disabled", true);
+							$("#smtpPort").prop("disabled", true);
+							$("#smtpEmail").prop("disabled", true);
+							$("#smtpPass").prop("disabled", true);
+						}
+					}
+				});
+				$("#customSwitch5").on("click",function() {
+					if (this.checked) {
+						if($("#smtpHost").prop("disabled"))
+							$("#smtpHost").prop("disabled", false);
+						if($("#smtpPort").prop("disabled"))
+							$("#smtpPort").prop("disabled", false);
+						if($("#smtpEmail").prop("disabled"))
+							$("#smtpEmail").prop("disabled", false);
+						if($("#smtpPass").prop("disabled"))
+							$("#smtpPass").prop("disabled", false);
+					} else {
+						if (!$("#customSwitch4").prop("checked")) {
+							$("#smtpHost").prop("disabled", true);
+							$("#smtpPort").prop("disabled", true);
+							$("#smtpEmail").prop("disabled", true);
+							$("#smtpPass").prop("disabled", true);
+						}
+					}
+				});
+				if(!$("#customSwitch4").prop("checked") && !$("#customSwitch5").prop("checked")){
+					$("#smtpHost").prop("disabled", true);
+					$("#smtpPort").prop("disabled", true);
+					$("#smtpEmail").prop("disabled", true);
+					$("#smtpPass").prop("disabled", true);
+				}
+				$("#customSwitch6").on("click",function() {
+					if (this.checked) {
+						if($("#bankName").prop("disabled"))
+							$("#bankName").prop("disabled", false);
+						if($("#depositBranch").prop("disabled"))
+							$("#depositBranch").prop("disabled", false);
+						if($("#depositAccount").prop("disabled"))
+							$("#depositAccount").prop("disabled", false);
+						if($("#depositType").prop("disabled"))
+							$("#depositType").prop("disabled", false);
+						if($("#depositBeneficiary").prop("disabled"))
+							$("#depositBeneficiary").prop("disabled", false);
+						if($("#depositCpf").prop("disabled"))
+							$("#depositCpf").prop("disabled", false);
+						if($("#confirmationEmail").prop("disabled"))
+							$("#confirmationEmail").prop("disabled", false);
+					} else {
+						if(!$("#customSwitch7").prop("checked") && !$("#customSwitch8").prop("checked") && !$("#customSwitch51").prop("checked"))
+							$("#confirmationEmail").prop("disabled", true);
+						$("#bankName").prop("disabled", true);
+						$("#depositBranch").prop("disabled", true);
+						$("#depositAccount").prop("disabled", true);
+						$("#depositType").prop("disabled", true);
+						$("#depositBeneficiary").prop("disabled", true);
+						$("#depositCpf").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch6").prop("checked")){
+					$("#bankName").prop("disabled", true);
+					$("#depositBranch").prop("disabled", true);
+					$("#depositAccount").prop("disabled", true);
+					$("#depositType").prop("disabled", true);
+					$("#depositBeneficiary").prop("disabled", true);
+					$("#depositCpf").prop("disabled", true);
+				}
+				$("#customSwitch7").on("click",function() {
+					if (this.checked) {
+						if($("#PS_Currency").prop("disabled"))
+							$("#PS_Currency").prop("disabled", false);
+						if($("#amountBrlCoins").prop("disabled"))
+							$("#amountBrlCoins").prop("disabled", false);
+						if($("#pagseguroEmail").prop("disabled"))
+							$("#pagseguroEmail").prop("disabled", false);
+						if($("#pagseguroToken").prop("disabled"))
+							$("#pagseguroToken").prop("disabled", false);
+						if($("#confirmationEmail").prop("disabled"))
+							$("#confirmationEmail").prop("disabled", false);
+					} else {
+						if(!$("#customSwitch6").prop("checked") && !$("#customSwitch8").prop("checked") && !$("#customSwitch51").prop("checked"))
+							$("#confirmationEmail").prop("disabled", true);
+						$("#PS_Currency").prop("disabled", true);
+						$("#amountBrlCoins").prop("disabled", true);
+						$("#pagseguroEmail").prop("disabled", true);
+						$("#pagseguroToken").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch7").prop("checked")){
+					$("#PS_Currency").prop("disabled", true);
+					$("#amountBrlCoins").prop("disabled", true);
+					$("#pagseguroEmail").prop("disabled", true);
+					$("#pagseguroToken").prop("disabled", true);
+				}
+				$("#customSwitch8").on("click",function() {
+					if (this.checked) {
+						if($("#PP_Currency").prop("disabled"))
+							$("#PP_Currency").prop("disabled", false);
+						if($("#amountUsdCoins").prop("disabled"))
+							$("#amountUsdCoins").prop("disabled", false);
+						if($("#paypalEmail").prop("disabled"))
+							$("#paypalEmail").prop("disabled", false);
+						if($("#confirmationEmail").prop("disabled"))
+							$("#confirmationEmail").prop("disabled", false);
+					} else {
+						if(!$("#customSwitch6").prop("checked") && !$("#customSwitch7").prop("checked") && !$("#customSwitch51").prop("checked"))
+							$("#confirmationEmail").prop("disabled", true);
+						$("#PP_Currency").prop("disabled", true);
+						$("#amountUsdCoins").prop("disabled", true);
+						$("#paypalEmail").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch8").prop("checked")){
+					$("#PP_Currency").prop("disabled", true);
+					$("#amountUsdCoins").prop("disabled", true);
+					$("#paypalEmail").prop("disabled", true);
+				}
+				$("#customSwitch51").on("click",function() {
+					if (this.checked) {
+						if($("#MP_Currency").prop("disabled"))
+							$("#MP_Currency").prop("disabled", false);
+						if($("#amountMPCoins").prop("disabled"))
+							$("#amountMPCoins").prop("disabled", false);
+						if($("#mercadopagoToken").prop("disabled"))
+							$("#mercadopagoToken").prop("disabled", false);
+						if($("#confirmationEmail").prop("disabled"))
+							$("#confirmationEmail").prop("disabled", false);
+					} else {
+						if(!$("#customSwitch6").prop("checked") && !$("#customSwitch7").prop("checked") && !$("#customSwitch8").prop("checked"))
+							$("#confirmationEmail").prop("disabled", true);
+						$("#MP_Currency").prop("disabled", true);
+						$("#amountMPCoins").prop("disabled", true);
+						$("#mercadopagoToken").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch51").prop("checked")){
+					$("#MP_Currency").prop("disabled", true);
+					$("#amountMPCoins").prop("disabled", true);
+					$("#mercadopagoToken").prop("disabled", true);
+				}
+				if(!$("#customSwitch6").prop("checked") && !$("#customSwitch7").prop("checked") && !$("#customSwitch8").prop("checked") && !$("#customSwitch51").prop("checked"))
+					$("#confirmationEmail").prop("disabled", true);
+				$("#customSwitch9").on("click",function() {
+					if (this.checked) {
+						if($("#newsMax").prop("disabled"))
+							$("#newsMax").prop("disabled", false);
+					} else {
+						$("#newsMax").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch9").prop("checked"))
+					$("#newsMax").prop("disabled", true);
+				$("#customSwitch10").on("click",function() {
+					if (this.checked) {
+						if($("#screenshotsMax").prop("disabled"))
+							$("#screenshotsMax").prop("disabled", false);
+					} else {
+						$("#screenshotsMax").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch10").prop("checked"))
+					$("#screenshotsMax").prop("disabled", true);
+				$("#customSwitch11").on("click",function() {
+					if (this.checked) {
+						if($("#videosMax").prop("disabled"))
+							$("#videosMax").prop("disabled", false);
+					} else {
+						$("#videosMax").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch11").prop("checked"))
+					$("#videosMax").prop("disabled", true);
+				$("#customSwitch16").on("click",function() {
+					if (this.checked) {
+						if($("#classPvp").prop("disabled"))
+							$("#classPvp").prop("disabled", false);
+					} else {
+						$("#classPvp").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch16").prop("checked"))
+					$("#classPvp").prop("disabled", true);
+				$("#customSwitch18").on("click",function() {
+					if (this.checked) {
+						if($("#classPk").prop("disabled"))
+							$("#classPk").prop("disabled", false);
+					} else {
+						$("#classPk").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch18").prop("checked"))
+					$("#classPk").prop("disabled", true);
+				$("#customSwitch20").on("click",function() {
+					if (this.checked) {
+						if($("#goldbar").prop("disabled"))
+							$("#goldbar").prop("disabled", false);
+					} else {
+						$("#goldbar").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch20").prop("checked"))
+					$("#goldbar").prop("disabled", true);
+				$("#customSwitch27").on("click",function() {
+					if (this.checked) {
+						if($("#onlineDays").prop("disabled"))
+							$("#onlineDays").prop("disabled", false);
+						if($("#onlineRewards").prop("disabled"))
+							$("#onlineRewards").prop("disabled", false);
+					} else {
+						$("#onlineDays").prop("disabled", true);
+						$("#onlineRewards").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch27").prop("checked")){
+					$("#onlineDays").prop("disabled", true);
+					$("#onlineRewards").prop("disabled", true);
+				}
+				$("#customSwitch28").on("click",function() {
+					if (this.checked) {
+						if($("#pvpAmount").prop("disabled"))
+							$("#pvpAmount").prop("disabled", false);
+						if($("#pvpRewards").prop("disabled"))
+							$("#pvpRewards").prop("disabled", false);
+					} else {
+						$("#pvpAmount").prop("disabled", true);
+						$("#pvpRewards").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch28").prop("checked")){
+					$("#pvpAmount").prop("disabled", true);
+					$("#pvpRewards").prop("disabled", true);
+				}
+				$("#customSwitch29").on("click",function() {
+					if (this.checked) {
+						if($("#pkAmount").prop("disabled"))
+							$("#pkAmount").prop("disabled", false);
+						if($("#pkRewards").prop("disabled"))
+							$("#pkRewards").prop("disabled", false);
+					} else {
+						$("#pkAmount").prop("disabled", true);
+						$("#pkRewards").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch29").prop("checked")){
+					$("#pkAmount").prop("disabled", true);
+					$("#pkRewards").prop("disabled", true);
+				}
+				$("#customSwitch26").on("click",function() {
+					if (this.checked) {
+						if($("#customSwitch27").prop("disabled"))
+							$("#customSwitch27").prop("disabled", false);
+						if($("#customSwitch28").prop("disabled"))
+							$("#customSwitch28").prop("disabled", false);
+						if($("#customSwitch29").prop("disabled"))
+							$("#customSwitch29").prop("disabled", false);
+						if($("#RewardLoc").prop("disabled"))
+							$("#RewardLoc").prop("disabled", false);
+					} else {
+						if($("#customSwitch27").prop("checked"))
+							$("#customSwitch27").click();
+						$("#customSwitch27").prop("disabled", true);
+						if($("#customSwitch28").prop("checked"))
+							$("#customSwitch28").click();
+						$("#customSwitch28").prop("disabled", true);
+						if($("#customSwitch29").prop("checked"))
+							$("#customSwitch29").click();
+						$("#customSwitch29").prop("disabled", true);
+						$("#RewardLoc").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch26").prop("checked")){
+					$("#customSwitch27").prop("checked", false);
+					$("#customSwitch27").prop("disabled", true);
+					$("#customSwitch28").prop("checked", false);
+					$("#customSwitch28").prop("disabled", true);
+					$("#customSwitch29").prop("checked", false);
+					$("#customSwitch29").prop("disabled", true);
+					$("#RewardLoc").prop("disabled", true);
+				}
+				$("#customSwitch30").on("click",function() {
+					if (this.checked) {
+						if($("#primePage").prop("disabled"))
+							$("#primePage").prop("disabled", false);
+						if($("#primeLoc").prop("disabled"))
+							$("#primeLoc").prop("disabled", false);
+					} else {
+						$("#primePage").prop("disabled", true);
+						$("#primeLoc").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch30").prop("checked")){
+					$("#primePage").prop("disabled", true);
+					$("#primeLoc").prop("disabled", true);
+				}
+				$("#customSwitch35").on("click",function() {
+					if (this.checked) {
+						if($("#itemBrokerAuctionDays").prop("disabled"))
+							$("#itemBrokerAuctionDays").prop("disabled", false);
+						if($("#itemBrokerAuctionRange").prop("disabled"))
+							$("#itemBrokerAuctionRange").prop("disabled", false);
+					} else {
+						$("#itemBrokerAuctionDays").prop("disabled", true);
+						$("#itemBrokerAuctionRange").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch35").prop("checked")){
+					$("#itemBrokerAuctionDays").prop("disabled", true);
+					$("#itemBrokerAuctionRange").prop("disabled", true);
+				}
+				$("#customSwitch31").on("click",function() {
+					if (this.checked) {
+						if($("#customSwitch32").prop("disabled"))
+							$("#customSwitch32").prop("disabled", false);
+						if($("#customSwitch33").prop("disabled"))
+							$("#customSwitch33").prop("disabled", false);
+						if($("#customSwitch34").prop("disabled"))
+							$("#customSwitch34").prop("disabled", false);
+						if($("#customSwitch35").prop("disabled"))
+							$("#customSwitch35").prop("disabled", false);
+						if($("#itemBrokerPage").prop("disabled"))
+							$("#itemBrokerPage").prop("disabled", false);
+						if($("#itemBrokerLoc").prop("disabled"))
+							$("#itemBrokerLoc").prop("disabled", false);
+						if($("#d-grade").prop("disabled"))
+							$("#d-grade").prop("disabled", false);
+						if($("#c-grade").prop("disabled"))
+							$("#c-grade").prop("disabled", false);
+						if($("#b-grade").prop("disabled"))
+							$("#b-grade").prop("disabled", false);
+						if($("#a-grade").prop("disabled"))
+							$("#a-grade").prop("disabled", false);
+						if($("#s-grade").prop("disabled"))
+							$("#s-grade").prop("disabled", false);
+						if($("#s80-grade").prop("disabled"))
+							$("#s80-grade").prop("disabled", false);
+						if($("#s84-grade").prop("disabled"))
+							$("#s84-grade").prop("disabled", false);
+						if($("#r-grade").prop("disabled"))
+							$("#r-grade").prop("disabled", false);
+						if($("#r95-grade").prop("disabled"))
+							$("#r95-grade").prop("disabled", false);
+						if($("#r99-grade").prop("disabled"))
+							$("#r99-grade").prop("disabled", false);
+						if($("#r110-grade").prop("disabled"))
+							$("#r110-grade").prop("disabled", false);
+					} else {
+						$("#customSwitch32").prop("checked", false);
+						$("#customSwitch32").prop("disabled", true);
+						$("#customSwitch33").prop("checked", false);
+						$("#customSwitch33").prop("disabled", true);
+						$("#customSwitch34").prop("checked", false);
+						$("#customSwitch34").prop("disabled", true);
+						if($("#customSwitch35").prop("checked"))
+							$("#customSwitch35").click();
+						$("#customSwitch35").prop("disabled", true);
+						$("#itemBrokerPage").prop("disabled", true);
+						$("#itemBrokerLoc").prop("disabled", true);
+						$("#c-grade").prop("disabled", true);
+						$("#d-grade").prop("disabled", true);
+						$("#b-grade").prop("disabled", true);
+						$("#a-grade").prop("disabled", true);
+						$("#s-grade").prop("disabled", true);
+						$("#s80-grade").prop("disabled", true);
+						$("#s84-grade").prop("disabled", true);
+						$("#r-grade").prop("disabled", true);
+						$("#r95-grade").prop("disabled", true);
+						$("#r99-grade").prop("disabled", true);
+						$("#r110-grade").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch31").prop("checked")){
+					$("#customSwitch32").prop("checked", false);
+					$("#customSwitch32").prop("disabled", true);
+					$("#customSwitch33").prop("checked", false);
+					$("#customSwitch33").prop("disabled", true);
+					$("#customSwitch34").prop("checked", false);
+					$("#customSwitch34").prop("disabled", true);
+					$("#customSwitch35").prop("checked", false);
+					$("#customSwitch35").prop("disabled", true);
+					$("#itemBrokerPage").prop("disabled", true);
+					$("#itemBrokerLoc").prop("disabled", true);
+					$("#d-grade").prop("disabled", true);
+					$("#c-grade").prop("disabled", true);
+					$("#b-grade").prop("disabled", true);
+					$("#a-grade").prop("disabled", true);
+					$("#s-grade").prop("disabled", true);
+					$("#s80-grade").prop("disabled", true);
+					$("#s84-grade").prop("disabled", true);
+					$("#r-grade").prop("disabled", true);
+					$("#r95-grade").prop("disabled", true);
+					$("#r99-grade").prop("disabled", true);
+					$("#r110-grade").prop("disabled", true);
+				}
+				$("#customSwitch37").on("click",function() {
+					if (this.checked) {
+						if($("#characterAuctionDays").prop("disabled"))
+							$("#characterAuctionDays").prop("disabled", false);
+						if($("#characterAuctionRange").prop("disabled"))
+							$("#characterAuctionRange").prop("disabled", false);
+					} else {
+						$("#characterAuctionDays").prop("disabled", true);
+						$("#characterAuctionRange").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch37").prop("checked")){
+					$("#characterAuctionDays").prop("disabled", true);
+					$("#characterAuctionRange").prop("disabled", true);
+				}
+				$("#customSwitch36").on("click",function() {
+					if (this.checked) {
+						if($("#customSwitch37").prop("disabled"))
+							$("#customSwitch37").prop("disabled", false);
+						if($("#characterMinLevel").prop("disabled"))
+							$("#characterMinLevel").prop("disabled", false);
+						if($("#characterPage").prop("disabled"))
+							$("#characterPage").prop("disabled", false);
+					} else {
+						if($("#customSwitch37").prop("checked"))
+							$("#customSwitch37").click();
+						$("#customSwitch37").prop("disabled", true);
+						$("#characterPage").prop("disabled", true);
+						$("#characterMinLevel").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch36").prop("checked")){
+					$("#customSwitch37").prop("checked", false);
+					$("#customSwitch37").prop("disabled", true);
+					$("#characterMinLevel").prop("disabled", true);
+					$("#characterPage").prop("disabled", true);
+				}
+				$("#customSwitch38").on("click",function() {
+					if (this.checked) {
+						if($("#customSwitch39").prop("disabled"))
+							$("#customSwitch39").prop("disabled", false);
+						if($("#customSwitch40").prop("disabled"))
+							$("#customSwitch40").prop("disabled", false);
+						if($("#allowItemsCEnchant").prop("checked"))
+							if($("#enchantChance").prop("disabled"))
+								$("#enchantChance").prop("disabled", false);
+						if($("#allowItemsDEnchant").prop("disabled"))
+							$("#allowItemsDEnchant").prop("disabled", false);
+						if($("#allowItemsDEnchant").prop("checked"))
+							if($("#enchantDGrade").prop("disabled"))
+								$("#enchantDGrade").prop("disabled", false);
+						if($("#allowItemsCEnchant").prop("disabled"))
+							$("#allowItemsCEnchant").prop("disabled", false);
+						if($("#allowItemsCEnchant").prop("checked"))
+							if($("#enchantCGrade").prop("disabled"))
+								$("#enchantCGrade").prop("disabled", false);
+						if($("#allowItemsBEnchant").prop("disabled"))
+							$("#allowItemsBEnchant").prop("disabled", false);
+						if($("#allowItemsBEnchant").prop("checked"))
+							if($("#enchantBGrade").prop("disabled"))
+								$("#enchantBGrade").prop("disabled", false);
+						if($("#allowItemsAEnchant").prop("disabled"))
+							$("#allowItemsAEnchant").prop("disabled", false);
+						if($("#allowItemsAEnchant").prop("checked"))
+							if($("#enchantAGrade").prop("disabled"))
+								$("#enchantAGrade").prop("disabled", false);
+						if($("#allowItemsSEnchant").prop("disabled"))
+							$("#allowItemsSEnchant").prop("disabled", false);
+						if($("#allowItemsSEnchant").prop("checked"))
+							if($("#enchantSGrade").prop("disabled"))
+								$("#enchantSGrade").prop("disabled", false);
+						if($("#allowItemsS80Enchant").prop("disabled"))
+							$("#allowItemsS80Enchant").prop("disabled", false);
+						if($("#allowItemsS80Enchant").prop("checked"))
+							if($("#enchantS80Grade").prop("disabled"))
+								$("#enchantS80Grade").prop("disabled", false);
+						if($("#allowItemsS84Enchant").prop("disabled"))
+							$("#allowItemsS84Enchant").prop("disabled", false);
+						if($("#allowItemsS84Enchant").prop("checked"))
+							if($("#enchantS84Grade").prop("disabled"))
+								$("#enchantS84Grade").prop("disabled", false);
+						if($("#allowItemsREnchant").prop("disabled"))
+							$("#allowItemsREnchant").prop("disabled", false);
+						if($("#allowItemsREnchant").prop("checked"))
+							if($("#enchantRGrade").prop("disabled"))
+								$("#enchantRGrade").prop("disabled", false);
+						if($("#allowItemsR95Enchant").prop("disabled"))
+							$("#allowItemsR95Enchant").prop("disabled", false);
+						if($("#allowItemsR95Enchant").prop("checked"))
+							if($("#enchantR95Grade").prop("disabled"))
+								$("#enchantR95Grade").prop("disabled", false);
+						if($("#allowItemsR99Enchant").prop("disabled"))
+							$("#allowItemsR99Enchant").prop("disabled", false);
+						if($("#allowItemsR99Enchant").prop("checked"))
+							if($("#enchantR99Grade").prop("disabled"))
+								$("#enchantR99Grade").prop("disabled", false);
+						if($("#allowItemsR110Enchant").prop("disabled"))
+							$("#allowItemsR110Enchant").prop("disabled", false);
+						if($("#allowItemsR110Enchant").prop("checked"))
+							if($("#enchantR110Grade").prop("disabled"))
+								$("#enchantR110Grade").prop("disabled", false);
+					} else {
+						$("#customSwitch39").prop("checked", false);
+						$("#customSwitch39").prop("disabled", true);
+						$("#customSwitch40").prop("checked", false);
+						$("#customSwitch40").prop("disabled", true);
+						$("#enchantChance").prop("disabled", true);
+						$("#allowItemsDEnchant").prop("disabled", true);
+						if($("#allowItemsDEnchant").prop("checked"))
+							$("#enchantDGrade").prop("disabled", true);
+						$("#allowItemsCEnchant").prop("disabled", true);
+						if($("#allowItemsCEnchant").prop("checked"))
+							$("#enchantCGrade").prop("disabled", true);
+						$("#allowItemsBEnchant").prop("disabled", true);
+						if($("#allowItemsBEnchant").prop("checked"))
+							$("#enchantBGrade").prop("disabled", true);
+						$("#allowItemsAEnchant").prop("disabled", true);
+						if($("#allowItemsAEnchant").prop("checked"))
+							$("#enchantAGrade").prop("disabled", true);
+						$("#allowItemsSEnchant").prop("disabled", true);
+						if($("#allowItemsSEnchant").prop("checked"))
+							$("#enchantSGrade").prop("disabled", true);
+						$("#allowItemsS80Enchant").prop("disabled", true);
+						if($("#allowItemsS80Enchant").prop("checked"))
+							$("#enchantS80Grade").prop("disabled", true);
+						$("#allowItemsS84Enchant").prop("disabled", true);
+						if($("#allowItemsS84Enchant").prop("checked"))
+							$("#enchantS84Grade").prop("disabled", true);
+						$("#allowItemsREnchant").prop("disabled", true);
+						if($("#allowItemsREnchant").prop("checked"))
+							$("#enchantRGrade").prop("disabled", true);
+						$("#allowItemsR95Enchant").prop("disabled", true);
+						if($("#allowItemsR95Enchant").prop("checked"))
+							$("#enchantR95Grade").prop("disabled", true);
+						$("#allowItemsR99Enchant").prop("disabled", true);
+						if($("#allowItemsR99Enchant").prop("checked"))
+							$("#enchantR99Grade").prop("disabled", true);
+						$("#allowItemsR110Enchant").prop("disabled", true);
+						if($("#allowItemsR110Enchant").prop("checked"))
+							$("#enchantR110Grade").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch38").prop("checked")){
+					$("#customSwitch39").prop("checked", false);
+					$("#customSwitch39").prop("disabled", true);
+					$("#customSwitch40").prop("checked", false);
+					$("#customSwitch40").prop("disabled", true);
+					$("#enchantChance").prop("disabled", true);
+					$("#allowItemsDEnchant").prop("disabled", true);
+					$("#enchantDGrade").prop("disabled", true);
+					$("#allowItemsCEnchant").prop("disabled", true);
+					$("#enchantCGrade").prop("disabled", true);
+					$("#allowItemsBEnchant").prop("disabled", true);
+					$("#enchantBGrade").prop("disabled", true);
+					$("#allowItemsAEnchant").prop("disabled", true);
+					$("#enchantAGrade").prop("disabled", true);
+					$("#allowItemsSEnchant").prop("disabled", true);
+					$("#enchantSGrade").prop("disabled", true);
+					$("#allowItemsS80Enchant").prop("disabled", true);
+					$("#enchantS80Grade").prop("disabled", true);
+					$("#allowItemsS84Enchant").prop("disabled", true);
+					$("#enchantS84Grade").prop("disabled", true);
+					$("#allowItemsREnchant").prop("disabled", true);
+					$("#enchantRGrade").prop("disabled", true);
+					$("#allowItemsR95Enchant").prop("disabled", true);
+					$("#enchantR95Grade").prop("disabled", true);
+					$("#allowItemsR99Enchant").prop("disabled", true);
+					$("#enchantR99Grade").prop("disabled", true);
+					$("#allowItemsR110Enchant").prop("disabled", true);
+					$("#enchantR110Grade").prop("disabled", true);
+				}
+				if(!$("#allowItemsDEnchant").prop("checked"))
+					$("#enchantDGrade").prop("disabled", true);
+				if(!$("#allowItemsCEnchant").prop("checked"))
+					$("#enchantCGrade").prop("disabled", true);
+				if(!$("#allowItemsBEnchant").prop("checked"))
+					$("#enchantBGrade").prop("disabled", true);
+				if(!$("#allowItemsAEnchant").prop("checked"))
+					$("#enchantAGrade").prop("disabled", true);
+				if(!$("#allowItemsSEnchant").prop("checked"))
+					$("#enchantSGrade").prop("disabled", true);
+				if(!$("#allowItemsS80Enchant").prop("checked"))
+					$("#enchantS80Grade").prop("disabled", true);
+				if(!$("#allowItemsS84Enchant").prop("checked"))
+					$("#enchantS84Grade").prop("disabled", true);
+				if(!$("#allowItemsREnchant").prop("checked"))
+					$("#enchantRGrade").prop("disabled", true);
+				if(!$("#allowItemsR95Enchant").prop("checked"))
+					$("#enchantR95Grade").prop("disabled", true);
+				if(!$("#allowItemsR99Enchant").prop("checked"))
+					$("#enchantR99Grade").prop("disabled", true);
+				if(!$("#allowItemsR110Enchant").prop("checked"))
+					$("#enchantR110Grade").prop("disabled", true);
+				$("#allowItemsDEnchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantDGrade").prop("disabled", false);
+					} else {
+						$("#enchantDGrade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsCEnchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantCGrade").prop("disabled", false);
+					} else {
+						$("#enchantCGrade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsBEnchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantBGrade").prop("disabled", false);
+					} else {
+						$("#enchantBGrade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsAEnchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantAGrade").prop("disabled", false);
+					} else {
+						$("#enchantAGrade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsSEnchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantSGrade").prop("disabled", false);
+					} else {
+						$("#enchantSGrade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsS80Enchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantS80Grade").prop("disabled", false);
+					} else {
+						$("#enchantS80Grade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsS84Enchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantS84Grade").prop("disabled", false);
+					} else {
+						$("#enchantS84Grade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsREnchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantRGrade").prop("disabled", false);
+					} else {
+						$("#enchantRGrade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsR95Enchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantR95Grade").prop("disabled", false);
+					} else {
+						$("#enchantR95Grade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsR99Enchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantR99Grade").prop("disabled", false);
+					} else {
+						$("#enchantR99Grade").prop("disabled", true);
+					}
+				});
+				$("#allowItemsR110Enchant").on("click",function() {
+					if (this.checked) {
+						$("#enchantR110Grade").prop("disabled", false);
+					} else {
+						$("#enchantR110Grade").prop("disabled", true);
+					}
+				});
+				$("#customSwitch42").on("click",function() {
+					if (this.checked) {
+						if($("#baseClassPrice").prop("disabled"))
+							$("#baseClassPrice").prop("disabled", false);
+					} else {
+						$("#baseClassPrice").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch42").prop("checked")){
+					$("#baseClassPrice").prop("disabled", true);
+				}
+				$("#customSwitch43").on("click",function() {
+					if (this.checked) {
+						if($("#sexPrice").prop("disabled"))
+							$("#sexPrice").prop("disabled", false);
+					} else {
+						$("#sexPrice").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch43").prop("checked")){
+					$("#sexPrice").prop("disabled", true);
+				}
+				$("#customSwitch44").on("click",function() {
+					if (this.checked) {
+						if($("#nicknamePrice").prop("disabled"))
+							$("#nicknamePrice").prop("disabled", false);
+					} else {
+						$("#nicknamePrice").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch44").prop("checked")){
+					$("#nicknamePrice").prop("disabled", true);
+				}
+				$("#customSwitch45").on("click",function() {
+					if (this.checked) {
+						if($("#accountPrice").prop("disabled"))
+							$("#accountPrice").prop("disabled", false);
+					} else {
+						$("#accountPrice").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch45").prop("checked")){
+					$("#accountPrice").prop("disabled", true);
+				}
+				$("#customSwitch41").on("click",function() {
+					if (this.checked) {
+						if($("#customSwitch42").prop("disabled"))
+							$("#customSwitch42").prop("disabled", false);
+						if($("#customSwitch43").prop("disabled"))
+							$("#customSwitch43").prop("disabled", false);
+						if($("#customSwitch44").prop("disabled"))
+							$("#customSwitch44").prop("disabled", false);
+						if($("#customSwitch45").prop("disabled"))
+							$("#customSwitch45").prop("disabled", false);
+					} else {
+						if($("#customSwitch42").prop("checked"))
+							$("#customSwitch42").click();
+						$("#customSwitch42").prop("disabled", true);
+						if($("#customSwitch43").prop("checked"))
+							$("#customSwitch43").click();
+						$("#customSwitch43").prop("disabled", true);
+						if($("#customSwitch44").prop("checked"))
+							$("#customSwitch44").click();
+						$("#customSwitch44").prop("disabled", true);
+						if($("#customSwitch45").prop("checked"))
+							$("#customSwitch45").click();
+						$("#customSwitch45").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch41").prop("checked")){
+					$("#customSwitch42").prop("checked", false);
+					$("#customSwitch42").prop("disabled", true);
+					$("#customSwitch43").prop("checked", false);
+					$("#customSwitch43").prop("disabled", true);
+					$("#customSwitch44").prop("checked", false);
+					$("#customSwitch44").prop("disabled", true);
+					$("#customSwitch45").prop("checked", false);
+					$("#customSwitch45").prop("disabled", true);
+				}
+				$("#customSwitch46").on("click",function() {
+					if (this.checked) {
+						if($("#fakePlayersNum").prop("disabled"))
+							$("#fakePlayersNum").prop("disabled", false);
+					} else {
+						$("#fakePlayersNum").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch46").prop("checked")){
+					$("#fakePlayersNum").prop("disabled", true);
+				}
+				$("#customSwitch50").on("click",function() {
+					if (this.checked) {
+						if($("#customSwitch46").prop("disabled"))
+							$("#customSwitch46").prop("disabled", false);
+					} else {
+						if($("#customSwitch46").prop("checked"))
+							$("#customSwitch46").click();
+						$("#customSwitch46").prop("disabled", true);
+					}
+				});
+				if(!$("#customSwitch50").prop("checked")){
+					if($("#customSwitch46").prop("checked"))
+						$("#customSwitch46").click();
+					$("#customSwitch46").prop("disabled", true);
+				}
+				$("#customSwitch47").on("click",function() {
+					if (this.checked) {
+						$("#customSwitch48").prop("checked", false);
+						if(!$("#customSwitch48").prop("disabled"))
+							$("#customSwitch48").prop("disabled", true);
+						$("#customSwitch49").prop("checked", false);
+						if(!$("#customSwitch49").prop("disabled"))
+							$("#customSwitch49").prop("disabled", true);
+					} else {
+						$("#customSwitch48").prop("disabled", false);
+						$("#customSwitch49").prop("disabled", false);
+					}
+				});
+				if($("#customSwitch47").prop("checked")){
+					$("#customSwitch48").prop("checked", false);
+					$("#customSwitch48").prop("disabled", true);
+					$("#customSwitch49").prop("checked", false);
+					$("#customSwitch49").prop("disabled", true);
+				}
+				$("#customSwitch48").on("click",function() {
+					if (this.checked) {
+						if(!$("#customSwitch47").prop("disabled"))
+							$("#customSwitch47").prop("disabled", true);
+					} else {
+						if(!$("#customSwitch49").prop("checked"))
+							$("#customSwitch47").prop("disabled", false);
+					}
+				});
+				$("#customSwitch49").on("click",function() {
+					if (this.checked) {
+						if(!$("#customSwitch47").prop("disabled"))
+							$("#customSwitch47").prop("disabled", true);
+					} else {
+						if(!$("#customSwitch48").prop("checked"))
+							$("#customSwitch47").prop("disabled", false);
+					}
+				});
+				if($("#customSwitch48").prop("checked") || $("#customSwitch49").prop("checked")){
+					$("#customSwitch47").prop("checked", false);
+					$("#customSwitch47").prop("disabled", true);
+				}
+				popBoxWaitImage.src = "images/miscs/spinner40.gif";
+				popBoxRevertImage = "images/miscs/magminus.gif";
+				popBoxPopImage = "images/miscs/magplus.gif";
+				var query = location.search.slice(1);
+				var partes = query.split('&');
+				if(partes.length > 1){
+					partes.forEach(function (parte) {
+							var chaveValor = parte.split('=');
+							if(chaveValor[0] == 'show'){
+								if(chaveValor[1] == '' || chaveValor[1] == null)
+									$('#icp-panel-home').addClass('active');
+								else
+									$('#icp-panel-'+chaveValor[1]).addClass('active');
+							}
+					});
+				}else{
+					$('#icp-panel-home').addClass('active');
+				}
+				feather.replace();
+				var $modalTitle;
+				var $modalBody;
+				var $modalFooter;
+				$('.modal-btn').click(function() {
+					$modalTitle = $(this).attr('modalTitle');
+					$modalBody = $(this).attr('modalBody');
+					$modalFooter = $(this).attr('modalFooter');
+				});
+				$('#modalVideos').on('shown.bs.modal', function (e) {
+					$(".modal-video-title").html($modalTitle);
+					$(".modal-video-body").html($modalBody);
+					$(".modal-video-footer").html($modalFooter);
+				});
+				$('#modalVideos').on('hide.bs.modal', function (e) {
+					$(".modal-video-title").html('');
+					$(".modal-video-body").html('');
+					$(".modal-video-footer").html('');
+				});
+				var $modalAlertTitle;
+				var $modalAlertBody;
+				var $modalAlertFooter;
+				$('.modal-alert').click(function() {
+					$modalAlertTitle = $(this).html();
+					$modalAlertBody = $(this).attr('description');
+					$modalAlertFooter = $(this).attr('footer');
+				});
+				$('#modal-alert').on('shown.bs.modal', function (e) {
+					$(".modal-alert-title").html($modalAlertTitle);
+					$(".modal-alert-body").html($modalAlertBody);
+					$(".modal-alert-footer").html($modalAlertFooter);
+				});
+				$('#modal-alert').on('hide.bs.modal', function (e) {
+					$(".modal-alert-title").html('');
+					$(".modal-alert-body").html('');
+					$(".modal-alert-footer").html('');
+				});
+			});
+		</script>
+	</body>
+</html>

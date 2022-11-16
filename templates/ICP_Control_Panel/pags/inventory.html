@@ -1,0 +1,122 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+	<div class='row w-100'>
+		<div class='col-sm-3'>
+			<h1 class="h2 mb-0">Inventory</h1>
+			<small class="text-muted">Showing {PANEL_ITEM_OWNER_NAME} items</small>
+		</div>
+		{PANEL_ITEM_FORM_SELL}
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-4">
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Equiped Items
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-striped table-sm mb-0">
+						<thead>
+							<tr align="center">
+								<th style="width:40px;">Img</th>
+								<th>Name</th>
+								<th style="max-width:40px;">{PANEL_ITEM_TITLE_SELL}</th>
+							</tr>
+						</thead>
+						<tbody style="font-size:14px;">
+							<!-- BEGIN BLOCK_ICP_PANEL_EQUIPED_ITEMS -->
+								<tr align="center">
+									<td valign="middle" style="width:40px;">{PANEL_ITEM_DETAILS}<img src="images/icons/{PANEL_ITEM_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+									<td valign="middle">{PANEL_ITEM_NAME}</td>
+									<td valign="middle" style="max-width:40px;">{PANEL_ITEM_CAN_SELL}</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_EQUIPED_ITEMS -->
+							<!-- BEGIN BLOCK_ICP_PANEL_EQUIPED_ITEMS_NULL -->
+								<tr>
+									<td valign="middle" colspan="3">No items equipped.</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_EQUIPED_ITEMS_NULL -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Inventory Items
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-striped table-sm mb-0">
+						<thead>
+							<tr align="center">
+								<th style="width:40px;">Img</th>
+								<th>Name</th>
+								<th style="max-width:40px;">{PANEL_ITEM_TITLE_SELL}</th>
+							</tr>
+						</thead>
+						<tbody style="font-size:14px;">
+							<!-- BEGIN BLOCK_ICP_PANEL_INVENTORY_ITEMS -->
+								<tr align="center">
+									<td valign="middle" style="width:40px;">{PANEL_ITEM_DETAILS}<img src="images/icons/{PANEL_ITEM_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+									<td valign="middle">{PANEL_ITEM_NAME}</td>
+									<td valign="middle" style="max-width:40px;">{PANEL_ITEM_CAN_SELL}</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_INVENTORY_ITEMS -->
+							<!-- BEGIN BLOCK_ICP_PANEL_INVENTORY_ITEMS_NULL -->
+								<tr>
+									<td valign="middle" colspan="3">Inventory is empty.</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_INVENTORY_ITEMS_NULL -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Warehouse Items
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-striped table-sm mb-0">
+						<thead>
+							<tr align="center">
+								<th style="width:40px;">Img</th>
+								<th>Name</th>
+								<th style="max-width:40px;">{PANEL_ITEM_TITLE_SELL}</th>
+							</tr>
+						</thead>
+						<tbody style="font-size:14px;">
+							<!-- BEGIN BLOCK_ICP_PANEL_WAREHOUSE_ITEMS -->
+								<tr align="center">
+									<td valign="middle" style="width:40px;">{PANEL_ITEM_DETAILS}<img src="images/icons/{PANEL_ITEM_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+									<td valign="middle">{PANEL_ITEM_NAME}</td>
+									<td valign="middle" style="max-width:40px;">{PANEL_ITEM_CAN_SELL}</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_WAREHOUSE_ITEMS -->
+							<!-- BEGIN BLOCK_ICP_PANEL_WAREHOUSE_ITEMS_NULL -->
+								<tr>
+									<td valign="middle" colspan="3">Warehouse is empty.</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_WAREHOUSE_ITEMS_NULL -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

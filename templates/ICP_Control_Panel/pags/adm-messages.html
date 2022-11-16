@@ -1,0 +1,229 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<style>
+	.breadcrumb-item + .breadcrumb-item::before {
+		content: '>';
+	}
+</style>
+<!-- BEGIN CONFIG_ICP_PANEL_MESSAGES -->
+	<!-- BEGIN CONFIG_ICP_PANEL_UNREAD_MESSAGES -->
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">Messages</h1>
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Moderation
+				</button>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="?icp=panel&show=adm-messages&new=true"><span data-feather="plus"></span> New message</a>
+					<a class="dropdown-item" href="javascript:void(0)" id="blockMsg"><span data-feather="slash" style="position:relative;top:-2px;"></span> Block/Unblock user</a>
+				</div>
+			</div>
+		</div>
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item active" aria-current="page">Inbox</li>
+			</ol>
+		</nav>
+		<div class="border rounded pt-3 pb-3 mb-3 shadow">
+			<div class="bg-light border rounded text-center m-3 mt-0 p-2">{SITE_NAME} messages center</div>
+			<div class="border border-bottom-0 rounded m-3 mb-0">
+				<!-- BEGIN BLOCK_MSGS_TO_REPLY -->
+					<div class="row {CONTACT_MSG_ACTIVE_DIV}{CONTACT_MSG_FIX_CSS_TOP}{CONTACT_MSG_FIX_CSS_BOTTOM} border-bottom align-items-center ms-0 me-0">
+						<div class="col p-2 ps-3" style="font-size:11px; min-width:190px;">
+							<div style="float:right; margin-top:2px; font-size:12px;">{CONTACT_REPLY_COUNT} replies</div>
+							<a href="?icp=panel&show=adm-messages&id={CONTACT_MSG_ID}" class="text-decoration-none" style="font-size:16px;{CONTACT_MSG_ACTIVE_LINK}">{CONTACT_MSG_TITLE}</a><br>
+							By: {CONTACT_MSG_AUTHOR}
+						</div>
+						<div class="col-auto p-2" style="width:195px;">
+							<div class="row">
+								<div class="col-auto me-3" style="width:38px;">
+									<image class="border rounded" width="38" height="38" src="images/profiles/{CONTACT_MSG_PROFILE_IMG}" />
+								</div>
+								<div class="col" style="font-size:12px;">
+									{CONTACT_MSG_ANSWERED}<br>
+									<a href="?icp=panel&show=adm-messages&id={CONTACT_MSG_ID}#{CONTACT_REPLY_ID}" class="text-decoration-none">{CONTACT_MSG_DATE}</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- END BLOCK_MSGS_TO_REPLY -->
+				<!-- BEGIN BLOCK_MSGS_TO_REPLY_NULL -->
+					<p class="text-center">No message to reply.</p>
+				<!-- END BLOCK_MSGS_TO_REPLY_NULL -->
+			</div>
+		</div>
+		<!-- BEGIN BLOCK_PAGINATION -->
+			<nav aria-label="Pagination">
+				<ul class="pagination justify-content-center">
+					{PAGINATION}
+				</ul>
+			</nav>
+		<!-- END BLOCK_PAGINATION -->
+	<!-- END CONFIG_ICP_PANEL_UNREAD_MESSAGES -->
+	<!-- BEGIN CONFIG_ICP_PANEL_UNREAD_MESSAGES_NULL -->
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">Messages</h1>
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Moderation
+				</button>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="?icp=panel&show=adm-messages&new=true"><span data-feather="plus"></span> New message</a>
+					<a class="dropdown-item" href="javascript:void(0)" id="blockMsg"><span data-feather="slash" style="position:relative;top:-2px;"></span> Block/Unblock user</a>
+				</div>
+			</div>
+		</div>
+		<p class="text-center">Inbox is empty.</p>
+	<!-- END CONFIG_ICP_PANEL_UNREAD_MESSAGES_NULL -->
+	<!-- BEGIN CONFIG_ICP_PANEL_NEW_MESSAGE -->
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">Messages</h1>
+		</div>
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="?icp=panel&show=adm-messages" class="text-decoration-none">Inbox</a></li>
+				<li class="breadcrumb-item active" aria-current="page">New message</li>
+			</ol>
+		</nav>
+		<div class="border rounded mt-4 mb-3 p-3 pb-0 shadow">
+			<div class="bg-light border rounded text-center mb-3 p-2">Contact us</div>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Account</span>
+				</div>
+				<input type="text" class="form-control accounts" form="sendMsg" name="recipient" required>
+			</div>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Subject</span>
+				</div>
+				<input type="text" class="form-control" form="sendMsg" name="subject" required>
+			</div>
+			<textarea class="form-control mb-3" form="sendMsg" rows="8" name="message" required></textarea>
+			<div class="row">
+				<div class="col-sm-10">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Upload</span>
+						</div>
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" form="sendMsg" id="inputGroupFile01" name="file" accept=".gif,.jpg,.png,.bmp,.pdf">
+							<label class="custom-file-label" for="inputGroupFile01" style="overflow:hidden; line-height:24px;">Choose a file <span class="text-muted" style="opacity:0.5;">( Allowed files: .gif, .jpg, .png, .bmp and .pdf )</span></label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2 text-end">
+					<button type="submit" class="btn btn-primary w-100 mb-3" name="submitMsg" form="sendMsg">Submit</button>
+				</div>
+			</div>
+		</div>
+		<form action="" method="post" style="margin:0px;padding:0px" id="sendMsg" enctype="multipart/form-data"></form>
+	<!-- END CONFIG_ICP_PANEL_NEW_MESSAGE -->
+	<!-- BEGIN CONFIG_ICP_PANEL_READ_MESSAGES -->
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">Messages</h1>
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Moderation
+				</button>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="?icp=panel&show=adm-messages&lock=true&id={CONTACT_MSG_ID}">{CONTACT_BUTTON_LOCK}</a>
+					<a class="dropdown-item" href="?icp=panel&show=adm-messages&delete=true&id={CONTACT_MSG_ID}"><span data-feather="trash-2" style="position:relative;top:-2px;"></span> Delete message</a>
+				</div>
+			</div>
+		</div>
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="?icp=panel&show=adm-messages" class="text-decoration-none">Inbox</a></li>
+				<li class="breadcrumb-item active" aria-current="page">{CONTACT_MSG_TITLE}</li>
+			</ol>
+		</nav>
+		<div class="border rounded mt-4 mb-3 p-3 pb-0 shadow">
+			<div class="bg-light border rounded text-center mb-3 p-2">{CONTACT_MSG_TITLE}</div>
+			<!-- BEGIN CONFIG_ICP_PANEL_READ_MESSAGE_DETAILS -->
+				<div class="border rounded mb-3 p-3" style="position:relative;">
+					<div class="row">
+						<div class="col-auto me-3" style="width:100px;">
+							<image class="news-profile" width="100" height="100" src="images/profiles/{CONTACT_MSG_PROFILE_IMG}" /><br>
+							{CONTACT_MSG_PROFILE_OFFICE}
+							<div class="news-author" style="width:100px">{CONTACT_MSG_ANSWERED}</div>
+						</div>
+						<div class="col">
+							<div class="rounded w-100" style="background-color:#F5F5F5;padding:3px 8px;font-size:12px;">{CONTACT_MSG_DATE}<div style="float:right;" id="{CONTACT_REPLY_ID}"></div><div style="float:right;"><a href="?icp=panel&show=adm-messages&id={CONTACT_MSG_ID}&reply_id={CONTACT_REPLY_ID}&delete_reply=true" class="text-decoration-none">Delete</a></div></div>
+							<div class="w-100" style="padding:3px 8px 45px 8px;">
+								{CONTACT_MSG_TEXT}
+								{CONTACT_MSG_ATTACH}
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- END CONFIG_ICP_PANEL_READ_MESSAGE_DETAILS -->
+		</div>
+		<!-- BEGIN BLOCK_PAGINATION2 -->
+			<nav aria-label="Pagination" style="margin-top:30px;">
+				<ul class="pagination justify-content-center">
+					{PAGINATION}
+				</ul>
+			</nav>
+		<!-- END BLOCK_PAGINATION2 -->
+		<!-- BEGIN CONFIG_ICP_PANEL_MSG_ALLOW_REPLY -->
+			<div class="border rounded mt-4 mb-3 p-3 pb-0 shadow">
+				<div class="bg-light border rounded text-center mb-3 p-2">Reply</div>
+				<input type="hidden" form="sendMsg" name="msgId" value="{CONTACT_MSG_ID}">
+				<textarea class="form-control mb-3" form="sendMsg" rows="8" name="message" required></textarea>
+				<div class="row">
+					<div class="col-sm-10">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Upload</span>
+							</div>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" form="sendMsg" id="inputGroupFile01" name="file" name="screenshot" accept=".gif,.jpg,.png,.bmp,.pdf">
+								<label class="custom-file-label" for="inputGroupFile01" style="overflow:hidden; line-height:24px;">Choose a file <span class="text-muted" style="opacity:0.5;">( Allowed files: .gif, .jpg, .png, .bmp and .pdf )</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2 text-end">
+						<button type="submit" class="btn btn-primary w-100 mb-3" name="submitMsg" form="sendMsg">Submit</button>
+					</div>
+				</div>
+			</div>
+			<form action="" method="post" style="margin:0px;padding:0px" id="sendMsg" enctype="multipart/form-data"></form>
+		<!-- END CONFIG_ICP_PANEL_MSG_ALLOW_REPLY -->
+		<!-- BEGIN CONFIG_ICP_PANEL_MSG_ALLOW_REPLY_NULL -->
+			<p class="text-center">Locked: Unable to send messages.</p>
+		<!-- END CONFIG_ICP_PANEL_MSG_ALLOW_REPLY_NULL -->
+	<!-- END CONFIG_ICP_PANEL_READ_MESSAGES -->
+	<!-- BEGIN CONFIG_ICP_PANEL_READ_MESSAGES_NULL -->
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">Messages</h1>
+		</div>
+		<p class="text-center">Message not found.</p>
+	<!-- END CONFIG_ICP_PANEL_READ_MESSAGES_NULL -->
+	<script>
+	document.querySelector('.custom-file-input').addEventListener('change',function(e){
+		var fileName = document.getElementById("inputGroupFile01").files[0].name;
+		var nextSibling = e.target.nextElementSibling;
+		nextSibling.innerText = fileName;
+	});
+	</script>
+<!-- END CONFIG_ICP_PANEL_MESSAGES -->
+<!-- BEGIN CONFIG_ICP_PANEL_MESSAGES_NULL -->
+	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+		<h1 class="h2">Messages</h1>
+	</div>
+	<p class="text-center">Unauthorized user.</p>
+<!-- END CONFIG_ICP_PANEL_MESSAGES_NULL -->
+<!-- BEGIN CONFIG_ICP_PANEL_MESSAGES_DISABLED -->
+	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+		<h1 class="h2">Messages</h1>
+	</div>
+	<p class="text-center">Messages system id disabled.</p>
+<!-- END CONFIG_ICP_PANEL_MESSAGES_DISABLED -->

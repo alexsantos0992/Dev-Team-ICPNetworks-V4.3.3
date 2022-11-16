@@ -1,0 +1,137 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">My ScreenShots</h1>
+</div>
+<div class="row">
+	<div class="col-sm-8">
+		<div class="row">
+			<div class="text-center">
+				<p>Total of <b>{INDEX_SCREENSHOTS_TOTAL}</b> aproved ScreenShots. Showing from {INDEX_SCREENSHOTS_START} to {INDEX_SCREENSHOTS_STOP}.</p>
+			</div>
+			<div class="row">
+				<!-- BEGIN BLOCK_GALLERY_MY_SCREENSHOTS -->
+					<div class="col-sm-4">
+						<div class="card mb-3">
+							<div class="card-header text-center">
+								{INDEX_SCREENSHOTS_AUTHOR}
+							</div>
+							<img alt="ScreenShots" src="images/screenshots/thumbs/{INDEX_SCREENSHOTS_IMG}" pbsrc="images/screenshots/{INDEX_SCREENSHOTS_IMG}" pbCaption="Author: {INDEX_SCREENSHOTS_AUTHOR} - Legend: {INDEX_SCREENSHOTS_LEGEND} - Date: {INDEX_SCREENSHOTS_DATE}" class="card-img-top PopBoxImageSmall" onclick="Pop(this,50,'PopBoxImageLarge');" />
+							<div class="card-body">
+								Legend: {INDEX_SCREENSHOTS_LEGEND}<br>
+								Date: {INDEX_SCREENSHOTS_DATE}
+							</div>
+						</div>
+					</div>
+				<!-- END BLOCK_GALLERY_MY_SCREENSHOTS -->
+				<!-- BEGIN BLOCK_PAGINATION -->
+					<nav aria-label="Pagination">
+						<ul class="pagination justify-content-center">
+							{PAGINATION}
+						</ul>
+					</nav>
+				<!-- END BLOCK_PAGINATION -->
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Upload your ScreenShots
+			</div>
+			<div class="card-body">
+				<ul>
+					<li>
+						Submit your best screenshots to the {SITE_NAME}!
+					</li>
+					<li>
+						All screenshots will be approved by Staff {SITE_NAME} before to be published on the website.
+					</li>
+					<li>
+						Tip: Press Alt + H to remove the menus from the game, press again to return.
+					</li>
+				</ul>
+				<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST -->
+					<form action="" method="post" enctype="multipart/form-data">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Upload</span>
+							</div>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="inputGroupFile01" name="screenshot" accept=".gif,.jpg,.png,.bmp" required>
+								<label class="custom-file-label" for="inputGroupFile01">Choose a ScreenShot</label>
+							</div>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Author</span>
+							</div>
+							<select type="text" class="form-select" name="charName" required>
+								<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST_DETAILS -->
+									<option value="{PANEL_CHARACTER_LIST_NAME}"{PANEL_CHARACTER_LIST_ONLINE}>{PANEL_CHARACTER_LIST_NAME}</option>
+								<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST_DETAILS -->
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Legend</span>
+							</div>
+							<input type="text" class="form-control" name="legend" required>
+						</div>
+						<input type="submit" class="btn btn-primary btn-sm w-100" name="submitScreenshot" value="Submit ScreenShot">
+					</form>
+				<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST -->
+				<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+					<p>You have not created any char on our server yet.</p>
+				<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Uploaded ScreenShots
+			</div>
+			<div class="card-body pb-0">
+				<h5 class="pb-2 mb-3 border-bottom text-center">Waiting for approval</h5>
+				<!-- BEGIN BLOCK_GALLERY_MY_SCREENSHOTS_WAITING -->
+					<div class="table-responsive">
+						<table class="table table-striped table-sm">
+							<thead>
+								<tr>
+									<td valign="middle">Date</td>
+									<td valign="middle">Preview</td>
+									<td valign="middle">Author</td>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- BEGIN BLOCK_GALLERY_MY_SCREENSHOTS_WAITING_LIST -->
+									<tr>
+										<td valign="middle">{INDEX_SCREENSHOTS_DATE}</td>
+										<td valign="middle"><a href="javascript:void(0)" pbsrc="images/screenshots/{INDEX_SCREENSHOTS_IMG}" pbCaption="Author: {INDEX_SCREENSHOTS_AUTHOR} - Legend: {INDEX_SCREENSHOTS_LEGEND} - Date: {INDEX_SCREENSHOTS_DATE}" class="PopBoxImageSmall" onclick="Pop(this,50,'PopBoxImageLarge');">Image</a></td>
+										<td valign="middle">{INDEX_SCREENSHOTS_AUTHOR}</td>
+									</tr>
+								<!-- END BLOCK_GALLERY_MY_SCREENSHOTS_WAITING_LIST -->
+							</tbody>
+						</table>
+					</div>
+				<!-- END BLOCK_GALLERY_MY_SCREENSHOTS_WAITING -->
+				<!-- BEGIN BLOCK_GALLERY_MY_SCREENSHOTS_WAITING_NULL -->
+					<p>No screenshot awaiting approval</p>
+				<!-- END BLOCK_GALLERY_MY_SCREENSHOTS_WAITING_NULL -->
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+document.querySelector('.custom-file-input').addEventListener('change',function(e){
+	var fileName = document.getElementById("inputGroupFile01").files[0].name;
+	var nextSibling = e.target.nextElementSibling;
+	nextSibling.innerText = fileName;
+});
+</script>

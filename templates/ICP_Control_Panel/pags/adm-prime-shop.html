@@ -1,0 +1,100 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">Prime Shop</h1>
+</div>
+<!-- BEGIN CONFIG_ICP_PANEL_PRIME_SHOP -->
+	<div class="card mb-3">
+		<div class="card-header text-center">
+			Add Prime Shop items
+		</div>
+		<div class="card-body pb-0">
+			<div class="text-end">
+				<button class="btn btn-primary mb-4" id="addScnt">Add item(s)</button>
+			</div>
+			<div class="table-responsive">
+				<table class="table table-striped table-sm text-center">
+					<thead>
+						<tr>
+							<th valign="middle">ID</th>
+							<th valign="middle">Amount</th>
+							<th valign="middle">Ench.</th>
+							<th valign="middle">Fire</th>
+							<th valign="middle">Water</th>
+							<th valign="middle">Wind</th>
+							<th valign="middle">Earth</th>
+							<th valign="middle">Holy</th>
+							<th valign="middle">Dark</th>
+							<th valign="middle">-</th>
+						</tr>
+					</thead>
+					<tbody id="p_scents">
+					</tbody>
+				</table>
+			</div>
+			<div class="row mt-3">
+				<div class="col-sm-9">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Price</span>
+						</div>
+						<input type="number" class="form-control" name="itemPrice" min="1" value="1" form="formPrimeShop" oninput="validity.valid||(value='');" required>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<input type="submit" name="addPrimeShop" form="formPrimeShop" class="btn btn-primary mb-3 w-100" value="Add on Prime Shop">
+				</div>
+			</div>
+		</div>
+	</div>
+	<form action="" method="post" style="margin:0px; padding:0px;" id="formPrimeShop"></form>
+	<div class="card mb-3 mt-5">
+		<div class="card-header text-center">
+			Remove Prime Shop items
+		</div>
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-striped table-sm mb-0 w-100">
+					<thead>
+						<tr>
+							<th style="width:40px;">Img</th>
+							<th>Item Name</th>
+							<th>Enchant</th>
+							<th>Count</th>
+							<th>Price</th>
+							<th style="width:50px;">Del</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- BEGIN BLOCK_ICP_PANEL_PRIME_SHOP -->
+							<tr>
+								<td valign="middle">{PANEL_PRIME_DETAILS}<img src="images/icons/{PANEL_PRIME_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+								<td valign="middle">{PANEL_PRIME_NAME}</td>
+								<td valign="middle">+{PANEL_PRIME_ENCHANT}</td>
+								<td valign="middle">{PANEL_PRIME_COUNT}</td>
+								<td valign="middle">{PANEL_PRIME_PRICE}</td>
+								<td valign="middle"><button type="submit" name="removePrimeShop" form="removePrimeShop" value="{PANEL_PRIME_ID}" class="btn btn-sm btn-primary" aria-hidden="true">&times;</button></td>
+							</tr>
+						<!-- END BLOCK_ICP_PANEL_PRIME_SHOP -->
+						<!-- BEGIN BLOCK_ICP_PANEL_PRIME_SHOP_NULL -->
+							<tr>
+								<td valign="middle" colspan="6">No premium items added yet.</td>
+							</tr>
+						<!-- END BLOCK_ICP_PANEL_PRIME_SHOP_NULL -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<form action="" method="post" style="margin:0px; padding:0px;" id="removePrimeShop"></form>
+<!-- END CONFIG_ICP_PANEL_PRIME_SHOP -->
+<!-- BEGIN CONFIG_ICP_PANEL_PRIME_SHOP_NULL -->
+	<p class="text-center">Unauthorized user.</p>
+<!-- END CONFIG_ICP_PANEL_PRIME_SHOP_NULL -->

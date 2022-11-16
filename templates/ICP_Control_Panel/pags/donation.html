@@ -1,0 +1,22 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+	<h1 class="h2 mb-0">Donations</h1>
+</div>
+<!-- BEGIN BLOCK_ICP_PANEL_DONATION -->
+	<div class="row">
+		<!-- BEGIN BLOCK_ICP_PANEL_DONATION_METHODS -->
+			{DONATION_OPTIONS}
+		<!-- END BLOCK_ICP_PANEL_DONATION_METHODS -->
+	</div>
+<!-- END BLOCK_ICP_PANEL_DONATION -->
+<!-- BEGIN BLOCK_ICP_PANEL_DONATION_NULL -->
+	<p class="text-center">Donate system is disabled.</p>
+<!-- END BLOCK_ICP_PANEL_DONATION_NULL -->

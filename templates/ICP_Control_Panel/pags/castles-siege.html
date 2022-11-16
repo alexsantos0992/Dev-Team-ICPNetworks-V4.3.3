@@ -1,0 +1,33 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">Castles siege</h1>
+</div>
+<div class="row">
+	<!-- BEGIN BLOCK_RANK_CASTLES -->
+		<div class="col-sm-4">
+			<div class="card mb-3">
+				<div class="card-header text-center" style="text-transform: capitalize;">
+					{RANK_CASTLE_NAME} Castle
+				</div>
+				<img src="images/castles/castle_{RANK_CASTLE_NAME}.jpg" pbsrc="images/castles/castle_{RANK_CASTLE_NAME}.jpg" pbCaption="{RANK_CASTLE_NAME} Castle" title="{RANK_CASTLE_NAME} Castle" class="card-img-top PopBoxImageSmall" onClick="Pop(this,50,'PopBoxImageLarge');" />
+				<div class="card-body">
+					<strong>Leader:</strong> {RANK_CASTLE_OWNER}<br>
+					<strong>Clan:</strong> {RANK_CASTLE_CLAN}<br>
+					<strong>Allyance:</strong> {RANK_CASTLE_ALLY}<br>
+					<strong>Tax:</strong> {RANK_CASTLE_TAX}%<br>
+					<strong>Siege date:</strong> {RANK_CASTLE_DATE}<br>
+					<strong>Attackers:</strong> {RANK_CASTLE_ATTACKERS}<br>
+					<strong>Deffenders:</strong> {RANK_CASTLE_DEFENDERS}
+				</div>
+			</div>
+		</div>
+	<!-- END BLOCK_RANK_CASTLES -->
+</div>

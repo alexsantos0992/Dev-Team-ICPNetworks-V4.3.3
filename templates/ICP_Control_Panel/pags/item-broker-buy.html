@@ -1,0 +1,152 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+	<h1 class="h2">Item Broker Purchase</h1>
+</div>
+<div class="card mb-3">
+	<div class="card-header text-center">
+		Item Broker Purchase Confirmation
+	</div>
+	<div class="card-body">
+		<!-- BEGIN BLOCK_ICP_PANEL_ITEM_BROKER_CONFIRMATION -->
+			<div class="row">
+				<div class="col-sm-8">
+					<!-- BEGIN BLOCK_ICP_PANEL_ITEM_BROKER_NORMAL_CONFIRMATION -->
+						<p class="text-center">Check the {PANEL_ITEM_BROKER_TYPE} of items below.</p>
+						<div class="table-responsive">
+							<table class="table table-striped table-sm mb-0 w-100">
+								<thead>
+									<tr>
+										<th style="width:40px;">Img</th>
+										<th>Item Name</th>
+										<th style="width:50px; text-align:center;">Enchant</th>
+										<th style="width:50px; text-align:center;">Count</th>
+										<th style="text-align:center;">Seller</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- BEGIN BLOCK_ICP_PANEL_ITEM_BROKER_NORMAL_CONFIRMATION_DETAILS -->
+										<tr>
+											<td valign="middle">{PANEL_ITEM_BROKER_DETAILS}<img src="images/icons/{PANEL_ITEM_BROKER_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+											<td valign="middle">{PANEL_ITEM_BROKER_NAME}</td>
+											<td valign="middle" style="text-align:center;">+{PANEL_ITEM_BROKER_ENCHANT}</td>
+											<td valign="middle" style="text-align:center;">{PANEL_ITEM_BROKER_COUNT}</td>
+											<td valign="middle" style="text-align:center;">{PANEL_ITEM_BROKER_CHAR_NAME}</td>
+										</tr>
+									<!-- END BLOCK_ICP_PANEL_ITEM_BROKER_NORMAL_CONFIRMATION_DETAILS -->
+								</tbody>
+								<tfoot>
+									<tr>
+										<th colspan="8" style="text-align:right">
+											Price: {PANEL_ITEM_BROKER_PRICE} {DONATE_COIN_NAME}
+										</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					<!-- END BLOCK_ICP_PANEL_ITEM_BROKER_NORMAL_CONFIRMATION -->
+					<!-- BEGIN BLOCK_ICP_PANEL_ITEM_BROKER_AUCTION_CONFIRMATION -->
+						<p class="text-center">Check the {PANEL_ITEM_BROKER_TYPE} of items below.</p>
+						<div class="table-responsive">
+							<table class="table table-striped table-sm mb-0 w-100">
+								<thead>
+									<tr>
+										<th style="width:40px;">Img</th>
+										<th>Item Name</th>
+										<th style="width:50px; text-align:center;">Enchant</th>
+										<th style="width:50px; text-align:center;">Count</th>
+										<th style="text-align:center;">Seller</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- BEGIN BLOCK_ICP_PANEL_ITEM_BROKER_AUCTION_CONFIRMATION_DETAILS -->
+										<tr>
+											<td valign="middle">{PANEL_ITEM_BROKER_DETAILS}<img src="images/icons/{PANEL_ITEM_BROKER_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+											<td valign="middle">{PANEL_ITEM_BROKER_NAME}</td>
+											<td valign="middle" style="text-align:center;">+{PANEL_ITEM_BROKER_ENCHANT}</td>
+											<td valign="middle" style="text-align:center;">{PANEL_ITEM_BROKER_COUNT}</td>
+											<td valign="middle" style="text-align:center;">{PANEL_ITEM_BROKER_CHAR_NAME}</td>
+										</tr>
+									<!-- END BLOCK_ICP_PANEL_ITEM_BROKER_AUCTION_CONFIRMATION_DETAILS -->
+								</tbody>
+								<tfoot>
+									<tr>
+										<th colspan="8" style="text-align:right">
+											Price: {PANEL_ITEM_BROKER_PRICE} {DONATE_COIN_NAME}
+										</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					<!-- END BLOCK_ICP_PANEL_ITEM_BROKER_AUCTION_CONFIRMATION -->
+				</div>
+				<div class="col">
+					<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST -->
+						<div class="card mb-3">
+							<div class="card-header text-center">
+								Purchase
+							</div>
+							<div class="card-body">
+								<p class="text-center">{PANEL_ITEM_BROKER_TXT_CONFIRM}</p>
+								<form action="" method="post">
+									{PANEL_ITEM_BROKER_SELECT}
+									<input type="hidden" name="itemBrokerId" value="{PANEL_ITEM_BROKER_ID}">
+									{PANEL_ITEM_BROKER_BUTTON}
+								</form>
+							</div>
+						</div>
+					<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST -->
+					<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+						<p>You have not created any char on our server yet.</p>
+					<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+					<!-- BEGIN BLOCK_ICP_PANEL_AUCTION_BIDS -->
+						<div class="card">
+							<div class="card-header text-center">
+								Auction history
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table table-striped table-sm mb-0 w-100">
+										<tbody style="font-size:12px;">
+											<tr><td>Auction starting bid: <strong>{PANEL_ITEM_BROKER_INITIAL_BID}</strong> {DONATE_COIN_NAME}</td></tr>
+											<tr><td>Last bid: <strong>{PANEL_ITEM_BROKER_LAST_BID}</strong></td></tr>
+											<tr><td>Next minimum bid: <strong>{PANEL_ITEM_BROKER_NEXT_BID}</strong> {DONATE_COIN_NAME}</strong></td></tr>
+											<tr><td>Auction started on: {PANEL_ITEM_BROKER_AUCTION_STARTED}</td></tr>
+											<tr><td>Auction ends on: {PANEL_ITEM_BROKER_AUCTION_ENDS}</td></tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="card mt-3">
+									<div class="card-header text-center">
+										Auction bids
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table table-striped table-sm mb-0 w-100">
+												<tbody style="font-size:11px;">
+													<!-- BEGIN BLOCK_ICP_PANEL_AUCTION_LASTS_BIDS -->
+														<tr><td>{PANEL_ITEM_BROKER_AUCTION_BIDS}</td></tr>
+													<!-- END BLOCK_ICP_PANEL_AUCTION_LASTS_BIDS -->
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- END BLOCK_ICP_PANEL_AUCTION_BIDS -->
+				</div>
+			</div>
+		<!-- END BLOCK_ICP_PANEL_ITEM_BROKER_CONFIRMATION -->
+		<!-- BEGIN BLOCK_ICP_PANEL_ITEM_BROKER_CONFIRMATION_NULL -->
+			<p>Item not found.</p>
+		<!-- END BLOCK_ICP_PANEL_ITEM_BROKER_CONFIRMATION_NULL -->
+	</div>
+</div>

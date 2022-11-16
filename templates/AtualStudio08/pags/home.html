@@ -1,0 +1,171 @@
+<!-- Banners -->
+<div class='banners'>
+	<div class='b1'>
+		<a href='./?icp=register'>
+			Cadastrar Agora			<span>Jogue grátis no melhor Interlude</span>
+		</a>
+		<img src='{TEMPLATE}imgs/banner1.jpg' />
+	</div>
+	<div class='b2'>
+		<a href='./?icp=donations'>
+			Adquira Coins			<span>Se fortaleça e torne-se o melhor</span>
+		</a>
+		<img src='{TEMPLATE}imgs/banner2.jpg' />
+	</div>
+</div>
+<section>
+	<aside>
+		<script type='text/javascript'>
+		$(document).ready(function(){
+			$('.banner > a:first-child').addClass('bvis');
+			$('.banner .circles div:first-child').addClass('act');
+			var rotateBannerAtualstudio = function() {
+				if($('input#tempBanner').val() == '1') {
+					var countA = $('.banner > a').length;
+					var relAtual = $('.banner > a.bvis').attr('rel');
+					var proxRel = parseInt(parseInt(relAtual)+1);
+					if(proxRel > countA) {
+						var proxRel = 1;
+					}
+					$('.banner > a').removeClass('bvis');
+					$('.banner > a[rel='+proxRel+']').addClass('bvis');
+					$('.banner .circles div').removeClass('act');
+					$('.banner .circles div[rel='+proxRel+']').addClass('act');
+				}
+				setTimeout(rotateBannerAtualstudio, 3000);
+			}
+			setTimeout(rotateBannerAtualstudio, 3000);
+			$('.banner').hover(function(){
+				$('input#tempBanner').val('2');
+			}, function(){
+				$('input#tempBanner').val('1');
+			});
+			$('.circles div').hover(function(){
+				var relCircle = $(this).attr('rel');
+				$('.banner .circles div').removeClass('act');
+				$(this).addClass('act');
+				$('.banner > a').removeClass('bvis');
+				$('.banner > a[rel='+relCircle+']').addClass('bvis');
+			});
+		});
+		</script>
+		<div class='banner'>
+			<div class='circles'>
+				<div rel='1' class='act'></div>
+				<div rel='2'></div>
+				<div rel='3'></div>
+			</div>
+			<a rel='1' href='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07.jpg' target='_blank' class='bvis'>
+				<div class='bmask'></div>
+				<img src='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07.jpg' />
+			</a>
+			<a rel='2' href='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07_en.jpg' target='_blank'>
+				<div class='bmask'></div>
+				<img src='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07_en.jpg' />
+			</a>
+			<a rel='3' href='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07_es.jpg' target='_blank'>
+				<div class='bmask'></div>
+				<img src='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07_es.jpg' />
+			</a>
+			<input type='hidden' id='tempBanner' value='1' />
+		</div>
+		<hr />
+		<!-- Ranking -->
+		<div class='box'>
+			<div class='title' id='40001'></div>
+			<div class='ct' style='padding-top:10px;'>
+				<div class='multitables'>	
+					<table border='0' cellpadding='0' cellspacing='0' class='pvp'>
+						<tr>
+							<th>Player</th>
+							<th>PvP</th>
+						</tr>
+						<!-- BEGIN BLOCK_INDEX_PVP -->
+							<tr class='{RANK_PVPPK_CSS_ADJUSTMENT}'>
+								<td>{RANK_PVPPK_POS} {RANK_PVPPK_NAME}</td>
+								<td>{RANK_PVPPK_COUNT}</td>
+							</tr>
+						<!-- END BLOCK_INDEX_PVP -->
+					</table>
+					<table border='0' cellpadding='0' cellspacing='0' class='pk'>
+						<tr>
+							<th>Player</th>
+							<th>PK</th>
+						</tr>
+						<!-- BEGIN BLOCK_INDEX_PK -->
+							<tr class='{RANK_PVPPK_CSS_ADJUSTMENT}'>
+								<td>{RANK_PVPPK_POS} {RANK_PVPPK_NAME}</td>
+								<td>{RANK_PVPPK_COUNT}</td>
+							</tr>
+						<!-- END BLOCK_INDEX_PK -->
+					</table>
+					<table border='0' cellpadding='0' cellspacing='0' class='clan'>
+						<tr>
+							<th>Clan</th>
+							<th>Lv</th>
+						</tr>
+						<tr class='RANK_CLAN_CSS_ADJUSTMENT'>
+							<td>pos &ordm;&nbsp;&nbsp; name</td>
+							<td>level</td>
+						</tr>
+					</table>
+				</div>
+				<a class='moreranks' href='./?icp=toppvp'>Ver mais rankings</a>
+			</div>
+		</div>
+		<!-- Ranking -->
+		<!-- Gallery -->
+		<div class='box'>
+			<div class='title' id='12026'></div>
+			<div class='ct'>
+				<div class='galleryBox'>
+					<div>
+						<!-- BEGIN BLOCK_INDEX_SCREENSHOTS_6 -->
+							<a href='images/screenshots/{INDEX_SCREENSHOTS_IMG}' rel='prettyPhoto[fullGallery]'>
+								<img src='images/screenshots/thumbs/{INDEX_SCREENSHOTS_IMG}'>
+								<div></div>
+							</a>
+						<!-- END BLOCK_INDEX_SCREENSHOTS_6 -->
+						<a class='moreranks' href='./?icp=gallery'>ver mais</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Gallery -->
+	</aside>
+	<article>
+		<!-- News -->	
+		<h1 id='13001'></h1>
+		<!-- BEGIN BLOCK_NEWS -->
+			<div class='news'>
+				<a class='imgn' href='./?icp=news&id={NEWS_ID}'><img src='images/profiles/{NEWS_PROFILE}' /></a>
+				<div class='contentn'>
+					<a href='./?icp=news&id={NEWS_ID}' class='titlen'>{NEWS_TITLE}</a>
+					<div class='textn'>
+						{NEWS_TEXT_MINI}
+					</div>
+					<div class='finalinfo'>
+						<div class='datan'>{NEWS_DATE}</div>
+						<div class='lermaisn'><a href='./?icp=news&id={NEWS_ID}'>ler mais &raquo;</a></div>
+					</div>
+				</div>
+			</div>
+			<div class='shadownew'></div>
+		<!-- END BLOCK_NEWS -->
+		<aside>
+			<div class='box'>
+				<div class='title'>Ajude-nos Votando</div>
+				<div class='ct vote'>
+					<footer>
+						<a href="#" target="_blank"><img src="https://l2topzone.com/90x60.png"></a>
+						<a href="#" target="_blank"><img src="https://hopzone.r.worldssl.net/img/_vbanners/lineage2/lineage2-90x60-1.gif"></a>
+						<a href="#" target="_blank"><img src="https://l2network.eu/images/button2.png"></a>
+						<center>
+							<a href="https://info.flagcounter.com/CSWO"><img src="https://s04.flagcounter.com/count2/CSWO/bg_000000/txt_FFF717/border_000000/columns_3/maxflags_19/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Free counters!" border="0"></a>
+						</center>
+					</footer>
+				</div>
+			</div>
+		</aside>
+	</article>
+</section>	

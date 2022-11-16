@@ -1,0 +1,155 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+	<h1 class="h2">Character changes</h1>Use your {DONATE_COIN_NAME} to edit your characters!
+</div>
+<div class="row mb-3">
+	<div class="col-sm-6">
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Choice of character
+			</div>
+			<div class="card-body pb-0">
+				<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST -->
+					<p class="text-center">Choose the character below to edit.</p>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Character</span>
+						</div>
+						<select class="form-select" onchange="this.disabled = true; window.location = '?icp=panel&show=character-changes&char_id=' + this.options[this.selectedIndex].value;" required>
+							<option>Select...</option>
+							<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST_DETAILS -->
+								<option value="{PANEL_CHARACTER_LIST_ID}"{PANEL_CHARACTER_LIST_ONLINE}>{PANEL_CHARACTER_LIST_NAME}</option>
+							<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST_DETAILS -->
+						</select>
+					</div>
+				<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST -->
+				<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+					<p class="text-center">You have not created any char on our server yet.</p>
+				<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Selected character
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<!-- BEGIN BLOCK_ICP_PANEL_SELECTED_CHARACTER_DETAILS -->
+						<div class="col" style="max-width:84px;">
+							<img src="images/races/{PANEL_SELECTED_CHARACTER_IMG}" width="75" height="75" style="border-radius:5px; border:1px solid #ddd;" data-toggle="tooltip" data-html="true" data-placement="right" title="<div class='itemDetails' style='border-radius:5px; border:1px solid #aaa; background: rgba(0,0,0,0.9)'>{PANEL_SELECTED_CHARACTER_DETAILS}</div>">
+						</div>
+						<div class="col">
+							<h5 class="mt-4">{PANEL_SELECTED_CHARACTER_NAME}</h5>
+						</div>
+					<!-- END BLOCK_ICP_PANEL_SELECTED_CHARACTER_DETAILS -->
+					<!-- BEGIN BLOCK_ICP_PANEL_SELECTED_CHARACTER_DETAILS_NULL -->
+						<div class="col" style="max-width:84px;">
+							<img src="images/races/noimage.jpg" width="75" height="75" style="border-radius:5px; border:1px solid #ddd;">
+						</div>
+						<div class="col">
+							<h5 class="mt-4">None</h5>
+						</div>
+					<!-- END BLOCK_ICP_PANEL_SELECTED_CHARACTER_DETAILS_NULL -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<!-- BEGIN BLOCK_ICP_PANEL_BASE_CHANGE -->
+		<div class="col-sm-3">
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					Base Class Change
+				</div>
+				<div class="card-body">
+					<p class="text-center">Select the new base class:</p>
+					<form action="" method="post" style="margin:0px; padding:0px;">
+						<select class="form-select mb-3" name="classId" required>
+							<option value="">Select...</option>
+							<!-- BEGIN BLOCK_ICP_PANEL_BASE_CHANGE_OPTIONS -->
+								<option value="{BASE_CHANGE_ID}">{BASE_CHANGE_NAME}</option>
+							<!-- END BLOCK_ICP_PANEL_BASE_CHANGE_OPTIONS -->
+						</select>
+						<input type="submit" class="btn btn-primary btn-sm w-100 mb-3" name="submitBaseChange" value="Base change">
+					</form>
+					<p class="text-center">By change your character base class all skills and points in the olympiads will be reseted.</p>
+					<p class="text-center">This action will cost <strong>{CHARACTER_BASE_CLASS_CHANGE_PRICE}</strong> {DONATE_COIN_NAME} and is irreversible.</p>
+				</div>
+			</div>
+		</div>
+	<!-- END BLOCK_ICP_PANEL_BASE_CHANGE -->
+	<!-- BEGIN BLOCK_ICP_PANEL_SEX_CHANGE -->
+		<div class="col-sm-3">
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					Sex Change
+				</div>
+				<div class="card-body">
+					<p class="text-center">Select the new sex:</p>
+					<form action="" method="post" style="margin:0px; padding:0px;">
+						<select class="form-select mb-3" name="sexId" required>
+							<option value="">Select...</option>
+							<option value="1">Male</option>
+							<option value="2">Female</option>
+						</select>
+						<input type="submit" class="btn btn-primary btn-sm w-100 mb-3" name="submitSexChange" value="Sex change">
+					</form>
+					<p class="text-center">This action will cost <strong>{CHARACTER_SEX_CHANGE_PRICE}</strong> {DONATE_COIN_NAME} and is irreversible.</p>
+				</div>
+			</div>
+		</div>
+	<!-- END BLOCK_ICP_PANEL_SEX_CHANGE -->
+	<!-- BEGIN BLOCK_ICP_PANEL_NICK_CHANGE -->
+		<div class="col-sm-3">
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					Nickname Change
+				</div>
+				<div class="card-body">
+					<p class="text-center">Choose the new nickname:</p>
+					<form action="" method="post" style="margin:0px; padding:0px;">
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" id="floatingNewNick" placeholder="New nickname" name="newName" autocomplete="off" required>
+							<label for="floatingNewNick">New nickname</label>
+						</div>
+						<input type="submit" class="btn btn-primary btn-sm w-100 mb-3" name="submitNickChange" value="Nick change">
+					</form>
+					<p class="text-center">Write the character name carefully!</p>
+					<p class="text-center">This action will cost <strong>{CHARACTER_NICKNAME_CHANGE_PRICE}</strong> {DONATE_COIN_NAME} and is irreversible.</p>
+				</div>
+			</div>
+		</div>
+	<!-- END BLOCK_ICP_PANEL_NICK_CHANGE -->
+	<!-- BEGIN BLOCK_ICP_PANEL_ACCOUNT_CHANGE -->
+		<div class="col-sm-3">
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					Account Change
+				</div>
+				<div class="card-body">
+					<p class="text-center">Choose the new account:</p>
+					<form action="" method="post" style="margin:0px; padding:0px;">
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" id="floatingNewAcc" placeholder="New account" name="newAccount" autocomplete="off" required>
+							<label for="floatingNewAcc">New account</label>
+						</div>
+						<input type="submit" class="btn btn-primary btn-sm w-100 mb-3" name="submitAccountChange" value="Account change">
+					</form>
+					<p class="text-center">Write the new account carefully!</p>
+					<p class="text-center">This action will cost <strong>{CHARACTER_ACCOUNT_CHANGE_PRICE}</strong> {DONATE_COIN_NAME} and is irreversible</p>
+				</div>
+			</div>
+		</div>
+	<!-- END BLOCK_ICP_PANEL_ACCOUNT_CHANGE -->
+</div>

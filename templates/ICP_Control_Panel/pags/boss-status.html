@@ -1,0 +1,82 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="row">
+	<div class="col-sm-6">
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">Grand bosses status</h1>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-striped table-sm">
+				<thead>
+					<tr align="center">
+						<th>Name</th>
+						<th>Level</th>
+						<th>Status</th>
+						<th>Respawn</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- BEGIN BLOCK_RANK_BOSSES -->
+						<tr>
+							<td valign="middle" align="center">
+								{RANK_BOSS_NAME}<br>
+								<img  alt="{RANK_BOSS_NAME}" src="images/bosses/{RANK_BOSS_NAME}.jpg" width="150" height="113" style="border:1px solid #999; margin-bottom:10px;" pbsrc="images/bosses/{RANK_BOSS_NAME}.jpg" pbCaption="{RANK_BOSS_NAME} - Status: {RANK_BOSS_STATUS} - Respawn: {RANK_BOSS_RESPAWN}" class="PopBoxImageSmall" onclick="Pop(this,50,'PopBoxImageLarge');">
+							</td>
+							<td valign="middle" align="center">
+								{RANK_BOSS_LEVEL}
+							</td>
+							<td valign="middle" align="center">
+								{RANK_BOSS_STATUS}
+							</td>
+							<td valign="middle" align="center">
+								{RANK_BOSS_RESPAWN}
+							</td>
+						</tr>
+					<!-- END BLOCK_RANK_BOSSES -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">Raid bosses status</h1>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-striped table-sm">
+				<thead>
+					<tr align="center">
+						<th>Name</th>
+						<th>Level</th>
+						<th>Status</th>
+						<th>Respawn</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- BEGIN BLOCK_RAID_BOSSES -->
+						<tr>
+							<td valign="middle" align="center">
+								{RANK_BOSS_NAME}
+							</td>
+							<td valign="middle" align="center">
+								{RANK_BOSS_LEVEL}
+							</td>
+							<td valign="middle" align="center">
+								{RANK_BOSS_STATUS}
+							</td>
+							<td valign="middle" align="center">
+								{RANK_BOSS_RESPAWN}
+							</td>
+						</tr>
+					<!-- END BLOCK_RAID_BOSSES -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

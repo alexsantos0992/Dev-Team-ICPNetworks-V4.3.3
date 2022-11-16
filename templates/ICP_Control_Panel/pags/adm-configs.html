@@ -1,0 +1,1022 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h3">ICP Panel Configs</h1>
+</div>
+<!-- BEGIN CONFIG_ICP_PANEL -->
+	<form action="" method="post" style="margin:0px;padding:0px;" id="configs"></form>
+	<div class="accordion mb-5" id="accordionExample">
+		<div class="card">
+			<div class="card-header" id="headingOne">
+				<h5 class="mb-0">
+					<button class="btn btn-link text-decoration-none w-100 text-start" style="box-shadow: none;" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						Server configs
+					</button>
+				</h5>
+			</div>
+			<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group row">
+								<label for="serverName" class="col-4 col-form-label col-form-label-sm">Server name:</label>
+								<div class="col-8 mb-3">
+									<input type="text" form="configs" name="serverName" class="form-control form-control-sm" id="serverName" value="{SITE_NAME}">
+								</div>
+								<label for="siteTitle" class="col-4 col-form-label col-form-label-sm">Server title:</label>
+								<div class="col-8 mb-3">
+									<input type="text" form="configs" name="siteTile" class="form-control form-control-sm" id="siteTitle" value="{SITE_TITLE}">
+								</div>
+								<label for="staticServer" class="col-4 col-form-label col-form-label-sm">Project:</label>
+								<div class="col-8 mb-3">
+									<input type="text" form="configs" readonly name="server" class="form-control form-control-sm" id="staticServer" value="{SERVER}">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group row">
+								<label for="serverSafeEnchant" class="col-3 col-form-label col-form-label-sm">Safe enchant:</label>
+								<div class="col-3 mb-3 text-end">
+									<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="safeEnchant" class="form-control form-control-sm" style="display:inline-block; min-width:50px;" id="serverSafeEnchant" value="{SAFE_ENCHANT}">
+								</div>
+								<label for="serverMaxEnchant" class="col-3 col-form-label col-form-label-sm">Max enchant:</label>
+								<div class="col-3 mb-3 text-end">
+									<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="10000" form="configs" name="maxEnchant" class="form-control form-control-sm" style="display:inline-block; min-width:50px;" id="serverMaxEnchant" value="{MAX_ENCHANT}">
+								</div>
+								<label for="serverXp" class="col-3 col-form-label col-form-label-sm">XP rate:</label>
+								<div class="col-3 mb-3 text-end">
+									<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="10000" form="configs" name="xpRate" class="form-control form-control-sm" style="display:inline-block; min-width:50px;" id="serverXp" value="{XP_RATE}">
+								</div>
+								<label for="serverSp" class="col-3 col-form-label col-form-label-sm">SP rate:</label>
+								<div class="col-3 mb-3 text-end">
+									<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="10000" form="configs" name="spRate" class="form-control form-control-sm" style="display:inline-block; min-width:50px;" id="serverSp" value="{SP_RATE}">
+								</div>
+								<label for="serverDrop" class="col-3 col-form-label col-form-label-sm">Drop rate:</label>
+								<div class="col-3 mb-3 text-end">
+									<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="10000" form="configs" name="dropRate" class="form-control form-control-sm" style="display:inline-block; min-width:50px;" id="serverDrop" value="{DROP_RATE}">
+								</div>
+								<label for="serverSpoil" class="col-3 col-form-label col-form-label-sm">Spoil rate:</label>
+								<div class="col-3 mb-3 text-end">
+									<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="10000" form="configs" name="spoilRate" class="form-control form-control-sm" style="display:inline-block; min-width:50px;" id="serverSpoil" value="{SPOIL_RATE}">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="headingTwo">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed text-decoration-none w-100 text-start" style="box-shadow: none;" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						Website configs
+					</button>
+				</h5>
+			</div>
+			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="form-group row">
+								<label for="pcTemplate" class="col-sm-4 col-form-label col-form-label-sm">Template:</label>
+								<div class="col-sm-8 mb-3">
+									<select class="form-select form-select-sm" form="configs" name="template" id="pcTemplate">
+										{CONFIG_ICP_PANEL_PC_TEMPLATES}
+									</select>
+								</div>
+								<label for="olyPeriod" class="col-sm-4 col-form-label col-form-label-sm">Olympiads period:</label>
+								<div class="col-sm-8 mb-3">
+									<select class="form-select form-select-sm" form="configs" name="olyPeriod" id="olyPeriod">
+										{CONFIG_ICP_PANEL_OLY_PERIOD}
+									</select>
+								</div>
+								<label for="serverTimezone" class="col-sm-4 col-form-label col-form-label-sm">Server timezone:</label>
+								<div class="col-sm-8 mb-3">
+									{CONFIG_ICP_PANEL_TIME_ZONE}
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group row">
+								<label for="instagram" class="col-sm-4 col-form-label col-form-label-sm">Instagram:</label>
+								<div class="col-sm-8 mb-3">
+									<input type="text" form="configs" name="instagram" class="form-control form-control-sm" id="instagram" value="{INSTAGRAM}">
+								</div>
+								<label for="youtube" class="col-sm-4 col-form-label col-form-label-sm">YouTube:</label>
+								<div class="col-sm-8 mb-3">
+									<input type="text" form="configs" name="youtube" class="form-control form-control-sm" id="youtube" value="{YOUTUBE}">
+								</div>
+								<label for="facebook" class="col-sm-4 col-form-label col-form-label-sm">Facebook:</label>
+								<div class="col-sm-8 mb-3">
+									<input type="text" form="configs" name="facebook" class="form-control form-control-sm" id="facebook" value="{FACEBOOK}">
+								</div>
+								<label for="discord" class="col-sm-4 col-form-label col-form-label-sm">Discord:</label>
+								<div class="col-sm-8 mb-3">
+									<input type="text" form="configs" name="discord" class="form-control form-control-sm" id="discord" placeholder="Server ID" value="{DISCORD}">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group row">
+								<label for="maxRankings" class="col-9 col-form-label col-form-label-sm">Maximum results of the rankings:</label>
+								<div class="col-3 pe-3 mb-3 text-end">
+									<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxRankings" class="form-control form-control-sm" style="display:inline-block; min-width:50px;" id="maxRankings" value="{MAX_RANKINGS}">
+								</div>
+								<label for="maxIndexRankings" class="col-9 col-form-label col-form-label-sm">Maximum results of the rankings in the index:</label>
+								<div class="col-3 pe-3 mb-3 text-end">
+									<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxIndexRankings" class="form-control form-control-sm" style="display:inline-block; min-width:50px;" id="maxIndexRankings" value="{MAX_INDEX_RANKINGS}">
+								</div>
+								<label for="clientDownload" class="col-sm-5 col-form-label col-form-label-sm">Client download:</label>
+								<div class="col-sm-7 mb-3">
+									<input type="text" form="configs" name="clientDownload" class="form-control form-control-sm" id="clientDownload" placeholder="URL" value="{CLIENT_DOWNLOAD_LINK}">
+								</div>
+								<label for="systemDownload" class="col-sm-5 col-form-label col-form-label-sm">System download:</label>
+								<div class="col-sm-7 mb-3">
+									<input type="text" form="configs" name="systemDownload" class="form-control form-control-sm" id="systemDownload" placeholder="URL" value="{FILES_DOWNLOAD_LINK}">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="headingThree">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed text-decoration-none w-100 text-start" style="box-shadow: none;" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						Email configs
+					</button>
+				</h5>
+			</div>
+			<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group row">
+								<label for="customSwitch4" class="col-10 col-form-label col-form-label-sm">Account creation by email:</label>
+								<div class="col-2 pe-0 mb-4">
+									<div class="custom-control custom-switch text-end">
+										<input type="checkbox" form="configs" name="accCreateByEmail" class="custom-control-input" id="customSwitch4"{CONFIG_ICP_PANEL_CREATE_BY_EMAIL}>
+										<label class="custom-control-label mt-1" for="customSwitch4"></label>
+									</div>
+								</div>
+								<label for="smtpHost" class="col-sm-5 col-form-label col-form-label-sm">SMTP host:</label>
+								<div class="col-sm-7 mb-3">
+									<input type="text" form="configs" name="smtpHost" class="form-control form-control-sm" id="smtpHost" value="{SMTP_HOST}">
+								</div>
+								<label for="smtpPort" class="col-sm-5 col-form-label col-form-label-sm">SMTP port:</label>
+								<div class="col-sm-7 mb-3">
+									<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="10000" form="configs" name="smtpPort" class="form-control form-control-sm" id="smtpPort" value="{SMTP_PORT}">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group row">
+								<label for="customSwitch5" class="col-10 col-form-label col-form-label-sm">Account recovery by email:</label>
+								<div class="col-2 pe-0 mb-4">
+									<div class="custom-control custom-switch text-end">
+										<input type="checkbox" form="configs" name="accRecoveryByEmail" class="custom-control-input" id="customSwitch5"{CONFIG_ICP_PANEL_RECOVERY_BY_EMAIL}>
+										<label class="custom-control-label mt-1" for="customSwitch5"></label>
+									</div>
+								</div>
+								<label for="smtpEmail" class="col-sm-5 col-form-label col-form-label-sm">SMTP email:</label>
+								<div class="col-sm-7 mb-3">
+									<input type="text" form="configs" name="smtpEmail" class="form-control form-control-sm" id="smtpEmail" value="{SMTP_EMAIL}">
+								</div>
+								<label for="smtpPass" class="col-sm-5 col-form-label col-form-label-sm">SMTP password:</label>
+								<div class="col-sm-7 mb-3">
+									<input type="text" form="configs" name="smtpPass" class="form-control form-control-sm" id="smtpPass" value="{SMTP_PASS}">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="headingFour">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed text-decoration-none w-100 text-start" style="box-shadow: none;" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+						Donate configs
+					</button>
+				</h5>
+			</div>
+			<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+				<div class="card-body pb-0">
+					<div class="form-group row">
+						<label for="donateCoinName" class="col-sm-2 col-form-label col-form-label-sm" style="min-width:145px">Donate coin name:</label>
+						<div class="col-sm-10 mb-3">
+							<input type="text" form="configs" name="donateCoinName" class="form-control form-control-sm" id="donateCoinName" value="{DONATE_COIN_NAME}">
+						</div>
+					</div>
+					<hr style="margin-top:0px;margin-bottom:20px" />
+					<div class="row">
+						<div class="col-sm-3 mb-3" style="min-width:343px">
+							<div class="card">
+								<img class="card-img-top border-bottom" src="images/miscs/mercadopago.png" alt="Mercado Pago">
+								<div class="card-body">
+									<h5 class="card-title border-bottom pb-3">Mercado Pago</h5>
+									<div class="form-group row">
+										<label for="customSwitch51" class="col-10 col-form-label col-form-label-sm">Enable Mercado Pago:</label>
+										<div class="col-2 pe-0 mb-4">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableMercadopago" class="custom-control-input" id="customSwitch51"{CONFIG_ICP_PANEL_ENABLE_MERCADOPAGO}>
+												<label class="custom-control-label mt-1" for="customSwitch51"></label>
+											</div>
+										</div>
+										<label for="MP_Currency" class="col-9 col-form-label col-form-label-sm">Currency: <small><small><small class="text-muted">(ex: BRL, USD, EUR, etc)</small></small></small></label>
+										<div class="col-3 mb-3">
+											<input type="text" form="configs" name="mpCurrency" class="form-control form-control-sm" id="MP_Currency" value="{mp_currency}">
+										</div>
+										<label for="amountMPCoins" class="col-9 col-form-label col-form-label-sm">Amount of coins: <small><small><small class="text-muted">(for every 1 BRL/USD)</small></small></small></label>
+										<div class="col-3 mb-3">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="10000" form="configs" name="mpCoins" class="form-control form-control-sm" id="amountMPCoins" value="{mp_amount}">
+										</div>
+										<label for="mercadopagoToken" class="col-sm-6 col-form-label col-form-label-sm"><small>Mercado Pago token:</small></label>
+										<div class="col-sm-6">
+											<input type="text" form="configs" name="mpToken" class="form-control form-control-sm" id="mercadopagoToken" value="{mp_token}">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3 mb-3" style="min-width:343px">
+							<div class="card">
+								<img class="card-img-top border-bottom" src="images/miscs/pagseguro.png" alt="PagSeguro">
+								<div class="card-body">
+									<h5 class="card-title border-bottom pb-3">PagSeguro</h5>
+									<div class="form-group row">
+										<label for="customSwitch7" class="col-10 col-form-label col-form-label-sm">Enable PagSeguro:</label>
+										<div class="col-2 pe-0 mb-4">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enablePagseguro" class="custom-control-input" id="customSwitch7"{CONFIG_ICP_PANEL_ENABLE_PAGSEGURO}>
+												<label class="custom-control-label mt-1" for="customSwitch7"></label>
+											</div>
+										</div>
+										<label for="PS_Currency" class="col-9 col-form-label col-form-label-sm">Currency: <small><small><small class="text-muted">(ex: BRL, USD, EUR, etc)</small></small></small></label>
+										<div class="col-3 mb-3">
+											<input type="text" form="configs" name="psCurrency" class="form-control form-control-sm" id="PS_Currency" value="{ps_currency}">
+										</div>
+										<label for="amountBrlCoins" class="col-9 col-form-label col-form-label-sm">Amount of coins: <small><small><small class="text-muted">(for every 1 BRL/USD)</small></small></small></label>
+										<div class="col-3 mb-3">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="10000" form="configs" name="psCoins" class="form-control form-control-sm" id="amountBrlCoins" value="{ps_amount}">
+										</div>
+										<label for="pagseguroEmail" class="col-sm-6 col-form-label col-form-label-sm">PagSeguro email:</label>
+										<div class="col-sm-6 mb-3">
+											<input type="email" form="configs" name="psEmail" class="form-control form-control-sm" id="pagseguroEmail" value="{ps_email}">
+										</div>
+										<label for="pagseguroToken" class="col-sm-6 col-form-label col-form-label-sm">PagSeguro token:</label>
+										<div class="col-sm-6">
+											<input type="text" form="configs" name="psToken" class="form-control form-control-sm" id="pagseguroToken" value="{ps_token}">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3 mb-3" style="min-width:343px">
+							<div class="card">
+								<img class="card-img-top border-bottom" src="images/miscs/paypal.png" alt="PayPal">
+								<div class="card-body">
+									<h5 class="card-title border-bottom pb-3">PayPal</h5>
+									<div class="form-group row">
+										<label for="customSwitch8" class="col-10 col-form-label col-form-label-sm">Enable PayPal:</label>
+										<div class="col-2 pe-0 mb-4">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enablePaypal" class="custom-control-input" id="customSwitch8"{CONFIG_ICP_PANEL_ENABLE_PAYPAL}>
+												<label class="custom-control-label mt-1" for="customSwitch8"></label>
+											</div>
+										</div>
+										<label for="PP_Currency" class="col-9 col-form-label col-form-label-sm">Currency: <small><small><small class="text-muted">(ex: BRL, USD, EUR, etc)</small></small></small></label>
+										<div class="col-3 mb-3">
+											<input type="text" form="configs" name="ppCurrency" class="form-control form-control-sm" id="PP_Currency" value="{pp_currency}">
+										</div>
+										<label for="amountUsdCoins" class="col-9 col-form-label col-form-label-sm">Amount of coins: <small><small><small class="text-muted">(for every 1 BRL/USD)</small></small></small></label>
+										<div class="col-3 mb-3">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="10000" form="configs" name="ppCoins" class="form-control form-control-sm" id="amountUsdCoins" value="{pp_amount}">
+										</div>
+										<label for="paypalEmail" class="col-sm-6 col-form-label col-form-label-sm">PayPal email:</label>
+										<div class="col-sm-6">
+											<input type="email" form="configs" name="ppEmail" class="form-control form-control-sm" id="paypalEmail" value="{pp_email}">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3 mb-3" style="min-width:343px">
+							<div class="card">
+								<img class="card-img-top border-bottom" src="images/miscs/bank.jpg" alt="Deposit">
+								<div class="card-body">
+									<h5 class="card-title border-bottom pb-3">Deposit</h5>
+									<div class="form-group row">
+										<label for="customSwitch6" class="col-10 col-form-label col-form-label-sm">Enable deposit:</label>
+										<div class="col-2 pe-0 mb-4">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableDeposit" class="custom-control-input" id="customSwitch6"{CONFIG_ICP_PANEL_ENABLE_DEPOSIT}>
+												<label class="custom-control-label mt-1" for="customSwitch6"></label>
+											</div>
+										</div>
+										<label for="bankName" class="col-sm-5 col-form-label col-form-label-sm">Bank name:</label>
+										<div class="col-sm-7 mb-3">
+											<input type="text" form="configs" name="depositBank" class="form-control form-control-sm" id="bankName" value="{bank_name}">
+										</div>
+										<label for="depositBranch" class="col-sm-5 col-form-label col-form-label-sm">Bank branch:</label>
+										<div class="col-sm-7 mb-3">
+											<input type="text" form="configs" name="depositBranch" class="form-control form-control-sm" id="depositBranch" value="{bank_branch}">
+										</div>
+										<label for="depositAccount" class="col-sm-5 col-form-label col-form-label-sm">Bank account:</label>
+										<div class="col-sm-7 mb-3">
+											<input type="text" form="configs" name="depositAccount" class="form-control form-control-sm" id="depositAccount" value="{bank_account}">
+										</div>
+										<label for="depositType" class="col-sm-5 col-form-label col-form-label-sm">Bank type:</label>
+										<div class="col-sm-7 mb-3">
+											<input type="text" form="configs" name="depositType" class="form-control form-control-sm" id="depositType" value="{bank_type}">
+										</div>
+										<label for="depositBeneficiary" class="col-sm-5 col-form-label col-form-label-sm">Bank beneficiary:</label>
+										<div class="col-sm-7 mb-3">
+											<input type="text" form="configs" name="depositBeneficiary" class="form-control form-control-sm" id="depositBeneficiary" value="{bank_beneficiary}">
+										</div>
+										<label for="depositCpf" class="col-sm-5 col-form-label col-form-label-sm">CPF number:</label>
+										<div class="col-sm-7 mb-3">
+											<input type="text" form="configs" name="depositCpf" class="form-control form-control-sm" id="depositCpf" value="{bank_cpf}">
+										</div>
+										<label for="confirmationEmail" class="col-sm-5 col-form-label col-form-label-sm"><small><small>Email to confirmation:</small></small></label>
+										<div class="col-sm-7">
+											<input type="text" form="configs" name="donateEmail" class="form-control form-control-sm" id="confirmationEmail" value="{email_donate_confirmation}">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="headingFive">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed text-decoration-none w-100 text-start" style="box-shadow: none;" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+						System configs
+					</button>
+				</h5>
+			</div>
+			<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+							<a class="nav-link active" id="v-pills-pages-tab" data-toggle="pill" href="#v-pills-pages" role="tab" aria-controls="v-pills-pages" aria-selected="true">Pages & Rankings System</a>
+							<a class="nav-link" id="v-pills-rewards-tab" data-toggle="pill" href="#v-pills-rewards" role="tab" aria-controls="v-pills-rewards" aria-selected="false">Reward System</a>
+							<a class="nav-link" id="v-pills-prime-tab" data-toggle="pill" href="#v-pills-prime" role="tab" aria-controls="v-pills-prime" aria-selected="false">Prime Shop System</a>
+							<a class="nav-link" id="v-pills-item-broker-tab" data-toggle="pill" href="#v-pills-item-broker" role="tab" aria-controls="v-pills-item-broker" aria-selected="false">Item Broker System</a>
+							<a class="nav-link" id="v-pills-character-broker-tab" data-toggle="pill" href="#v-pills-character-broker" role="tab" aria-controls="v-pills-character-broker" aria-selected="false">Character Broker System</a>
+							<a class="nav-link" id="v-pills-enchant-tab" data-toggle="pill" href="#v-pills-enchant" role="tab" aria-controls="v-pills-enchant" aria-selected="false">Safe Enchant System</a>
+							<a class="nav-link" id="v-pills-character-changes-tab" data-toggle="pill" href="#v-pills-character-changes" role="tab" aria-controls="v-pills-character-changes" aria-selected="false">Character Changes System</a>
+							<a class="nav-link" id="v-pills-server-infos-tab" data-toggle="pill" href="#v-pills-server-infos" role="tab" aria-controls="v-pills-server-infos" aria-selected="false">Server Informations System</a>
+							</div>
+						</div>
+						<div class="col ms-2 me-2 border rounded">
+							<div class="tab-content" id="v-pills-tabContent">
+								<div class="tab-pane fade show active" id="v-pills-pages" role="tabpanel" aria-labelledby="v-pills-pages-tab">
+									<div class="form-group row">
+										<label for="customSwitch52" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Messages System:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableMessages" class="custom-control-input" id="customSwitch52"{CONFIG_ICP_PANEL_ENABLE_MESSAGES}>
+												<label class="custom-control-label mt-1" for="customSwitch52"></label>
+											</div>
+										</div>
+										<label for="customSwitch9" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable News system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableNews" class="custom-control-input" id="customSwitch9"{CONFIG_ICP_PANEL_ENABLE_NEWS}>
+												<label class="custom-control-label mt-1" for="customSwitch9"></label>
+											</div>
+										</div>
+										<label for="newsMax" class="col-9 border-bottom col-form-label col-form-label-sm mt-2">Maximum news per page:</label>
+										<div class="col-3 pe-2 border-bottom text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxNews" class="form-control form-control-sm mb-2 mt-2" style="display:inline-block; width:50px;" id="newsMax" value="{MAX_NEWS}">
+										</div>
+										<label for="customSwitch10" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable ScreenShots Gallery system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableScreenshotsGallery" class="custom-control-input" id="customSwitch10"{CONFIG_ICP_PANEL_ENABLE_SCREENSHOTS}>
+												<label class="custom-control-label mt-1" for="customSwitch10"></label>
+											</div>
+										</div>
+										<label for="screenshotsMax" class="col-9 border-bottom col-form-label col-form-label-sm mt-2">Maximum ScreenShots per page:</label>
+										<div class="col-3 pe-2 border-bottom text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxScreenshots" class="form-control form-control-sm mb-2 mt-2" style="display:inline-block; width:50px;" id="screenshotsMax" value="{MAX_SCREENSHOTS_GALLERY}">
+										</div>
+										<label for="customSwitch11" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Videos Gallery system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableVideosGallery" class="custom-control-input" id="customSwitch11"{CONFIG_ICP_PANEL_ENABLE_VIDEOS}>
+												<label class="custom-control-label mt-1" for="customSwitch11"></label>
+											</div>
+										</div>
+										<label for="videosMax" class="col-9 border-bottom col-form-label col-form-label-sm mt-2">Maximum Videos per page:</label>
+										<div class="col-3 pe-2 border-bottom text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxVideos" class="form-control form-control-sm mb-2 mt-2" style="display:inline-block; width:50px;" id="videosMax" value="{MAX_VIDEOS_GALLERY}">
+										</div>
+										<label for="customSwitch12" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Bosses status:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableBosses" class="custom-control-input" id="customSwitch12"{CONFIG_ICP_PANEL_ENABLE_BOSSES}>
+												<label class="custom-control-label mt-1" for="customSwitch12"></label>
+											</div>
+										</div>
+										<label for="customSwitch13" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Castle Siege status:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableCastles" class="custom-control-input" id="customSwitch13"{CONFIG_ICP_PANEL_ENABLE_CASTLES}>
+												<label class="custom-control-label mt-1" for="customSwitch13"></label>
+											</div>
+										</div>
+										<label for="customSwitch14" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Clan Hall status:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableClanHalls" class="custom-control-input" id="customSwitch14"{CONFIG_ICP_PANEL_ENABLE_CLAN_HALLS}>
+												<label class="custom-control-label mt-1" for="customSwitch14"></label>
+											</div>
+										</div>
+										<label for="customSwitch15" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Top PvP ranking:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableTopPvp" class="custom-control-input" id="customSwitch15"{CONFIG_ICP_PANEL_ENABLE_TOP_PVP}>
+												<label class="custom-control-label mt-1" for="customSwitch15"></label>
+											</div>
+										</div>
+										<label for="customSwitch16" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Top Class PvP ranking:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="EnableTopClassPvp" class="custom-control-input" id="customSwitch16"{CONFIG_ICP_PANEL_ENABLE_TOP_CLASS_PVP}>
+												<label class="custom-control-label mt-1" for="customSwitch16"></label>
+											</div>
+										</div>
+										<label for="classPvp" class="col-9 border-bottom col-form-label col-form-label-sm mt-2">Maximum results per class ranking:</label>
+										<div class="col-3 pe-2 border-bottom text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxClassPvp" class="form-control form-control-sm mb-2 mt-2" style="display:inline-block; width:50px;" id="classPvp" value="{MAX_RANKING_PVP_BY_CLASSES}">
+										</div>
+										<label for="customSwitch17" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Top Pk ranking:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableTopPk" class="custom-control-input" id="customSwitch17"{CONFIG_ICP_PANEL_ENABLE_TOP_PK}>
+												<label class="custom-control-label mt-1" for="customSwitch17"></label>
+											</div>
+										</div>
+										<label for="customSwitch18" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Top Class Pk ranking:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="EnableTopClassPk" class="custom-control-input" id="customSwitch18"{CONFIG_ICP_PANEL_ENABLE_TOP_CLASS_PK}>
+												<label class="custom-control-label mt-1" for="customSwitch18"></label>
+											</div>
+										</div>
+										<label for="classPk" class="col-9 border-bottom col-form-label col-form-label-sm mt-2">Maximum results per class ranking:</label>
+										<div class="col-3 pe-2 border-bottom text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxClassPk" class="form-control form-control-sm mb-2 mt-2" style="display:inline-block; width:50px;" id="classPk" value="{MAX_RANKING_PK_BY_CLASSES}">
+										</div>
+										<label for="customSwitch19" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Top Online ranking:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableTopOnline" class="custom-control-input" id="customSwitch19"{CONFIG_ICP_PANEL_ENABLE_TOP_ONLINE}>
+												<label class="custom-control-label mt-1" for="customSwitch19"></label>
+											</div>
+										</div>
+										<label for="customSwitch20" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Top Adena ranking:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableTopAdena" class="custom-control-input" id="customSwitch20"{CONFIG_ICP_PANEL_ENABLE_TOP_ADENA}>
+												<label class="custom-control-label mt-1" for="customSwitch20"></label>
+											</div>
+										</div>
+										<label for="goldbar" class="col-7 border-bottom col-form-label col-form-label-sm mt-2">GoldBar value in Adenas:</label>
+										<div class="col-5 pe-2 border-bottom text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000000000" form="configs" name="goldbarValue" class="form-control form-control-sm mb-2 mt-2" style="display:inline-block; width:110px;" id="goldbar" value="{GOLDBAR_VALUE}">
+										</div>
+										<label for="customSwitch21" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Top Clan ranking:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableTopClan" class="custom-control-input" id="customSwitch21"{CONFIG_ICP_PANEL_ENABLE_TOP_CLAN}>
+												<label class="custom-control-label mt-1" for="customSwitch21"></label>
+											</div>
+										</div>
+										<label for="customSwitch22" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Sort top clan ranking by pvps:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableTopClanPvp" class="custom-control-input" id="customSwitch22"{CONFIG_ICP_PANEL_ENABLE_TOP_CLAN_BY_PVP}>
+												<label class="custom-control-label mt-1" for="customSwitch22"></label>
+											</div>
+										</div>
+										<label for="customSwitch23" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Top Olympiads ranking:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableTopOly" class="custom-control-input" id="customSwitch23"{CONFIG_ICP_PANEL_ENABLE_TOP_OLY}>
+												<label class="custom-control-label mt-1" for="customSwitch23"></label>
+											</div>
+										</div>
+										<label for="customSwitch24" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Top Heroes ranking:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableTopHero" class="custom-control-input" id="customSwitch24"{CONFIG_ICP_PANEL_ENABLE_TOP_HERO}>
+												<label class="custom-control-label mt-1" for="customSwitch24"></label>
+											</div>
+										</div>
+										<label for="customSwitch25" class="col-10 col-form-label col-form-label-sm bg-light">Enable Top Raid Points ranking:</label>
+										<div class="col pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableTopRaid" class="custom-control-input" id="customSwitch25"{CONFIG_ICP_PANEL_ENABLE_TOP_RAID}>
+												<label class="custom-control-label mt-1" for="customSwitch25"></label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-rewards" role="tabpanel" aria-labelledby="v-pills-rewards-tab">
+									<div class="form-group row">
+										<label for="customSwitch26" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Reward system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableRewardSystem" class="custom-control-input" id="customSwitch26"{CONFIG_ICP_PANEL_ENABLE_REWARD}>
+												<label class="custom-control-label mt-1" for="customSwitch26"></label>
+											</div>
+										</div>
+										<label for="customSwitch27" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable reward for online time:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableRewardOnline" class="custom-control-input" id="customSwitch27"{CONFIG_ICP_PANEL_ENABLE_ONLINE_REWARD}>
+												<label class="custom-control-label mt-1" for="customSwitch27"></label>
+											</div>
+										</div>
+										<label for="onlineDays" class="col-9 col-form-label col-form-label-sm mt-2">How many days online to earn rewards:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="rewardOnlineDays" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="onlineDays" value="{REWARD_ONLINE_TIME_DAYS}">
+										</div>
+										<label for="onlineRewards" class="col-6 border-bottom col-form-label col-form-label-sm mt-2">Rewards for online time (ex: "rewardId,amount;"):</label>
+										<div class="col-6 pe-2 border-bottom text-end">
+											<input type="text" form="configs" name="rewardOnlineItems" class="form-control form-control-sm mb-2 mt-2" id="onlineRewards" value="{REWARD_ONLINE_TIME_ITEMS}">
+										</div>
+										<label for="customSwitch28" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable reward for PvP's:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableRewardPvp" class="custom-control-input" id="customSwitch28"{CONFIG_ICP_PANEL_ENABLE_PVP_REWARD}>
+												<label class="custom-control-label mt-1" for="customSwitch28"></label>
+											</div>
+										</div>
+										<label for="pvpAmount" class="col-9 col-form-label col-form-label-sm mt-2">How many PvP's to earn rewards:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="rewardPvpCount" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="pvpAmount" value="{REWARD_PVP_COUNT}">
+										</div>
+										<label for="pvpRewards" class="col-6 border-bottom col-form-label col-form-label-sm mt-2">Rewards for PvP's (ex: "rewardId,amount;"):</label>
+										<div class="col-6 pe-2 border-bottom text-end">
+											<input type="text" form="configs" name="rewardPvpItems" class="form-control form-control-sm mb-2 mt-2" id="pvpRewards" value="{REWARD_PVP_ITEMS}">
+										</div>
+										<label for="customSwitch29" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable reward for Pk's:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableRewardPk" class="custom-control-input" id="customSwitch29"{CONFIG_ICP_PANEL_ENABLE_PK_REWARD}>
+												<label class="custom-control-label mt-1" for="customSwitch29"></label>
+											</div>
+										</div>
+										<label for="pkAmount" class="col-9 col-form-label col-form-label-sm mt-2">How many Pk's to earn rewards:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="rewardPkCount" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="pkAmount" value="{REWARD_PK_COUNT}">
+										</div>
+										<label for="pkRewards" class="col-6 col-form-label col-form-label-sm mt-2">Rewards for Pk's (ex: "rewardId,amount;"):</label>
+										<div class="col-6 pe-2 text-end">
+											<input type="text" form="configs" name="rewardPkItems" class="form-control form-control-sm mb-2 mt-2" id="pkRewards" value="{REWARD_PK_ITEMS}">
+										</div>
+										<label for="RewardLoc" class="col-6 col-form-label col-form-label-sm mt-2">Item Broker delivery location:</label>
+										<div class="col-6 pe-2 mt-2 text-end">
+											<select class="form-select form-select-sm mb-2" form="configs" name="RewardLoc" id="RewardLoc" required>
+												{CONFIG_ICP_PANEL_REWARD_LOC}
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-prime" role="tabpanel" aria-labelledby="v-pills-prime-tab">
+									<div class="form-group row">
+										<label for="customSwitch30" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Prime Shop system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enablePrimeShop" class="custom-control-input" id="customSwitch30"{CONFIG_ICP_PANEL_ENABLE_PRIME_SHOP}>
+												<label class="custom-control-label mt-1" for="customSwitch30"></label>
+											</div>
+										</div>
+										<label for="primePage" class="col-9 col-form-label col-form-label-sm mt-2">Maximum of items per page:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxPrimeShop" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="primePage" value="{MAX_PRIME_SHOP_ITEMS}">
+										</div>
+										<label for="primeLoc" class="col-6 col-form-label col-form-label-sm mt-2">Prime Shop delivery location:</label>
+										<div class="col-6 pe-2 mt-2 text-end">
+											<select class="form-select form-select-sm mb-2" form="configs" name="primeShopLoc" id="primeLoc" required>
+												{CONFIG_ICP_PANEL_PRIME_SHOP_LOC}
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-item-broker" role="tabpanel" aria-labelledby="v-pills-item-broker-tab">
+									<div class="form-group row">
+										<label for="customSwitch31" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Item Broker system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableItemBroker" class="custom-control-input" id="customSwitch31"{CONFIG_ICP_PANEL_ENABLE_ITEM_BROKER}>
+												<label class="custom-control-label mt-1" for="customSwitch31"></label>
+											</div>
+										</div>
+										<label for="customSwitch32" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Allow sale of combo items:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="allowComboItems" class="custom-control-input" id="customSwitch32"{CONFIG_ICP_PANEL_ALLOW_COMBO_ITEM_BROKER}>
+												<label class="custom-control-label mt-1" for="customSwitch32"></label>
+											</div>
+										</div>
+										<label for="customSwitch33" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Allow sale of {{_}PvP} items:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="allowPvpItems" class="custom-control-input" id="customSwitch33"{CONFIG_ICP_PANEL_ALLOW_PVP_ITEM_BROKER}>
+												<label class="custom-control-label mt-1" for="customSwitch33"></label>
+											</div>
+										</div>
+										<label for="customSwitch34" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Allow sale of augmented items:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="allowAugmentedItems" class="custom-control-input" id="customSwitch34"{CONFIG_ICP_PANEL_ALLOW_AUG_ITEM_BROKER}>
+												<label class="custom-control-label mt-1" for="customSwitch34"></label>
+											</div>
+										</div>
+										<label for="customSwitch35" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Allow auctions:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="allowAuctionItems" class="custom-control-input" id="customSwitch35"{CONFIG_ICP_PANEL_ALLOW_AUCTION_ITEM_BROKER}>
+												<label class="custom-control-label mt-1" for="customSwitch35"></label>
+											</div>
+										</div>
+										<label for="itemBrokerAuctionDays" class="col-9 col-form-label col-form-label-sm mt-2">Auction days:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="auctionItemsDay" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="itemBrokerAuctionDays" value="{AUCTION_ITEM_BROKER_DAYS}">
+										</div>
+										<label for="itemBrokerAuctionRange" class="col-9 col-form-label col-form-label-sm mt-2">Auction bid range:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="auctionRangeItems" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="itemBrokerAuctionRange" value="{AUCTION_ITEM_RANGES_BID}">
+										</div>
+										<label for="itemBrokerPage" class="col-9 col-form-label col-form-label-sm mt-2">Maximum of items per page:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxItemBroker" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="itemBrokerPage" value="{MAX_ITEM_BROKER_LIST}">
+										</div>
+										<label class="col-6 col-form-label col-form-label-sm mt-2">Allowed grades:</label>
+										<div class="col-6 pe-2 mt-2 text-end">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="d-grade" value="d"{CONFIG_ICP_PANEL_ALLOW_SELL_D_GRADE_ITEMS}>
+												<label class="form-check-label" for="d-grade">D</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="c-grade" value="c"{CONFIG_ICP_PANEL_ALLOW_SELL_C_GRADE_ITEMS}>
+												<label class="form-check-label" for="c-grade">C</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="b-grade" value="b"{CONFIG_ICP_PANEL_ALLOW_SELL_B_GRADE_ITEMS}>
+												<label class="form-check-label" for="b-grade">B</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="a-grade" value="a"{CONFIG_ICP_PANEL_ALLOW_SELL_A_GRADE_ITEMS}>
+												<label class="form-check-label" for="a-grade">A</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="s-grade" value="s"{CONFIG_ICP_PANEL_ALLOW_SELL_S_GRADE_ITEMS}>
+												<label class="form-check-label" for="s-grade">S</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="s80-grade" value="s80"{CONFIG_ICP_PANEL_ALLOW_SELL_S80_GRADE_ITEMS}>
+												<label class="form-check-label" for="s80-grade">S80</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="s84-grade" value="s84"{CONFIG_ICP_PANEL_ALLOW_SELL_S84_GRADE_ITEMS}>
+												<label class="form-check-label" for="s84-grade">S84</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="r-grade" value="r"{CONFIG_ICP_PANEL_ALLOW_SELL_R_GRADE_ITEMS}>
+												<label class="form-check-label" for="r-grade">R</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="r95-grade" value="r95"{CONFIG_ICP_PANEL_ALLOW_SELL_R95_GRADE_ITEMS}>
+												<label class="form-check-label" for="r95-grade">R95</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="r99-grade" value="r99"{CONFIG_ICP_PANEL_ALLOW_SELL_R99_GRADE_ITEMS}>
+												<label class="form-check-label" for="r99-grade">R99</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" form="configs" name="itemBrokerGrade[]" id="r110-grade" value="r110"{CONFIG_ICP_PANEL_ALLOW_SELL_R110_GRADE_ITEMS}>
+												<label class="form-check-label" for="r110-grade">R110</label>
+											</div>
+										</div>
+										<label for="itemBrokerLoc" class="col-6 col-form-label col-form-label-sm mt-2">Item Broker delivery location:</label>
+										<div class="col-6 pe-2 mt-2 text-end">
+											<select class="form-select form-select-sm mb-2" form="configs" name="itemBrokerLoc" id="itemBrokerLoc" required>
+												{CONFIG_ICP_PANEL_ITEM_BROKER_LOC}
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-character-broker" role="tabpanel" aria-labelledby="v-pills-character-broker-tab">
+									<div class="form-group row">
+										<label for="customSwitch36" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Character Broker system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableCharacterBroker" class="custom-control-input" id="customSwitch36"{CONFIG_ICP_PANEL_ENABLE_CHARACTER_BROKER}>
+												<label class="custom-control-label mt-1" for="customSwitch36"></label>
+											</div>
+										</div>
+										<label for="customSwitch37" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Allow auctions:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="allowAuctionCharacters" class="custom-control-input" id="customSwitch37"{CONFIG_ICP_PANEL_ALLOW_AUCTION_CHARACTER_BROKER}>
+												<label class="custom-control-label mt-1" for="customSwitch37"></label>
+											</div>
+										</div>
+										<label for="characterAuctionDays" class="col-9 col-form-label col-form-label-sm mt-2">Auction days:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="auctionCharactersDay" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="characterAuctionDays" value="{AUCTION_CHARACTER_BROKER_DAYS}">
+										</div>
+										<label for="characterAuctionRange" class="col-9 col-form-label col-form-label-sm mt-2">Auction bid range:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="auctionRangeCharacters" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="characterAuctionRange" value="{AUCTION_CHARACTER_RANGES_BID}">
+										</div>
+										<label for="characterMinLevel" class="col-9 col-form-label col-form-label-sm mt-2">Minimum character level for sale:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="120" form="configs" name="minCharacterBrokerLevel" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="characterMinLevel" value="{MIN_CHARACTER_BROKER_LEVEL}">
+										</div>
+										<label for="characterPage" class="col-9 col-form-label col-form-label-sm mt-2">Maximum of items per page:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="100" form="configs" name="maxCharacterBroker" class="form-control form-control-sm mt-2 mb-2" style="display:inline-block; width:50px;" id="characterPage" value="{MAX_CHARACTER_BROKER_LIST}">
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-enchant" role="tabpanel" aria-labelledby="v-pills-enchant-tab">
+									<div class="form-group row">
+										<label for="customSwitch38" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Safe Enchant system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableSafeEnchant" class="custom-control-input" id="customSwitch38"{CONFIG_ICP_PANEL_ENABLE_SAFE_ENCHANT}>
+												<label class="custom-control-label mt-1" for="customSwitch38"></label>
+											</div>
+										</div>
+										<label for="customSwitch39" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Allow {{_}PvP} item enchantment:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="allowPvpEnchant" class="custom-control-input" id="customSwitch39"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_PVP_ITEMS}>
+												<label class="custom-control-label mt-1" for="customSwitch39"></label>
+											</div>
+										</div>
+										<label for="customSwitch40" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Allow augmented item enchantment:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="allowAugmentedEnchant" class="custom-control-input" id="customSwitch40"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_AUG_ITEMS}>
+												<label class="custom-control-label mt-1" for="customSwitch40"></label>
+											</div>
+										</div>
+										<label for="enchantChance" class="col-9 col-form-label col-form-label-sm mt-2">Chance of enchantment:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantChance" min="1" max="100" class="form-control form-control-sm mt-2" style="display:inline-block; width:50px;" id="enchantChance" value="{ENCHANT_SYSTEM_CHANCE}">
+										</div>
+										<label for="enchantDGrade" class="col-9 col-form-label col-form-label-sm mt-2">D-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsDEnchant" name="itemEnchantGrade[]" value="d"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_D_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantDGrade" min="1" max="100" class="form-control form-control-sm" id="enchantDGrade" value="{PRICE_D_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantCGrade" class="col-9 col-form-label col-form-label-sm mt-2">C-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsCEnchant" name="itemEnchantGrade[]" value="c"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_C_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantCGrade" min="1" max="100" class="form-control form-control-sm" id="enchantCGrade" value="{PRICE_C_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantBGrade" class="col-9 col-form-label col-form-label-sm mt-2">B-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2 text-end">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsBEnchant" name="itemEnchantGrade[]" value="b"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_B_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantBGrade" min="1" max="100" class="form-control form-control-sm" id="enchantBGrade" value="{PRICE_B_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantAGrade" class="col-9 col-form-label col-form-label-sm mt-2">A-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2 text-end">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsAEnchant" name="itemEnchantGrade[]" value="a"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_A_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantAGrade" min="1" max="100" class="form-control form-control-sm" id="enchantAGrade" value="{PRICE_A_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantSGrade" class="col-9 col-form-label col-form-label-sm mt-2">S-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2 text-end">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsSEnchant" name="itemEnchantGrade[]" value="s"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_S_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantSGrade" min="1" max="100" class="form-control form-control-sm" id="enchantSGrade" value="{PRICE_S_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantS80Grade" class="col-9 col-form-label col-form-label-sm mt-2">S80-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2 text-end">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsS80Enchant" name="itemEnchantGrade[]" value="s80"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_S80_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantS80Grade" min="1" max="100" class="form-control form-control-sm" id="enchantS80Grade" value="{PRICE_S80_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantS84Grade" class="col-9 col-form-label col-form-label-sm mt-2">S84-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2 text-end">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsS84Enchant" name="itemEnchantGrade[]" value="s84"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_S84_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantS84Grade" min="1" max="100" class="form-control form-control-sm" id="enchantS84Grade" value="{PRICE_S84_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantRGrade" class="col-9 col-form-label col-form-label-sm mt-2">R-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2 text-end">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsREnchant" name="itemEnchantGrade[]" value="r"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_R_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantRGrade" min="1" max="100" class="form-control form-control-sm" id="enchantRGrade" value="{PRICE_R_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantR95Grade" class="col-9 col-form-label col-form-label-sm mt-2">R95-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2 text-end">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsR95Enchant" name="itemEnchantGrade[]" value="r95"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_R95_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantR95Grade" min="1" max="100" class="form-control form-control-sm" id="enchantR95Grade" value="{PRICE_R95_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantR99Grade" class="col-9 col-form-label col-form-label-sm mt-2">R99-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2 text-end">
+											<div class="input-group mt-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsR99Enchant" name="itemEnchantGrade[]" value="r99"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_R99_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantR99Grade" min="1" max="100" class="form-control form-control-sm" id="enchantR99Grade" value="{PRICE_R99_GRADE_ITEMS}">
+											</div>
+										</div>
+										<label for="enchantR110Grade" class="col-9 col-form-label col-form-label-sm mt-2">R110-Grade items price (By attempted enchantment):</label>
+										<div class="col-3 pe-2 text-end">
+											<div class="input-group mt-2 mb-2" style="width:90px; float:right">
+												<div class="input-group-prepend">
+													<div class="input-group-text pt-2 pb-2">
+														<input type="checkbox" form="configs" id="allowItemsR110Enchant" name="itemEnchantGrade[]" value="r110"{CONFIG_ICP_PANEL_ALLOW_ENCHANT_110_GRADE_ITEMS}>
+													</div>
+												</div>
+												<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" form="configs" name="enchantR110Grade" min="1" max="100" class="form-control form-control-sm" id="enchantR110Grade" value="{PRICE_R110_GRADE_ITEMS}">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-character-changes" role="tabpanel" aria-labelledby="v-pills-character-changes-tab">
+									<div class="form-group row">
+										<label for="customSwitch41" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Character Changes system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableCharacterChanges" class="custom-control-input" id="customSwitch41"{CONFIG_ICP_PANEL_ENABLE_CHARACTER_CHANGES}>
+												<label class="custom-control-label mt-1" for="customSwitch41"></label>
+											</div>
+										</div>
+										<label for="customSwitch42" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable base class change:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableBaseChange" class="custom-control-input" id="customSwitch42"{CONFIG_ICP_PANEL_ALLOW_BASE_CHANGE}>
+												<label class="custom-control-label mt-1" for="customSwitch42"></label>
+											</div>
+										</div>
+										<label for="baseClassPrice" class="col-9 border-bottom col-form-label col-form-label-sm mt-2">Base class change price:</label>
+										<div class="col-3 border-bottom pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="baseChangePrice" class="form-control form-control-sm mt-2 mb-2" style="display:inline-block; width:50px;" id="baseClassPrice" value="{CHARACTER_BASE_CLASS_CHANGE_PRICE}">
+										</div>
+										<label for="customSwitch43" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable sex change:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableSexChange" class="custom-control-input" id="customSwitch43"{CONFIG_ICP_PANEL_ALLOW_SEX_CHANGE}>
+												<label class="custom-control-label mt-1" for="customSwitch43"></label>
+											</div>
+										</div>
+										<label for="sexPrice" class="col-9 border-bottom col-form-label col-form-label-sm mt-2">Sex change price:</label>
+										<div class="col-3 border-bottom pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="sexChangePrice" class="form-control form-control-sm mt-2 mb-2" style="display:inline-block; width:50px;" id="sexPrice" value="{CHARACTER_SEX_CHANGE_PRICE}">
+										</div>
+										<label for="customSwitch44" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable nickname change:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableNickChange" class="custom-control-input" id="customSwitch44"{CONFIG_ICP_PANEL_ALLOW_NICK_CHANGE}>
+												<label class="custom-control-label mt-1" for="customSwitch44"></label>
+											</div>
+										</div>
+										<label for="nicknamePrice" class="col-9 border-bottom col-form-label col-form-label-sm mt-2">Nickname change price:</label>
+										<div class="col-3 border-bottom pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="nickChangePrice" class="form-control form-control-sm mt-2 mb-2" style="display:inline-block; width:50px;" id="nicknamePrice" value="{CHARACTER_NICKNAME_CHANGE_PRICE}">
+										</div>
+										<label for="customSwitch45" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable account change:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableAccChange" class="custom-control-input" id="customSwitch45"{CONFIG_ICP_PANEL_ALLOW_ACC_CHANGE}>
+												<label class="custom-control-label mt-1" for="customSwitch45"></label>
+											</div>
+										</div>
+										<label for="accountPrice" class="col-9 col-form-label col-form-label-sm mt-2">Account change price:</label>
+										<div class="col-3 pe-2 text-end">
+											<input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="1" max="1000" form="configs" name="accChangePrice" class="form-control form-control-sm mt-2 mb-2" style="display:inline-block; width:50px;" id="accountPrice" value="{CHARACTER_ACCOUNT_CHANGE_PRICE}">
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="v-pills-server-infos" role="tabpanel" aria-labelledby="v-pills-server-infos-tab">
+									<div class="form-group row">
+										<label for="customSwitch47" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable server status checking (This slows down the site):</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableCheckStatus" class="custom-control-input" id="customSwitch47"{CONFIG_ICP_PANEL_ENABLE_CHECK_SERVER_STATUS}>
+												<label class="custom-control-label mt-1" for="customSwitch47"></label>
+											</div>
+										</div>
+										<label for="customSwitch48" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Force login server status to go online:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="forceLoginOnline" class="custom-control-input" id="customSwitch48"{CONFIG_ICP_PANEL_FORCE_LOGIN_ONLINE}>
+												<label class="custom-control-label mt-1" for="customSwitch48"></label>
+											</div>
+										</div>
+										<label for="customSwitch49" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Force game server status to go online:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="forceGameOnline" class="custom-control-input" id="customSwitch49"{CONFIG_ICP_PANEL_FORCE_GAME_ONLINE}>
+												<label class="custom-control-label mt-1" for="customSwitch49"></label>
+											</div>
+										</div>
+										<label for="customSwitch50" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Allow viewing of server statistics (accounts createds, characters online, etc...):</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="allowServerStats" class="custom-control-input" id="customSwitch50"{CONFIG_ICP_PANEL_ALLOW_SHOW_STATS}>
+												<label class="custom-control-label mt-1" for="customSwitch50"></label>
+											</div>
+										</div>
+										<label for="customSwitch46" class="col-10 border-bottom col-form-label col-form-label-sm bg-light">Enable Fake Players system:</label>
+										<div class="col-2 border-bottom pe-0 bg-light">
+											<div class="custom-control custom-switch text-end">
+												<input type="checkbox" form="configs" name="enableFakePlayers" class="custom-control-input" id="customSwitch46"{CONFIG_ICP_PANEL_ENABLE_FAKE_PLAYERS}>
+												<label class="custom-control-label mt-1" for="customSwitch46"></label>
+											</div>
+										</div>
+										<label for="fakePlayersNum" class="col-9 col-form-label col-form-label-sm mt-2">Percentage of fake players:</label>
+										<div class="col-3 pe-2 mt-2 text-end">
+											<select class="form-select form-select-sm mb-2" form="configs" name="fakePlayersNum" id="fakePlayersNum" required>
+												{CONFIG_ICP_PANEL_FAKE_PLAYERS_NUM}
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button form="configs" name="submitConfigs" class="btn btn-primary btn-sm position-fixed bottom-0 end-0 me-2 mb-2">Save all changes</button>
+<!-- END CONFIG_ICP_PANEL -->
+<!-- BEGIN CONFIG_ICP_PANEL_NULL -->
+	<p class="text-center">Unauthorized user.</p>
+<!-- END CONFIG_ICP_PANEL_NULL -->

@@ -1,0 +1,93 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">ScreenShots Gallery</h1>
+</div>
+<!-- BEGIN CONFIG_ICP_PANEL_APPROVE_SCREENSHOTS -->
+	<div class="card mb-3">
+		<div class="card-header text-center">
+			ScreenShots awaiting approval
+		</div>
+		<div class="card-body pb-0">
+			<div class="table-responsive">
+				<table class="table table-striped table-sm text-center">
+					<thead>
+						<tr>
+							<th valign="middle">Author</th>
+							<th valign="middle">ScreenShot</th>
+							<th valign="middle">Approve</th>
+							<th valign="middle">Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- BEGIN CONFIG_ICP_PANEL_TO_APPROVE_SCREENSHOTS -->
+							<tr>
+								<td valign="middle">{INDEX_SCREENSHOTS_AUTHOR}</td>
+								<td valign="middle"><a href="javascript:void(0)" pbsrc="images/screenshots/{INDEX_SCREENSHOTS_IMG}" pbCaption="Author: {INDEX_SCREENSHOTS_AUTHOR} - Legend: {INDEX_SCREENSHOTS_LEGEND} - Date: {INDEX_SCREENSHOTS_DATE}" class="card-img-top PopBoxImageSmall" onclick="Pop(this,50,'PopBoxImageLarge');">ScreenShot</a></td>
+								<td valign="middle"><button type="submit" form="approveScreenshot" name="approveScreenshot" value="{INDEX_SCREENSHOTS_ID}" class="btn btn-sm btn-primary"><span data-feather="thumbs-up"></span> Approve</button></td>
+								<td valign="middle"><button type="submit" form="delete1Screenshot" name="delete1Screenshot" value="{INDEX_SCREENSHOTS_ID}" class="btn btn-sm btn-primary"><span data-feather="x"></span> Delete</button></td>
+							</tr>
+						<!-- END CONFIG_ICP_PANEL_TO_APPROVE_SCREENSHOTS -->
+						<!-- BEGIN CONFIG_ICP_PANEL_TO_APPROVE_SCREENSHOTS_NULL -->
+							<tr>
+								<td colspan="4">
+									No ScreenShots awaiting approval.
+								</td>
+							</tr>
+						<!-- END CONFIG_ICP_PANEL_TO_APPROVE_SCREENSHOTS_NULL -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="card mb-3 mt-5">
+		<div class="card-header text-center">
+			Approved ScreenShots
+		</div>
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-striped table-sm text-center">
+					<thead>
+						<tr>
+							<th valign="middle">Author</th>
+							<th valign="middle">ScreenShot</th>
+							<th valign="middle">Disapprove</th>
+							<th valign="middle">Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- BEGIN BLOCK_GALLERY_SCREENSHOTS -->
+							<tr>
+								<td valign="middle">{INDEX_SCREENSHOTS_AUTHOR}</td>
+								<td valign="middle"><a href="javascript:void(0)" pbsrc="images/screenshots/{INDEX_SCREENSHOTS_IMG}" pbCaption="Author: {INDEX_SCREENSHOTS_AUTHOR} - Legend: {INDEX_SCREENSHOTS_LEGEND} - Date: {INDEX_SCREENSHOTS_DATE}" class="card-img-top PopBoxImageSmall" onclick="Pop(this,50,'PopBoxImageLarge');">ScreenShot</a></td>
+								<td valign="middle"><button type="submit" form="disapproveScreenshot" name="disapproveScreenshot" value="{INDEX_SCREENSHOTS_ID}" class="btn btn-sm btn-primary"><span data-feather="thumbs-down"></span> Disapprove</button></td>
+								<td valign="middle"><button type="submit" form="delete2Screenshot" name="delete2Screenshot" value="{INDEX_SCREENSHOTS_ID}" class="btn btn-sm btn-primary"><span data-feather="x"></span> Delete</button></td>
+							</tr>
+						<!-- END BLOCK_GALLERY_SCREENSHOTS -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- BEGIN BLOCK_PAGINATION -->
+		<nav aria-label="Pagination">
+			<ul class="pagination justify-content-center">
+				{PAGINATION}
+			</ul>
+		</nav>
+	<!-- END BLOCK_PAGINATION -->
+	<form action="" method="post" style="margin:0px; padding:0px;" id="approveScreenshot"></form>
+	<form action="" method="post" style="margin:0px; padding:0px;" id="disapproveScreenshot"></form>
+	<form action="" method="post" style="margin:0px; padding:0px;" id="delete1Screenshot"></form>
+	<form action="" method="post" style="margin:0px; padding:0px;" id="delete2Screenshot"></form>
+<!-- END CONFIG_ICP_PANEL_APPROVE_SCREENSHOTS -->
+<!-- BEGIN CONFIG_ICP_PANEL_APPROVE_SCREENSHOTS_NULL -->
+	<p class="text-center">Unauthorized user.</p>
+<!-- END CONFIG_ICP_PANEL_APPROVE_SCREENSHOTS_NULL -->

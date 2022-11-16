@@ -1,0 +1,64 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">Send donations</h1>
+</div>
+<!-- BEGIN CONFIG_ICP_PANEL_SEND_DONATIONS -->
+	<div class="card mb-3">
+		<div class="card-header text-center">
+			Add / Remove donation coins
+		</div>
+		<div class="card-body pb-0">
+			<div class="row">
+				<div class="col-sm-7">
+					<div class="row">
+						<div class="col-sm-8">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Account name</span>
+								</div>
+								<input type="text" class="form-control accounts" form="formDonate" name="username" autocomplete="off" placeholder="Account name" required>
+							</div>
+						</div>
+						<div class="col-sm-4 mb-3 mt-2 text-center" style="min-width:100px;">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input type="radio" id="customRadioInline1" name="donateType" form="formDonate" value="1" class="custom-control-input" checked required>
+								<label class="custom-control-label" for="customRadioInline1">Add</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input type="radio" id="customRadioInline2" name="donateType" form="formDonate" value="2" class="custom-control-input" required>
+								<label class="custom-control-label" for="customRadioInline2">Remove</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-5">
+					<div class="row">
+						<div class="col-sm-8">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Coins</span>
+								</div>
+								<input type="number" min="1" max="10000" value="1" class="form-control" form="formDonate" name="coins" required>
+							</div>
+						</div>
+						<div class="col-sm-4 mb-3" style="min-width:100px;">
+							<input type="submit" class="btn btn-primary w-100" name="submitDonateCoins" form="formDonate" value="Apply">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form action="" method="post" style="margin:0px;padding:0px" id="formDonate"></form>
+<!-- END CONFIG_ICP_PANEL_SEND_DONATIONS -->
+<!-- BEGIN CONFIG_ICP_PANEL_SEND_DONATIONS_NULL -->
+	<p class="text-center">Unauthorized user.</p>
+<!-- END CONFIG_ICP_PANEL_SEND_DONATIONS_NULL -->

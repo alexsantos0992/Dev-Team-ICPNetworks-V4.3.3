@@ -1,0 +1,30 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<main class="form-signin">
+	<div class="text-center">
+		<form method="post" action="">
+			<img class="mb-4" src="images/miscs/icplogo.png" alt="" width="200" height="48">
+			<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+			<div class="form-floating mb-3">
+				<input type="text" class="form-control" id="floatingInput" placeholder="Login / Username" name="username" autocomplete="off" required>
+				<label for="floatingInput">Login / Username</label>
+			</div>
+			<div class="form-floating">
+				<input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" autocomplete="off" required>
+				<label for="floatingPassword">Password</label>
+			</div>
+			<p></p>
+			<input type="submit" class="w-100 btn btn-lg btn-primary" name="login" value="Sign in">
+			<p class="mt-5 mb-3 text-muted">Don't have an account? <a href="?icp=panel&show=register">Register here!</a><br>
+			Forgot your password? <a href="?icp=panel&show=recovery">Recover here!</a></p>
+			<p class="mt-5 mb-3 text-muted"><a href="http://www.icpnetworks.com.br" target="_blank">ICPNetworks &copy; 2010–2030</a></p>
+		</form>
+	</div>
+</main>

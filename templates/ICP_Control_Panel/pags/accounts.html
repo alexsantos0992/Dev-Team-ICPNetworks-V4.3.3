@@ -1,0 +1,182 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="row">
+	<div class="col-sm-3">
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h3">Account information</h1>
+		</div>
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Account details
+			</div>
+			<div class="card-body">
+				Login: {ICP_UserName}<br>
+				Email: {ICP_UserEmail}<br>
+				<!-- BEGIN BLOCK_ICP_PANEL_ACCOUNT_VIP -->
+					Vip Status: {ACCOUNT_VIP_STATUS}<br>
+					Vip Ends: {ACCOUNT_VIP_END}<br>
+				<!-- END BLOCK_ICP_PANEL_ACCOUNT_VIP -->
+				<!-- BEGIN BLOCK_ICP_PANEL_ACCOUNT_DETAILS -->
+					Created Characters: {ACCOUNT_TOTAL_CHARACTERS}<br>
+					{ACCOUNT_TOTAL_SCREENSHOTS}
+					{ACCOUNT_TOTAL_VIDEOS}
+				<!-- END BLOCK_ICP_PANEL_ACCOUNT_DETAILS -->
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-sm-6">
+				<button class="btn btn-primary btn-sm modal-btn mb-3 w-100" modalTitle="Change password" modalBody='<div class="card"><div class="card-body"><form method="post" action="" id="passChange"><div class="form-floating mb-3"><input type="password" class="form-control" id="floatingPassword1" placeholder="Current Password" name="password" autocomplete="off" required><label for="floatingPassword1">Current Password</label></div><div class="form-floating mb-3"><input type="password" class="form-control" id="floatingPassword2" placeholder="New Password" name="password1" autocomplete="off" required><label for="floatingPassword2">New Password</label></div><div class="form-floating mb-3"><input type="password" class="form-control" id="floatingPassword3" placeholder="New Password" name="password2" autocomplete="off" required><label for="floatingPassword3">New Password</label></div></form></div></div>' modalFooter="<button type='submit' form='passChange' class='w-100 btn btn-sm btn-primary' name='passChange'>Change Password</button>" data-toggle="modal" data-target="#modalVideos">Change pass</button>
+			</div>
+			<div class="col-sm-6">
+				<button class="btn btn-primary btn-sm modal-btn mb-3 w-100" modalTitle="Change email" modalBody='<div class="card"><div class="card-body"><form method="post" action="" id="emailChange"><div class="form-floating mb-3"><input type="email" class="form-control" id="floatingEmail1" placeholder="Current email" name="email1" autocomplete="off" required><label for="floatingEmail1">Current email</label></div><div class="form-floating mb-3"><input type="email" class="form-control" id="floatingEmail2" placeholder="New email" name="email2" autocomplete="off" required><label for="floatingEmail2">New email</label></div><div class="form-floating mb-3"><input type="email" class="form-control" id="floatingEmail3" placeholder="New email" name="email3" autocomplete="off" required><label for="floatingEmail3">New email</label></div></form></div></div>' modalFooter="<button type='submit' form='emailChange' class='w-100 btn btn-sm btn-primary' name='editEmail'>Change email</button>" data-toggle="modal" data-target="#modalVideos">Change email</button>
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Donate details
+			</div>
+			<div class="card-body">
+				<!-- BEGIN BLOCK_ICP_PANEL_DONATE_DETAILS -->
+					<p>Total donated: {DONATE_CURRENCY}{DONATE_TOTAL_VALUE}</p>
+					You won: {DONATE_TOTAL_COINS} {DONATE_COIN_NAME}<br>
+					You used: {DONATE_USED_COINS} {DONATE_COIN_NAME}<br>
+					Your balance is: {DONATE_BALANCE_COINS} {DONATE_COIN_NAME}
+				<!-- END BLOCK_ICP_PANEL_DONATE_DETAILS -->
+				<div style="margin-top:20px;">
+					<a href="index.php?icp=panel&show=donation-history" class="btn btn-primary btn-sm w-100">See more details</a>
+				</div>
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				<span data-feather="server"></span> Logs of IP's
+			</div>
+			<div class="card-body text-center pb-0">
+				<h5 class="pb-2 mb-3 border-bottom">Last 5 ips logged</h5>
+				<div class="table-responsive">
+					<table class="table table-striped table-sm">
+						<tbody>
+							<!-- BEGIN BLOCK_ICP_PANEL_LOG_IP -->
+								<tr>
+									<td valign="middle">{LOG_IP_DATE}</td>
+									<td valign="middle"><span data-feather="arrow-right"></span></td>
+									<td valign="middle">{LOG_IP_NUMBER}</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_LOG_IP -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h3">Your characters</h1> Hello {ICP_UserName}. It is always a pleasure to welcome you!!!
+		</div>
+		<div class="row">
+			<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_INFO -->
+				<div class="col-sm-6">
+					<div class="card mb-3">
+						<div class="card-header text-center">
+							{CHARACTER_INFO_NAME}
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-sm-3" style="min-width:100px;">
+									<img src="images/races/{CHARACTER_INFO_PROFILE}" width="100" height="100" style="border-radius:5px; border:1px solid #aaa;">
+								</div>
+								<div class="col">
+									<div class="table-responsive">
+										<table class="table table-sm mb-0">
+											<tbody>
+												<tr style="font-size:0.68em;">
+													<td class="border-0 pt-0">
+														Base class: {CHARACTER_INFO_BASE_CLASS}<br>
+														Subclass: {CHARACTER_INFO_SUB_CLASS}<br>
+														Nobless: {CHARACTER_INFO_NOBLESS}<br>
+														Hero: {CHARACTER_INFO_HERO}<br>
+														Karma: {CHARACTER_INFO_KARMA}<br>
+														Level: {CHARACTER_INFO_LEVEL}<br>
+														Sex: {CHARACTER_INFO_SEX}
+													</td>
+													<td class="border-0 pt-0">
+														Online time: {CHARACTER_INFO_ONLINE_TIME}<br>
+														Last Access: {CHARACTER_INFO_LAST_ACCESS}<br>
+														Clan: {CHARACTER_INFO_CREST_CLAN}{CHARACTER_INFO_CLAN}<br>
+														Ally: {CHARACTER_INFO_ALLYANCE}<br>
+														PvP's: {CHARACTER_INFO_PVP}<br>
+														Pk's: {CHARACTER_INFO_PK}<br>
+														Location: {CHARACTER_INFO_LOC}
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="text-center mt-1">
+								<div class="table-responsive">
+									<table class="table table-sm mb-0" style="width:98%;">
+										<tbody>
+											<tr>
+												<td style="border-bottom:0px;">
+													<a href="#" class="btn btn-primary btn-sm modal-alert w-100" style="margin:5px 5px 0px 5px;" data-toggle="modal" data-target="#modal-alert" description="<p>Are you sure you want to unlock your character?</p><p>Read the rules:</p><ul><li>All equipped items will be sent to the Warehouse.</li><li>The character will be teleported to the nearest city.</li><li>The character cannot have karma.</li><li>The character must be offline.</li></ul><form action='' method='post' id='repairChar'><input type='hidden' name='char_id' value='{CHARACTER_INFO_ID}'></form>" footer='<button type="submit" form="repairChar" name="repair" class="btn btn-primary">Yes, unlock!</button>'><span data-feather="tool"></span> Repair {CHARACTER_INFO_NAME}</a>
+												</td>
+												{PANEL_CHAR_CAN_SELL}
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-sm mb-0" style="width:98%;">
+										<tbody>
+											<tr>
+												<td style="border-bottom:0px;">
+													<a href="?icp=panel&show=inventory&char_id={CHARACTER_INFO_ID}" class="btn btn-primary btn-sm w-100" style="margin:0px 5px;"><span data-feather="trello"></span> Inventory</a>
+												</td>
+												<td style="border-bottom:0px;">
+													<a href="?icp=panel&show=skills&char_id={CHARACTER_INFO_ID}" class="btn btn-primary btn-sm w-100" style="margin:0px 5px;"><span data-feather="book-open"></span> Skills</a>
+												</td>
+												<td style="border-bottom:0px;">
+													<a href="?icp=panel&show=quests&char_id={CHARACTER_INFO_ID}" class="btn btn-primary btn-sm w-100" style="margin:0px 5px;"><span data-feather="flag"></span> Quests</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- END BLOCK_ICP_PANEL_CHARACTER_INFO -->
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title">
+				<div class="modal-alert-title"></div>
+			</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body p-3">
+			<div class="modal-alert-body"></div>
+		</div>
+		<div class="modal-footer">
+			<div class="modal-alert-footer"></div>
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+		</div>
+		</div>
+	</div>
+</div>

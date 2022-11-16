@@ -1,0 +1,140 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="row">
+	<div class="col">
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+			<h1 class="h2">Character Broker</h1><span>Total of <b>{PANEL_CHAR_BROKER_TOTAL}</b> characters for sale. Showing from {PANEL_CHAR_BROKER_START} to {PANEL_CHAR_BROKER_STOP}.</span>
+		</div>
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Character for sale
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-striped table-sm mb-0 w-100">
+						<thead>
+							<tr>
+								<th style="width:40px;">Img</th>
+								<th>Char Name</th>
+								<th style="text-align:center;">Sale type</th>
+								<th style="width:80px; text-align:center;">Price</th>
+								<th style="width:60px; text-align:center;">Buy</th>
+							</tr>
+						</thead>
+						<tbody style="font-size:14px;">
+							<!-- BEGIN BLOCK_ICP_PANEL_CHAR_BROKER -->
+								<tr>
+									<td valign="middle"><img src="images/races/{PANEL_CHAR_BROKER_IMG}" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top' data-toggle="tooltip" data-html="true" data-placement="right" title="<div class='itemDetails' style='border-radius:5px; border:1px solid #aaa; background: rgba(0,0,0,0.9)'>{PANEL_CHAR_BROKER_DETAILS}</div>"></td>
+									<td valign="middle">{PANEL_CHAR_BROKER_NAME}</td>
+									<td valign="middle" style="text-align:center;">{PANEL_CHAR_BROKER_TYPE}</td>
+									<td valign="middle" style="text-align:center;">{PANEL_CHAR_BROKER_PRICE}</td>
+									<td valign="middle" style="text-align:center;">{PANEL_CHAR_BROKER_BUTTON}</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_CHAR_BROKER -->
+							<!-- BEGIN BLOCK_ICP_PANEL_CHAR_BROKER_NULL -->
+								<tr>
+									<td valign="middle" colspan="8">No characters found.</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_CHAR_BROKER_NULL -->
+						</tbody>
+						<tfoot>
+							<tr>
+								<th colspan="8" style="text-align:right">
+									*Price is in {DONATE_COIN_NAME}.
+								</th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- BEGIN BLOCK_PAGINATION -->
+			<nav aria-label="Pagination">
+				<ul class="pagination justify-content-center">
+					{PAGINATION}
+				</ul>
+			</nav>
+		<!-- END BLOCK_PAGINATION -->
+	</div>
+	<div class="col-sm-4 border-start">
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+			<h1 class="h2">Your sales</h1>
+		</div>
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Your characters for sale: {PANEL_ICP_TOTAL_SALES}
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-striped table-sm mb-0 w-100">
+						<thead>
+							<tr>
+								<th style="width:40px; text-align:center;">Img</th>
+								<th>Char Name</th>
+								<th style="width:50px; text-align:center;">Cancel</th>
+							</tr>
+						</thead>
+						<tbody style="font-size:14px;">
+							<!-- BEGIN BLOCK_ICP_PANEL_CHAR_BROKER_MY_SALES -->
+								<tr>
+									<td valign="middle"><img src="images/races/{PANEL_CHAR_BROKER_IMG}" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top' data-toggle="tooltip" data-html="true" data-placement="right" title="<div class='itemDetails' style='border-radius:5px; border:1px solid #aaa; background: rgba(0,0,0,0.9)'>{PANEL_CHAR_BROKER_DETAILS}</div>"></td>
+									<td valign="middle">{PANEL_CHAR_BROKER_NAME}</td>
+									<td valign="middle">{PANEL_CHAR_BROKER_BUTTON}</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_CHAR_BROKER_MY_SALES -->
+							<!-- BEGIN BLOCK_ICP_PANEL_CHAR_BROKER_MY_SALES_NULL -->
+								<tr>
+									<td valign="middle" colspan="3">No characters for sale.</td>
+								</tr>
+							<!-- END BLOCK_ICP_PANEL_CHAR_BROKER_MY_SALES_NULL -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- BEGIN BLOCK_ICP_PANEL_ENABLE_CHAR_BROKER_MY_AUCTIONS -->
+			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+				<h1 class="h2">Your auctions</h1>
+			</div>
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					Auctions in which you participate: {PANEL_ICP_TOTAL_AUCTIONS}
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-striped table-sm mb-0 w-100">
+							<thead>
+								<tr>
+									<th style="width:40px; text-align:center;">Img</th>
+									<th>Char Name</th>
+									<th style="width:50px; text-align:center;">Bid</th>
+								</tr>
+							</thead>
+							<tbody style="font-size:14px;">
+								<!-- BEGIN BLOCK_ICP_PANEL_CHAR_BROKER_MY_AUCTIONS -->
+									<tr>
+										<td valign="middle"><img src="images/races/{PANEL_CHAR_BROKER_IMG}" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top' data-toggle="tooltip" data-html="true" data-placement="right" title="<div class='itemDetails' style='border-radius:5px; border:1px solid #aaa; background: rgba(0,0,0,0.9)'>{PANEL_CHAR_BROKER_DETAILS}</div>"></td>
+										<td valign="middle">{PANEL_CHAR_BROKER_NAME}</td>
+										<td valign="middle">{PANEL_CHAR_BROKER_BUTTON}</td>
+									</tr>
+								<!-- END BLOCK_ICP_PANEL_CHAR_BROKER_MY_AUCTIONS -->
+								<!-- BEGIN BLOCK_ICP_PANEL_CHAR_BROKER_MY_AUCTIONS_NULL -->
+									<tr>
+										<td valign="middle" colspan="3">You are not participating in any auction.</td>
+									</tr>
+								<!-- END BLOCK_ICP_PANEL_CHAR_BROKER_MY_AUCTIONS_NULL -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		<!-- END BLOCK_ICP_PANEL_ENABLE_CHAR_BROKER_MY_AUCTIONS -->
+	</div>
+</div>

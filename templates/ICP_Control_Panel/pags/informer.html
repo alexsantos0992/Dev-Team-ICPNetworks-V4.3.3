@@ -1,0 +1,119 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+	<h1 class="h2">Informer</h1>
+</div>
+<!-- BEGIN BLOCK_ICP_PANEL_INFORMER -->
+	{ICP_PANEL_INFORMER_SEARCH}
+	<!-- BEGIN BLOCK_ICP_PANEL_INFORMER_NPC -->
+		<div class="border rounded shadow p-3 pt-0 mt-4 mb-4">
+			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+				<h2>NPCs</h2>
+			</div>
+			<div class="table-responsive">
+				<table class="table table-striped table-sm mb-0">
+					<thead>
+						<tr align="center">
+							<th class="text-start ps-3">NPC name</th>
+							<th style="width:150px;">Droplist</th>
+							<th style="width:150px;">Location</th>
+						</tr>
+					</thead>
+					<tbody style="font-size:14px;">
+						<!-- BEGIN BLOCK_ICP_PANEL_INFORMER_NPC_DETAILS -->
+							<tr align="center">
+								<td valign="middle" class="text-start ps-3">{ICP_PANEL_INFORMER_NPC_NAME}</td>
+								<td valign="middle">{ICP_PANEL_INFORMER_NPC_DROPLIST}</td>
+								<td valign="middle">{ICP_PANEL_INFORMER_NPC_LOC}</td>
+							</tr>
+						<!-- END BLOCK_ICP_PANEL_INFORMER_NPC_DETAILS -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	<!-- END BLOCK_ICP_PANEL_INFORMER_NPC -->
+	<!-- BEGIN BLOCK_ICP_PANEL_INFORMER_ITEM -->
+		<div class="border rounded shadow p-3 pt-0 mt-4 mb-4">
+			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+				<h2>Items</h2>
+			</div>
+			<div class="table-responsive">
+				<table class="table table-striped table-sm mb-0">
+					<thead>
+						<tr align="center">
+							<th style="width:40px;">IMG</th>
+							<th class="text-start ps-3">Item name</th>
+							<th style="width:150px;">Droplist</th>
+						</tr>
+					</thead>
+					<tbody style="font-size:14px;">
+						<!-- BEGIN BLOCK_ICP_PANEL_INFORMER_ITEM_DETAILS -->
+							<tr align="center">
+								<td valign="middle">{ICP_PANEL_INFORMER_ITEM_IMG_DETAILS}<img src="images/icons/{ICP_PANEL_INFORMER_ITEM_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+								<td valign="middle" class="text-start ps-3">{ICP_PANEL_INFORMER_ITEM_NAME}</td>
+								<td valign="middle">{ICP_PANEL_INFORMER_ITEM_DROPLIST}</td>
+							</tr>
+						<!-- END BLOCK_ICP_PANEL_INFORMER_ITEM_DETAILS -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	<!-- END BLOCK_ICP_PANEL_INFORMER_ITEM -->
+	<!-- BEGIN BLOCK_ICP_PANEL_INFORMER_DROPLIST -->
+		<div class="border rounded shadow p-3 pt-0 mt-4 mb-4">
+			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+				{ICP_PANEL_INFORMER_DROPLIST_NPC_DETAILS}
+			</div>
+			<div class="table-responsive">
+				<table class="table table-striped table-sm mb-0">
+					<thead>
+						<tr align="center">
+							<th style="width:40px;">IMG</th>
+							<th class="text-start ps-3">Item name</th>
+							<th style="width:100px;">Amount</th>
+							<th style="width:100px;">type</th>
+							<th style="width:100px;">Chance</th>
+							<th style="width:120px;">Droplist</th>
+						</tr>
+					</thead>
+					<tbody style="font-size:14px;">
+						<!-- BEGIN BLOCK_ICP_PANEL_INFORMER_DROPLIST_DETAILS -->
+							<tr align="center">
+								<td valign="middle">{ICP_PANEL_INFORMER_DROPLIST_ITEM_IMG_DETAILS}<img src="images/icons/{ICP_PANEL_INFORMER_DROPLIST_ITEM_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+								<td valign="middle" class="text-start ps-3">{ICP_PANEL_INFORMER_DROPLIST_ITEM_NAME}</td>
+								<td valign="middle">{ICP_PANEL_INFORMER_DROPLIST_ITEM_COUNT}</td>
+								<td valign="middle">{ICP_PANEL_INFORMER_DROPLIST_ITEM_TYPE}</td>
+								<td valign="middle">{ICP_PANEL_INFORMER_DROPLIST_ITEM_CHANCE}</td>
+								<td valign="middle">{ICP_PANEL_INFORMER_DROPLIST_ITEM_DROPLIST}</td>
+							</tr>
+						<!-- END BLOCK_ICP_PANEL_INFORMER_DROPLIST_DETAILS -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	<!-- END BLOCK_ICP_PANEL_INFORMER_DROPLIST -->
+	<!-- BEGIN BLOCK_ICP_PANEL_INFORMER_LOCATION -->
+		<div class="border rounded shadow p-3 pt-0 mt-4 mb-4">
+			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+				{ICP_PANEL_INFORMER_SPAWN_NPC_DETAILS}
+			</div>
+			<div class="informerMap">
+				<div id="map">
+					<!-- BEGIN BLOCK_ICP_PANEL_INFORMER_LOCATION_DETAILS -->
+						{ICP_PANEL_INFORMER_LOCATION_MAP}
+					<!-- END BLOCK_ICP_PANEL_INFORMER_LOCATION_DETAILS -->
+				</div>
+			</div>
+		</div>
+	<!-- END BLOCK_ICP_PANEL_INFORMER_LOCATION -->
+<!-- END BLOCK_ICP_PANEL_INFORMER -->
+<!-- BEGIN BLOCK_ICP_PANEL_INFORMER_NULL -->
+	<p class="text-center h4">The search not found any results.</p>
+<!-- END BLOCK_ICP_PANEL_INFORMER_NULL -->

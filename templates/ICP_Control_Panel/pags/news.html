@@ -1,0 +1,36 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">Server news</h1>
+</div>
+<!-- BEGIN BLOCK_NEWS -->
+	<div class="card">
+		<div class="card-header">
+			{NEWS_TITLE}
+		</div>
+		<div class="card-body">
+			<div style="float:left; margin: 0px 10px 5px 0px;">
+				<img src="images/profiles/{NEWS_PROFILE}" class="news-profile"><br>
+				<div class="news-author">By: {NEWS_AUTHOR}</div>
+			</div>
+			<p class="card-text">{NEWS_TEXT_FULL}</p>
+		</div>
+		<div class="card-footer text-muted">
+			<div class="row">
+				<div class="col" style="line-height:40px;">
+					On date: {NEWS_DATE}
+				</div>
+				<div class="col" style="text-align:right;">
+					<a href="./?icp=panel" class="btn btn-primary">Go back</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END BLOCK_NEWS -->

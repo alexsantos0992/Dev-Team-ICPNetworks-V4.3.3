@@ -1,0 +1,176 @@
+<article>
+	<script type='text/javascript'>
+	$(document).ready(function(){
+		$('.banner > a:first-child').addClass('bvis');
+		$('.banner .circles div:first-child').addClass('act');
+		var rotateBannerAtualstudio = function() {
+			if($('input#tempBanner').val() == '1') {
+				var countA = $('.banner > a').length;
+				var relAtual = $('.banner > a.bvis').attr('rel');
+				var proxRel = parseInt(parseInt(relAtual)+1);
+				if(proxRel > countA) {
+					var proxRel = 1;
+				}
+				$('.banner > a').removeClass('bvis');
+				$('.banner > a[rel='+proxRel+']').addClass('bvis');
+				$('.banner .circles div').removeClass('act');
+				$('.banner .circles div[rel='+proxRel+']').addClass('act');
+			}
+			setTimeout(rotateBannerAtualstudio, 3000);
+		}
+		setTimeout(rotateBannerAtualstudio, 3000);
+		$('.banner').hover(function(){
+			$('input#tempBanner').val('2');
+		}, function(){
+			$('input#tempBanner').val('1');
+		});
+		$('.circles div').hover(function(){
+			var relCircle = $(this).attr('rel');
+			$('.banner .circles div').removeClass('act');
+			$(this).addClass('act');
+			$('.banner > a').removeClass('bvis');
+			$('.banner > a[rel='+relCircle+']').addClass('bvis');
+		});
+	});
+	</script>
+	<div class='banner'>
+		<div class='circles'>
+			<div rel='1' class='act'></div>
+			<div rel='2'></div>
+			<div rel='3'></div>
+		</div>
+		<a rel='1' href='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07.jpg' target='_blank' class='bvis'>
+			<div class='bmask'></div>
+			<img src='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07.jpg' />
+		</a>
+		<a rel='2' href='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07_en.jpg' target='_blank'>
+			<div class='bmask'></div>
+			<img src='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07_en.jpg' />
+		</a>
+		<a rel='3' href='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07_es.jpg' target='_blank'>
+			<div class='bmask'></div>
+			<img src='{TEMPLATE}imgs/banners/98a67ae9af1f9547003bc7b8ae33dd07_es.jpg' />
+		</a>
+		<input type='hidden' id='tempBanner' value='1' />
+	</div>
+	
+	<br>
+	<br>
+	<hr />
+	<center>
+		<p><b>Time zone for countries Open Server:</b></p>
+		<p>(Greece) Friday, October 20, 2017, 12:00 PM</p>
+		<p>(Venezuela) Friday, October 20, 2017, 05:00 PM</p>
+		<p>(Russia) Friday, October 20, 2017, 12:00 PM</p>
+		<p>(Brazil - Brasilia) Friday, October 20, 2017, 19:00</p>
+		<p>(Argentina) Friday, October 20, 2017, 06:00 PM</p>
+	</center>
+	
+	
+	<hr />
+	<!-- News -->
+	<h1>Latest News</h1>
+	<!-- BEGIN BLOCK_NEWS -->
+		<div class='news'>
+			<div>
+				<a class='imgn' href='./?icp=news&id={NEWS_ID}'><img src='images/profiles/{NEWS_PROFILE}' /></a>
+				<div class='contentn'>
+					<a href='./?icp=news&id={NEWS_ID}' class='titlen'>{NEWS_TITLE}</a>
+					<div class='textn'>
+						{NEWS_TEXT_MINI}
+					</div>
+					<div class='finalinfo'>
+						<div class='datan'>{NEWS_DATE}</div>
+						<div class='lermaisn'><a href='./?icp=news&id={NEWS_ID}'>ler mais &raquo;</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='shadownew'></div>
+	<!-- END BLOCK_NEWS -->
+</article>
+<aside>
+	<div class='box'>
+		<div class='title'>Ajude-nos Votando</div>
+		<div class='ct vote'>
+			<a href='https://top.l2jbrasil.com/index.php?a=in&u=lineage2free' target='_blank' title='Vote on Top L2JBrasil'><img src='{TEMPLATE}imgs/l2jbrasil.jpg' /></a>
+			<a href='https://vgw.hopzone.net/site/vote/100823/1' target='_blank' title='Vote on Hopzone'><img src='{TEMPLATE}imgs/hopzone.jpg' /></a>
+			<a href='https://l2topzone.com/vote/id/13432' target='_blank' title='Vote on L2Topzone'><img src='{TEMPLATE}imgs/l2topzone.jpg' /></a>
+			<a href='https://l2network.eu/index.php?a=in&u=l2free' target='_blank' title='Vote on L2Network'><img src='{TEMPLATE}imgs/l2network.jpg' /></a>
+		</div>
+	</div>
+	<div class='box'>
+		<div class='title'>TOP STATS</div>
+		<div class='ct'>
+			<div class='multitables'>
+				<table border='2' cellpadding='2' cellspacing='2' class='pvp'>
+					<tr>
+						<th><font color='#ff00ff'>Player</font></th>
+						<th><font color='#ff00ff'>PvP</font></th>
+					</tr>
+					<!-- BEGIN BLOCK_INDEX_PVP -->
+						<tr class='{RANK_PVPPK_CSS_ADJUSTMENT}'>
+							<td>{RANK_PVPPK_POS} {RANK_PVPPK_NAME}</td>
+							<td>{RANK_PVPPK_COUNT}</td>
+						</tr>
+					<!-- END BLOCK_INDEX_PVP -->
+				</table>
+				<table border='2' cellpadding='0' cellspacing='0' class='pk'>
+					<tr>
+						<th><font color='#ff0000'>Player</font></th>
+						<th><font color='#ff0000'>PK</font></th>
+					</tr>
+					<!-- BEGIN BLOCK_INDEX_PK -->
+						<tr class='{RANK_PVPPK_CSS_ADJUSTMENT}'>
+							<td>{RANK_PVPPK_POS} {RANK_PVPPK_NAME}</td>
+							<td>{RANK_PVPPK_COUNT}</td>
+						</tr>
+					<!-- END BLOCK_INDEX_PK -->
+				</table>
+				<table border='2' cellpadding='0' cellspacing='0' class='clan'>
+					<tr>
+						<th><font color='#fffe30'>Clan</font></th>
+						<th><font color='#fffe30'>Lv</font></th>
+					</tr>
+					<tr class='{RANK_CLAN_CSS_ADJUSTMENT}'>
+						<td>pos &ordm;&nbsp;&nbsp; name</td>
+						<td>level</td>
+					</tr>
+				</table>
+			</div>
+			<a class='moreranks' href='./?icp=toppvp'>Ver mais rankings</a>
+		</div>
+	</div>
+	<!-- Ranking -->
+	<!-- Gallery -->
+	<div class='box'>
+		<div class='title'>Galeria</div>
+		<div class='ct'>
+			<div style='display:table; margin: 0 auto;'>
+				<div class='galleryBox'>
+					<!-- BEGIN BLOCK_INDEX_SCREENSHOTS_6 -->
+						<a href='images/screenshots/{INDEX_SCREENSHOTS_IMG}' rel='prettyPhoto[fullGallery]'>
+							<img src='images/screenshots/thumbs/{INDEX_SCREENSHOTS_IMG}' />
+							<div></div>
+						</a>
+					<!-- END BLOCK_INDEX_SCREENSHOTS_6 -->
+				</div>
+				<a class='moregallery' href='./?icp=gallery'></a>
+			</div>
+		</div>
+	</div>
+	<div class='box'>
+		<div class='title'>Live Streams</div>
+		<div class='ct'>
+			<iframe src="https://player.twitch.tv/?channel=dannyllo" frameborder="1" allowfullscreen="true" scrolling="no" muted="true" height="200" width="240" style="center: 15px;"></iframe>
+			<iframe src="https://player.twitch.tv/?channel=pigtorres" frameborder="1" allowfullscreen="true" scrolling="no" muted="true" height="200" width="240" style="center: 15px;"></iframe>
+			<!--	<a href='./?icp=livestream' class='livestreams'><span></span></a> -->
+		</div>
+	</div>
+</aside>
+<script type='text/javascript'>
+$(document).ready(function(){
+	var aside = ($('aside').height()+100);
+	$('article').css({ 'min-height': ''+(aside)+'px' });
+});
+</script>

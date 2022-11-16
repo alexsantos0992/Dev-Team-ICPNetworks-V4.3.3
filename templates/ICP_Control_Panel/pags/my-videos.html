@@ -1,0 +1,127 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">My Videos</h1>
+</div>
+<div class="row">
+	<div class="col-sm-8">
+		<div class="row">
+			<div class="text-center">
+				<p>Total of <b>{INDEX_VIDEOS_TOTAL}</b> aproved videos. Showing from {INDEX_VIDEOS_START} to {INDEX_VIDEOS_STOP}.</p>
+			</div>
+			<div class="row">
+				<!-- BEGIN BLOCK_GALLERY_MY_VIDEOS -->
+					<div class="col-sm-4">
+						<div class="card mb-3">
+							<div class="card-header text-center">
+								{INDEX_VIDEOS_AUTHOR}
+							</div>
+							<img alt="Videos" src="{INDEX_VIDEOS_IMG}" modalBody='<iframe width="100%" height="315" class="embed-responsive-item" src="{INDEX_VIDEOS_URL}?autoplay=1&amp;modestbranding=1&amp;showinfo=0"  frameborder="0" id="video" allowscriptaccess="always" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' modalFooter='Legend: {INDEX_VIDEOS_LEGEND}<br>Date: {INDEX_VIDEOS_DATE}' modalTitle="Enviado por: {INDEX_VIDEOS_AUTHOR}" class="modal-btn card-img-top" data-toggle="modal" data-target="#modalVideos" style="cursor: pointer;" />
+							<div class="card-body">
+								Legend: {INDEX_VIDEOS_LEGEND}<br>
+								Date: {INDEX_VIDEOS_DATE}
+							</div>
+						</div>
+					</div>
+				<!-- END BLOCK_GALLERY_MY_VIDEOS -->
+				<!-- BEGIN BLOCK_PAGINATION -->
+					<nav aria-label="Pagination">
+						<ul class="pagination justify-content-center">
+							{PAGINATION}
+						</ul>
+					</nav>
+				<!-- END BLOCK_PAGINATION -->
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Upload your Videos
+			</div>
+			<div class="card-body">
+				<ul>
+					<li>
+						Submit your best videos to the {SITE_NAME}!
+					</li>
+					<li>
+						All videos will be approved by Staff {SITE_NAME} before to be published on the website.
+					</li>
+					<li>
+						Tip: Press Alt + H to remove the menus from the game, press again to return.
+					</li>
+				</ul>
+				<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST -->
+					<form action="" method="post" enctype="multipart/form-data">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Upload</span>
+							</div>
+							<input type="text" class="form-control" name="video" placeholder="YouTube URL" aria-label="YouTube URL" required>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Author</span>
+							</div>
+							<select type="text" class="form-select" name="charName" required>
+								<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST_DETAILS -->
+									<option value="{PANEL_CHARACTER_LIST_NAME}"{PANEL_CHARACTER_LIST_ONLINE}>{PANEL_CHARACTER_LIST_NAME}</option>
+								<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST_DETAILS -->
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Legend</span>
+							</div>
+							<input type="text" class="form-control" name="legend" required>
+						</div>
+						<input type="submit" class="btn btn-primary btn-sm w-100" name="submitVideo" value="Submit ScreenShot">
+					</form>
+				<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST -->
+				<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+					<p>You have not created any char on our server yet.</p>
+				<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Uploaded Videos
+			</div>
+			<div class="card-body pb-0">
+				<h5 class="pb-2 mb-3 border-bottom text-center">Waiting for approval</h5>
+				<!-- BEGIN BLOCK_GALLERY_MY_VIDEOS_WAITING -->
+					<div class="table-responsive">
+						<table class="table table-striped table-sm">
+							<thead>
+								<tr>
+									<td valign="middle">Date</td>
+									<td valign="middle">Preview</td>
+									<td valign="middle">Author</td>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- BEGIN BLOCK_GALLERY_MY_VIDEOS_WAITING_LIST -->
+									<tr>
+										<td valign="middle">{INDEX_VIDEOS_DATE}</td>
+										<td valign="middle"><a href="javascript:void(0)" modalBody='<iframe width="100%" height="315" class="embed-responsive-item" src="{INDEX_VIDEOS_URL}?autoplay=1&amp;modestbranding=1&amp;showinfo=0"  frameborder="0" id="video" allowscriptaccess="always" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' modalFooter='Legend: {INDEX_VIDEOS_LEGEND}<br>Date: {INDEX_VIDEOS_DATE}' modalTitle="Enviado por: {INDEX_VIDEOS_AUTHOR}" class="modal-btn" data-toggle="modal" data-target="#modalVideos">Video</a></td>
+										<td valign="middle">{INDEX_VIDEOS_AUTHOR}</td>
+									</tr>
+								<!-- END BLOCK_GALLERY_MY_VIDEOS_WAITING_LIST -->
+							</tbody>
+						</table>
+					</div>
+				<!-- END BLOCK_GALLERY_MY_VIDEOS_WAITING -->
+				<!-- BEGIN BLOCK_GALLERY_MY_VIDEOS_WAITING_NULL -->
+					<p>No videos awaiting approval</p>
+				<!-- END BLOCK_GALLERY_MY_VIDEOS_WAITING_NULL -->
+			</div>
+		</div>
+	</div>
+</div>

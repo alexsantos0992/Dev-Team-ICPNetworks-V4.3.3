@@ -1,0 +1,91 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h2">News</h1>
+</div>
+<!-- BEGIN CONFIG_ICP_PANEL_NEWS -->
+	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	<script>
+		tinymce.init({
+			selector: 'textarea#editor',
+			skin: 'bootstrap',
+			plugins: 'lists, link, image, media',
+			toolbar: 'h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help',
+			menubar: true,
+			force_p_newlines : false,
+			force_br_newlines : true,
+			forced_root_block : "",
+			setup: function (editor) {
+				editor.on('init', function (e) {
+					editor.setContent('{EDIT_NEWS_TXT}');
+				});
+			}
+		});
+	</script>
+	<div class="card mb-3">
+		<div class="card-header text-center">
+			Add new news
+		</div>
+		<div class="card-body">
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Title</span>
+				</div>
+				<input type="text" class="form-control" form="formAddNews" name="title" autocomplete="off" value="{EDIT_NEWS_TITLE}" required>
+			</div>
+			<textarea class="form-control" form="formAddNews" name="news" id="editor" value="{EDIT_NEWS_TXT}" rows="14"></textarea>
+			<div class="text-end">
+				<button type="submit" form="formAddNews" name="addNews" class="btn btn-sm btn-primary mt-3" value="{EDIT_NEWS_ID}">Submit</button>
+			</div>
+		</div>
+	</div>
+	<form action="" method="post" style="margin:0px;padding:0px" id="formAddNews"></form>
+	<div class="card mb-3 mt-5">
+		<div class="card-header text-center">
+			Posted news
+		</div>
+		<div class="card-body pb-0">
+			<div class="table-responsive">
+				<table class="table table-striped table-sm text-center">
+					<thead>
+						<tr>
+							<th valign="middle">Title</th>
+							<th valign="middle">News</th>
+							<th valign="middle">Edit</th>
+							<th valign="middle">Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- BEGIN BLOCK_NEWS -->
+							<tr>
+								<td valign="middle">{NEWS_TITLE}</td>
+								<td valign="middle">{NEWS_TEXT_MINI}</td>
+								<td valign="middle"><button type="submit" form="formEditNews" name="editNews" value="{NEWS_ID}" class="btn btn-sm btn-primary"><span data-feather="edit"></span></button></td>
+								<td valign="middle"><button type="submit" form="formDelNews" name="deleteNews" value="{NEWS_ID}" class="btn btn-sm btn-primary"><span data-feather="x"></span></button></td>
+							</tr>
+						<!-- END BLOCK_NEWS -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- BEGIN BLOCK_PAGINATION -->
+		<nav aria-label="Pagination">
+			<ul class="pagination justify-content-center">
+				{PAGINATION}
+			</ul>
+		</nav>
+	<!-- END BLOCK_PAGINATION -->
+	<form action="" method="post" style="margin:0px;padding:0px" id="formEditNews"></form>
+	<form action="" method="post" style="margin:0px;padding:0px" id="formDelNews"></form>
+<!-- END CONFIG_ICP_PANEL_NEWS -->
+<!-- BEGIN CONFIG_ICP_PANEL_NEWS_NULL -->
+	<p class="text-center">Unauthorized user.</p>
+<!-- END CONFIG_ICP_PANEL_NEWS_NULL -->

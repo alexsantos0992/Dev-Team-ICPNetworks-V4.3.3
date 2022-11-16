@@ -1,0 +1,209 @@
+<noscript>
+	<meta http-equiv="refresh" content="0; URL=../nojs.html">
+</noscript>
+<script>
+	if(typeof index === "undefined" || index == ""){
+		var url = window.location.href.split('/');
+		window.location.href = url[0] + '//' + url[2];
+	}
+</script>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 mb-3 border-bottom">
+	<h1 class="h2">Enchantment of Items</h1>
+</div>
+<div class="row mb-3">
+	<div class="col text-center">
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Use your {DONATE_COIN_NAME} to enchant your items!
+			</div>
+			<div class="card-body">
+				<p class="mt-3">The enchantment of items on the website is safe, with no chance to break the item or lose the current enchants.</p>
+				<div class="row text-start p-3 pb-0">
+					<div class="col-sm-6 p-0" style="min-width:260px;">
+						<div class="p-0 m-3 mt-0" style="border:1px solid #eee; border-radius:5px;">
+							<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-1 ps-3 border-bottom" style="background-color:#F0F0F0;">
+								For each enchant, you will need:
+							</div>
+							<ul class="m-1">
+								<!-- BEGIN BLOCK_ICP_PANEL_COST_ENCHANT_GRADE -->
+									{ALLOWED_ENCHANT_ITEMS_LIST}
+								<!-- END BLOCK_ICP_PANEL_COST_ENCHANT_GRADE -->
+							</ul>
+							
+						</div>
+					</div>
+					<div class="col p-0" style="min-width:260px;">
+						<div class="p-0 m-3 mt-0" style="border:1px solid #eee; border-radius:5px;">
+							<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-1 ps-3 border-bottom" style="background-color:#F0F0F0;">
+							Read the rules:
+							</div>
+							<ul class="m-1">
+								<li>Safe enchantment success rate: {ENCHANT_SYSTEM_CHANCE}%</li>
+								<li>The character must be offline.</li>
+								<li>Check in the game if the item you want to enchant is eligible for enchantment and enchantment bonus. The Staff {SITE_NAME} is not responsible if you enchant a wrong item.</li>
+								<li>We do not refund coins under any circumstances.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4 pb-0">
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Choice of character
+			</div>
+			<div class="card-body">
+				<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST -->
+					<p class="text-center">If you are in compliance with the rules, choose below the character to enchant the items.</p>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Character</span>
+						</div>
+						<select type="text" class="form-select" onchange="this.disabled = true; window.location = '?icp=panel&show=enchantment&char_id=' + this.options[this.selectedIndex].value;" required>
+							<option>Select...</option>
+							<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST_DETAILS -->
+								<option value="{PANEL_CHARACTER_LIST_ID}"{PANEL_CHARACTER_LIST_ONLINE}>{PANEL_CHARACTER_LIST_NAME}</option>
+							<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST_DETAILS -->
+						</select>
+					</div>
+				<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST -->
+				<!-- BEGIN BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+					<p class="text-center">You have not created any char on our server yet.</p>
+				<!-- END BLOCK_ICP_PANEL_CHARACTER_LIST_NULL -->
+			</div>
+		</div>
+		<div class="card mb-3">
+			<div class="card-header text-center">
+				Selected character
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<!-- BEGIN BLOCK_ICP_PANEL_SELECTED_CHARACTER_DETAILS -->
+						<div class="col" style="max-width:84px;">
+							<img src="images/races/{PANEL_SELECTED_CHARACTER_IMG}" width="64" height="64" style="border-radius:5px; border:1px solid #ddd;" data-toggle="tooltip" data-html="true" data-placement="right" title="<div class='itemDetails' style='border-radius:5px; border:1px solid #aaa; background: rgba(0,0,0,0.9)'>{PANEL_SELECTED_CHARACTER_DETAILS}</div>">
+						</div>
+						<div class="col">
+							<h5 class="mt-3">{PANEL_SELECTED_CHARACTER_NAME}</h5>
+						</div>
+					<!-- END BLOCK_ICP_PANEL_SELECTED_CHARACTER_DETAILS -->
+					<!-- BEGIN BLOCK_ICP_PANEL_SELECTED_CHARACTER_DETAILS_NULL -->
+						<div class="col" style="max-width:84px;">
+							<img src="images/races/noimage.jpg" width="64" height="64" style="border-radius:5px; border:1px solid #ddd;">
+						</div>
+						<div class="col">
+							<h5 class="mt-3">None</h5>
+						</div>
+					<!-- END BLOCK_ICP_PANEL_SELECTED_CHARACTER_DETAILS_NULL -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- BEGIN BLOCK_ICP_PANEL_SHOW_ENCHANTABLE_ITEMS -->
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					Equiped Items
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-striped table-sm mb-0">
+							<thead>
+								<tr align="center">
+									<th style="width:40px;">Img</th>
+									<th>Name</th>
+									<th style="width:40px;">Set</th>
+								</tr>
+							</thead>
+							<tbody style="font-size:14px;">
+								<!-- BEGIN BLOCK_ICP_PANEL_ENCHANT_EQUIPED_ITEMS -->
+									<tr align="center">
+										<td valign="middle" style="width:40px;">{PANEL_ITEM_DETAILS}<img src="images/icons/{PANEL_ITEM_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+										<td valign="middle">{PANEL_ITEM_NAME} +{PANEL_ITEM_ENCHANT}</td>
+										<td valign="middle" style="width:40px;">{PANEL_ITEM_CAN_ENCHANT}</td>
+									</tr>
+								<!-- END BLOCK_ICP_PANEL_ENCHANT_EQUIPED_ITEMS -->
+								<!-- BEGIN BLOCK_ICP_PANEL_ENCHANT_EQUIPED_ITEMS_NULL -->
+									<tr>
+										<td valign="middle" colspan="3">No items equipped.</td>
+									</tr>
+								<!-- END BLOCK_ICP_PANEL_ENCHANT_EQUIPED_ITEMS_NULL -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					Inventory Items
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-striped table-sm mb-0">
+							<thead>
+								<tr align="center">
+									<th style="width:40px;">Img</th>
+									<th>Name</th>
+									<th style="width:40px;">Set</th>
+								</tr>
+							</thead>
+							<tbody style="font-size:14px;">
+								<!-- BEGIN BLOCK_ICP_PANEL_ENCHANT_INVENTORY_ITEMS -->
+									<tr align="center">
+										<td valign="middle" style="width:40px;">{PANEL_ITEM_DETAILS}<img src="images/icons/{PANEL_ITEM_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+										<td valign="middle">{PANEL_ITEM_NAME} +{PANEL_ITEM_ENCHANT}</td>
+										<td valign="middle" style="width:40px;">{PANEL_ITEM_CAN_ENCHANT}</td>
+									</tr>
+								<!-- END BLOCK_ICP_PANEL_ENCHANT_INVENTORY_ITEMS -->
+								<!-- BEGIN BLOCK_ICP_PANEL_ENCHANT_INVENTORY_ITEMS_NULL -->
+									<tr>
+										<td valign="middle" colspan="3">Inventory is empty.</td>
+									</tr>
+								<!-- END BLOCK_ICP_PANEL_ENCHANT_INVENTORY_ITEMS_NULL -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card mb-3">
+				<div class="card-header text-center">
+					Warehouse Items
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-striped table-sm mb-0">
+							<thead>
+								<tr align="center">
+									<th style="width:40px;">Img</th>
+									<th>Name</th>
+									<th style="width:40px;">Set</th>
+								</tr>
+							</thead>
+							<tbody style="font-size:14px;">
+								<!-- BEGIN BLOCK_ICP_PANEL_ENCHANT_WAREHOUSE_ITEMS -->
+									<tr align="center">
+										<td valign="middle" style="width:40px;">{PANEL_ITEM_DETAILS}<img src="images/icons/{PANEL_ITEM_IMG}.png" style='border:1px solid #666; width:32px; height:32px; margin-top:2px;' align='top'></td>
+										<td valign="middle">{PANEL_ITEM_NAME} +{PANEL_ITEM_ENCHANT}</td>
+										<td valign="middle" style="width:40px;">{PANEL_ITEM_CAN_ENCHANT}</td>
+									</tr>
+								<!-- END BLOCK_ICP_PANEL_ENCHANT_WAREHOUSE_ITEMS -->
+								<!-- BEGIN BLOCK_ICP_PANEL_ENCHANT_WAREHOUSE_ITEMS_NULL -->
+									<tr>
+										<td valign="middle" colspan="3">Warehouse is empty.</td>
+									</tr>
+								<!-- END BLOCK_ICP_PANEL_ENCHANT_WAREHOUSE_ITEMS_NULL -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END BLOCK_ICP_PANEL_SHOW_ENCHANTABLE_ITEMS -->

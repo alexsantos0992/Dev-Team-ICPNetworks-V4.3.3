@@ -1,0 +1,50 @@
+<span id='accLoc'></span>
+<h1 class='29008'></h1>
+<div class='pddInner 12031'></div>
+
+<hr />
+
+<div class='horMenu'>
+	<a href='?icp=register#accLoc' class='12032'></a>
+	<a href='javascript:void(0);' class='act 12022'></a>
+	<a href='?icp=forgot#accLoc' class='12034'></a>
+</div>
+
+<div class='pddInner'>
+	
+	<div class='rmsg error' id='12035'></div>
+	
+	<div style='font-weight:bold; text-align:center;' id='12036'></div><br />
+	
+	<form method="POST" class="" action="">
+		
+		<label class='formpadrao'>
+			<div>
+				<div class='desc'>Login:</div>
+				<div class='camp'><input type='text' name='username' maxlength='16' autocomplete='off' /></div>
+			</div>
+		</label>
+		
+		<label class='formpadrao'>
+			<div>
+				<div class='desc' id='12037'></div>
+				<div class='camp'><input type='password' maxlength='16' name='password' autocomplete='off' /></div>
+			</div>
+		</label>
+		<br />
+		<div class='formpadrao dcaptcha'>
+		<img id="siimage" src="./engine/captcha/securimage_show.php?sid=UNICID" alt="CAPTCHA Image" align="left">
+			<a tabindex="-1" style="border-style: none;" href="#" title="Refresh Image" onclick="document.getElementById('siimage').src = './engine/captcha/securimage_show.php?sid=' + Math.random(); this.blur(); return false"><img src="./engine/captcha/images/refresh.png" alt="Reload Image" onclick="this.blur()" align="bottom" border="0"></a>
+		</div><br />
+
+		<label class='formpadrao'>
+			<div>
+				<div class='desc'>Security Code:</div>
+				<div class='camp'><input type='text' maxlength='6' name='captcha' autocomplete='off' /></div>
+			</div>
+		</label>
+		<input style='margin: 20px auto; display: table;' type="submit" class='default dbig' name="login" value="Login" />
+	
+	</form>
+
+</div>
