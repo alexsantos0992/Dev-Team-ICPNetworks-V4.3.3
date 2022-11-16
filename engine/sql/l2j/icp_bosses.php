@@ -1,0 +1,3 @@
+<?php
+$createTable[2] = "CREATE TABLE `icp_bosses` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT, `boss_id` int(11) unsigned NOT NULL, `name` varchar(255) NOT NULL, `level` int(11) unsigned NOT NULL, `x` int(11) NOT NULL DEFAULT 0, `y` int(11) NOT NULL DEFAULT 0, `type` varchar(255) NOT NULL, `chronicle` varchar(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;";
+$tableName[2] = "icp_bosses";

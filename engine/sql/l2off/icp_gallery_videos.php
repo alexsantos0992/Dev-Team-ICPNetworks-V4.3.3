@@ -1,0 +1,3 @@
+<?php
+$createTable[9] = "CREATE TABLE icp_gallery_videos ([id] int IDENTITY(1,1) NOT NULL PRIMARY KEY,[legend] varchar(40) COLLATE Latin1_General_CI_AS DEFAULT 'No legend' NOT NULL,[author] varchar(40) COLLATE Latin1_General_CI_AS DEFAULT 'No author' NOT NULL,[date] smalldatetime NULL,[link] varchar(max) COLLATE Latin1_General_CI_AS NOT NULL,[photo] varchar(255) COLLATE Latin1_General_CI_AS DEFAULT 'No photo' NOT NULL,[url] varchar(255) COLLATE Latin1_General_CI_AS DEFAULT 'No url' NOT NULL,[status] int DEFAULT '0' NOT NULL,[account] varchar(40) COLLATE Korean_Wansung_CI_AS DEFAULT 'No account' NOT NULL)";
+$tableName[9] = "icp_gallery_videos";

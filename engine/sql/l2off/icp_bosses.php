@@ -1,0 +1,3 @@
+<?php
+$createTable[2] = "CREATE TABLE icp_bosses ([id] int NOT NULL IDENTITY(1,1) PRIMARY KEY,[boss_id] int DEFAULT '0' NOT NULL,[name] varchar(255) COLLATE Latin1_General_CI_AS NOT NULL,[level] int DEFAULT '0' NOT NULL,[x] int DEFAULT '0' NOT NULL,[y] int DEFAULT '0' NOT NULL,[type] varchar(255) COLLATE Latin1_General_CI_AS NOT NULL,[chronicle] varchar(255) COLLATE Latin1_General_CI_AS NOT NULL)";
+$tableName[2] = "icp_bosses";

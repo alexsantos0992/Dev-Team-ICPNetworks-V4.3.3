@@ -1,0 +1,3 @@
+<?php
+$createTable[25] = "CREATE TABLE `icp_tickets_msgs` (`id` int UNSIGNED NOT NULL AUTO_INCREMENT, `msg_id` int UNSIGNED NOT NULL, `message` text CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL, `date` timestamp NOT NULL DEFAULT current_timestamp ON UPDATE CURRENT_TIMESTAMP, `answered` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '', `attach` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '', `status` int UNSIGNED NOT NULL DEFAULT 1, PRIMARY KEY (`id`) USING BTREE) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_general_ci ROW_FORMAT = Dynamic;";
+$tableName[25] = "icp_tickets_msgs";

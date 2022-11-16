@@ -1,0 +1,3 @@
+<?php
+$createTable[10] = "CREATE TABLE `icp_hennas` (`symbol_id` int(11) NOT NULL DEFAULT '0', `symbol_type` varchar(45) DEFAULT NULL, `stat_int` decimal(11,0) DEFAULT NULL, `stat_str` decimal(11,0) DEFAULT NULL, `stat_con` decimal(11,0) DEFAULT NULL, `stat_men` decimal(11,0) DEFAULT NULL, `stat_dex` decimal(11,0) DEFAULT NULL, `stat_wit` decimal(11,0) DEFAULT NULL, PRIMARY KEY (`symbol_id`)) ENGINE=MyISAM DEFAULT CHARSET=latin1;";
+$tableName[10] = "icp_hennas";

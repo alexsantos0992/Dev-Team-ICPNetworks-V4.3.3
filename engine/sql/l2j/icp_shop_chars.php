@@ -1,0 +1,3 @@
+<?php
+$createTable[16] = "CREATE TABLE `icp_shop_chars` (`id` int(11) unsigned zerofill NOT NULL AUTO_INCREMENT, `owner_id` int(11) unsigned NOT NULL DEFAULT '0', `account` varchar(255) NOT NULL DEFAULT 'error', `has_account` varchar(255) NOT NULL DEFAULT 'error', `type` int(1) unsigned zerofill NOT NULL DEFAULT '1', `price` int(11) unsigned NOT NULL DEFAULT '0', `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, `status` int(1) NOT NULL DEFAULT '1', PRIMARY KEY (`id`)) ENGINE=MyISAM DEFAULT CHARSET=latin1;";
+$tableName[16] = "icp_shop_chars";
